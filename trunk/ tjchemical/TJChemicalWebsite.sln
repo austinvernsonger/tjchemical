@@ -4,6 +4,7 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TJChemicalWebsite", "TJChemicalWebsite\", "{6D82DFB9-1EB9-4CDF-BEA3-47450D9C6F6D}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFramework = "3.5"
+		ProjectReferences = "{18237246-FA82-4C18-9A0E-0E7447C82BD4}|Login.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/TJChemicalWebsite"
 		Debug.AspNetCompiler.PhysicalPath = "TJChemicalWebsite\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\TJChemicalWebsite\"
@@ -26,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDepartment", "IDepartment\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "Login\Login.csproj", "{18237246-FA82-4C18-9A0E-0E7447C82BD4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiMediaText", "MultiMediaText\MultiMediaText.csproj", "{B7387BAE-6A53-479B-903B-FA338EA42F07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +47,10 @@ Global
 		{18237246-FA82-4C18-9A0E-0E7447C82BD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18237246-FA82-4C18-9A0E-0E7447C82BD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18237246-FA82-4C18-9A0E-0E7447C82BD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7387BAE-6A53-479B-903B-FA338EA42F07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7387BAE-6A53-479B-903B-FA338EA42F07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7387BAE-6A53-479B-903B-FA338EA42F07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7387BAE-6A53-479B-903B-FA338EA42F07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
