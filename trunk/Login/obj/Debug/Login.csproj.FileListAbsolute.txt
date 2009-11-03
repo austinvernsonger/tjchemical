@@ -7,3 +7,17 @@ E:\医学院网站\src\Login\bin\Debug\Operation.dll
 E:\医学院网站\src\Login\obj\Debug\ResolveAssemblyReference.cache
 E:\医学院网站\src\Login\obj\Debug\Login.dll
 E:\医学院网站\src\Login\obj\Debug\Login.pdb
+E:\医学院网站\test\Login\bin\Debug\Login.dll
+E:\医学院网站\test\Login\bin\Debug\Login.pdb
+E:\医学院网站\test\Login\bin\Debug\ADBS.dll
+E:\医学院网站\test\Login\bin\Debug\Global.dll
+E:\医学院网站\test\Login\bin\Debug\Interface.dll
+E:\医学院网站\test\Login\bin\Debug\Operation.dll
+E:\医学院网站\test\Login\obj\Debug\ResolveAssemblyReference.cache
+E:\医学院网站\test\Login\obj\Debug\Login.dll
+E:\医学院网站\test\Login\obj\Debug\Login.pdb
+E:\医学院网站\test\Login\bin\Debug\Core.dll
+E:\医学院网站\test\Login\bin\Debug\AFS.dll
+E:\医学院网站\test\Login\bin\Debug\SunMkr2.0.dll
+E:\医学院网站\test\Login\bin\Debug\Control.dll
+E:\医学院网站\test\Login\bin\Debug\ConfigElement.dll

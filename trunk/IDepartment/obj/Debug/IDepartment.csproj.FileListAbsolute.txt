@@ -3,3 +3,8 @@ E:\医学院网站\src\IDepartment\bin\Debug\IDepartment.pdb
 E:\医学院网站\src\IDepartment\obj\Debug\ResolveAssemblyReference.cache
 E:\医学院网站\src\IDepartment\obj\Debug\IDepartment.dll
 E:\医学院网站\src\IDepartment\obj\Debug\IDepartment.pdb
+E:\医学院网站\test\IDepartment\bin\Debug\IDepartment.dll
+E:\医学院网站\test\IDepartment\bin\Debug\IDepartment.pdb
+E:\医学院网站\test\IDepartment\obj\Debug\ResolveAssemblyReference.cache
+E:\医学院网站\test\IDepartment\obj\Debug\IDepartment.dll
+E:\医学院网站\test\IDepartment\obj\Debug\IDepartment.pdb

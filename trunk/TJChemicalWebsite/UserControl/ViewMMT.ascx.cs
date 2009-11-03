@@ -106,9 +106,10 @@ public partial class UserControl_ViewMMT : System.Web.UI.UserControl
             {
                 // Load the Registration Part
                 div_registration.Visible = true;
-                ReportDisplayer.SetDisplayMode(Report.Descriptor.DisplayMode.DisplayFront);
-                ReportDisplayer.SetReportDescriptorFilePath(HostingEnvironment.ApplicationPhysicalPath + "Report\\Form\\" + myMMT.ReportFormId + "Descriptor.xml");
-                ReportDisplayer.SetReportResultFilePath(HostingEnvironment.ApplicationPhysicalPath + "Report\\Data\\" + myMMT.ReportDataSet + "Result.xml");
+                /////////////////////////////////////////////////////////////////////////////////////////
+           //     ReportDisplayer.SetDisplayMode(Report.Descriptor.DisplayMode.DisplayFront);
+            //    ReportDisplayer.SetReportDescriptorFilePath(HostingEnvironment.ApplicationPhysicalPath + "Report\\Form\\" + myMMT.ReportFormId + "Descriptor.xml");
+             //   ReportDisplayer.SetReportResultFilePath(HostingEnvironment.ApplicationPhysicalPath + "Report\\Data\\" + myMMT.ReportDataSet + "Result.xml");
             }
 
             if (myMMT.HasAttachment)
