@@ -26,3 +26,17 @@ E:\医学院网站\src\MultiMediaText\bin\Debug\Global.dll
 E:\医学院网站\src\MultiMediaText\bin\Debug\Interface.dll
 E:\医学院网站\src\MultiMediaText\bin\Debug\Operation.dll
 E:\医学院网站\src\MultiMediaText\bin\Debug\SunMkr2.0.dll
+E:\医学院网站\test\MultiMediaText\bin\Debug\MultiMediaText.dll
+E:\医学院网站\test\MultiMediaText\bin\Debug\MultiMediaText.pdb
+E:\医学院网站\test\MultiMediaText\bin\Debug\ADBS.dll
+E:\医学院网站\test\MultiMediaText\bin\Debug\AFS.dll
+E:\医学院网站\test\MultiMediaText\bin\Debug\Global.dll
+E:\医学院网站\test\MultiMediaText\bin\Debug\Interface.dll
+E:\医学院网站\test\MultiMediaText\bin\Debug\Operation.dll
+E:\医学院网站\test\MultiMediaText\bin\Debug\SunMkr2.0.dll
+E:\医学院网站\test\MultiMediaText\bin\Debug\Core.dll
+E:\医学院网站\test\MultiMediaText\bin\Debug\Control.dll
+E:\医学院网站\test\MultiMediaText\bin\Debug\ConfigElement.dll
+E:\医学院网站\test\MultiMediaText\obj\Debug\ResolveAssemblyReference.cache
+E:\医学院网站\test\MultiMediaText\obj\Debug\MultiMediaText.dll
+E:\医学院网站\test\MultiMediaText\obj\Debug\MultiMediaText.pdb

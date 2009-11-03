@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ViewMMT.ascx.cs" Inherits="UserControl_ViewMMT" %>
 <%@ Register src="TagListControl.ascx" tagname="taglist" tagprefix="ucl" %>
-<%@ Register src="../Report/Control/Displayer.ascx" tagname="Displayer" tagprefix="uc1" %>
-
+<%--<%@ Register src="../Report/Control/Displayer.ascx" tagname="Displayer" tagprefix="uc1" %>
+--%>
 <div id="div_title" runat="server" align="center">
     <asp:Label ID="lb_title" runat="server" Text=""></asp:Label>
 </div>
@@ -58,7 +58,7 @@
 
 <asp:UpdatePanel ID="label_pnl" runat="server">
     <ContentTemplate>
-        <uc1:Displayer ID="ReportDisplayer" runat="server" />
+    <%--    <uc1:Displayer ID="ReportDisplayer" runat="server" />--%>
     </ContentTemplate>
 </asp:UpdatePanel>
 
