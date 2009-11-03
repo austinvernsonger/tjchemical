@@ -1,7 +1,0 @@
-﻿.notice_content_stl1{ text-decoration:none; font-size:11px; font-family:Arial; line-height:30px; color:#ff6000; border-bottom:dashed 1px silver; font-weight:normal}
-.notice_content_stl1 a{text-decoration: none; color:#000000; font-size:13px}
-.notice_content_stl1 a:hover{ color:Gray}
-.div_content{ margin:0 auto 15px auto; width:898px; border:solid 1px silver; font-family:黑体; font-size:24px; font-weight:bold; color:#0066ff; padding:10px 30px 30px 30px; line-height:65px}
-.title{ font-family:Arial; font-size:24px; color:#0066ff; font-weight:bold}
-.time,.location{ font-size:12px; color:gray; line-height:20px}
-#edit{ margin:0 10px}
