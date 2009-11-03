@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{18237246-FA82-4C18-9A0E-0E7447C82BD4}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -33,19 +33,23 @@
   <ItemGroup>
     <Reference Include="ADBS, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WebSite\Bin\ADBS.dll</HintPath>
+      <HintPath>..\TJChemicalWebsite\Bin\ADBS.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Global, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WebSite\Bin\Global.dll</HintPath>
+      <HintPath>..\TJChemicalWebsite\Bin\Global.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Interface, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WebSite\Bin\Interface.dll</HintPath>
+      <HintPath>..\TJChemicalWebsite\Bin\Interface.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Operation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WebSite\Bin\Operation.dll</HintPath>
+      <HintPath>..\TJChemicalWebsite\Bin\Operation.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
