@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TJChemicalWebsite", "E:\医学院网站\src\TJChemicalWebsite\", "{6D82DFB9-1EB9-4CDF-BEA3-47450D9C6F6D}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/TJChemicalWebsite"
+		Debug.AspNetCompiler.PhysicalPath = "E:\医学院网站\src\TJChemicalWebsite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\TJChemicalWebsite\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/TJChemicalWebsite"
+		Release.AspNetCompiler.PhysicalPath = "E:\医学院网站\src\TJChemicalWebsite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\TJChemicalWebsite\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51268"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IDepartment", "E:\医学院网站\src\IDepartment\IDepartment.csproj", "{4CE34F42-7153-48ED-9030-4C5708D864D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "E:\医学院网站\src\Login\Login.csproj", "{18237246-FA82-4C18-9A0E-0E7447C82BD4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D82DFB9-1EB9-4CDF-BEA3-47450D9C6F6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D82DFB9-1EB9-4CDF-BEA3-47450D9C6F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D82DFB9-1EB9-4CDF-BEA3-47450D9C6F6D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D82DFB9-1EB9-4CDF-BEA3-47450D9C6F6D}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{4CE34F42-7153-48ED-9030-4C5708D864D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CE34F42-7153-48ED-9030-4C5708D864D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CE34F42-7153-48ED-9030-4C5708D864D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CE34F42-7153-48ED-9030-4C5708D864D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18237246-FA82-4C18-9A0E-0E7447C82BD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18237246-FA82-4C18-9A0E-0E7447C82BD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18237246-FA82-4C18-9A0E-0E7447C82BD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18237246-FA82-4C18-9A0E-0E7447C82BD4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
