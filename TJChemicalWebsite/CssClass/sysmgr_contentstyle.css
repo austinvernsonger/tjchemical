@@ -1,0 +1,62 @@
+﻿/*CSS File for Content Page*/
+
+.h3style
+{
+	font-family: 宋体, Arial, Helvetica, sans-serif;
+	font-size: medium;
+	color: #666;
+	padding-left: 10px;
+	margin-bottom: 5px;
+}
+
+.titleblue
+{
+	font-family:Arial; font-size:24px; color:#0066ff; font-weight:bold;
+}
+.divstyle
+{
+	font-family: 宋体, Arial, Helvetica, sans-serif;
+	font-size: .75em;
+	color: #444444;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 10px;
+}
+
+.modalPopupBackground
+{
+	 background-color:Gray;
+	 filter:alpha(opacity=80);
+	 opacity:0.8;
+}
+
+.dragPanel
+{
+	border: 1px solid #666666;
+	background-color: #FAFAFA;
+	filter: alpha(opacity=80);
+	opacity: 0.8; /*	padding:3px;*/
+	width: 130px;
+}
+
+.tagBtnNormal
+{
+	margin: 5px;
+	border: 1px solid #808080;
+	background-color: #EAEAEA;
+	font-family: Tahoma;
+	font-size: small;
+	color: #808080;
+	height: 24px;
+}
+
+.tagBtnClicked
+{
+	margin: 5px;
+	border: 1px solid #0066FF;
+	background-color: #99CCFF;
+	font-family: Tahoma;
+	font-size: small;
+	color: #3C3C3C;
+	height: 24px;
+}

@@ -1,0 +1,9 @@
+E:\医学院网站\src\Login\bin\Debug\Login.dll
+E:\医学院网站\src\Login\bin\Debug\Login.pdb
+E:\医学院网站\src\Login\bin\Debug\ADBS.dll
+E:\医学院网站\src\Login\bin\Debug\Global.dll
+E:\医学院网站\src\Login\bin\Debug\Interface.dll
+E:\医学院网站\src\Login\bin\Debug\Operation.dll
+E:\医学院网站\src\Login\obj\Debug\ResolveAssemblyReference.cache
+E:\医学院网站\src\Login\obj\Debug\Login.dll
+E:\医学院网站\src\Login\obj\Debug\Login.pdb

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B7387BAE-6A53-479B-903B-FA338EA42F07}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SysCom</RootNamespace>
+    <AssemblyName>MultiMediaText</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADBS, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TJChemicalWebsite\Bin\ADBS.dll</HintPath>
+    </Reference>
+    <Reference Include="AFS, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TJChemicalWebsite\Bin\AFS.dll</HintPath>
+    </Reference>
+    <Reference Include="Global, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TJChemicalWebsite\Bin\Global.dll</HintPath>
+    </Reference>
+    <Reference Include="Interface, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TJChemicalWebsite\Bin\Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Operation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TJChemicalWebsite\Bin\Operation.dll</HintPath>
+    </Reference>
+    <Reference Include="SunMkr2.0, Version=3.4.3573.40298, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TJChemicalWebsite\Bin\SunMkr2.0.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attachment.cs" />
+    <Compile Include="Filter.cs" />
+    <Compile Include="IdGenerator.cs" />
+    <Compile Include="MMT.cs" />
+    <Compile Include="MMTContent.cs" />
+    <Compile Include="MMTContentEx.cs" />
+    <Compile Include="MMTDelegate.cs" />
+    <Compile Include="MMTStatic.cs" />
+    <Compile Include="Ops\addAttechment.cs" />
+    <Compile Include="Ops\addLabel.cs" />
+    <Compile Include="Ops\delAttachment.cs" />
+    <Compile Include="Ops\Delete.cs" />
+    <Compile Include="Ops\delLabel.cs" />
+    <Compile Include="Ops\doProducer.cs" />
+    <Compile Include="Ops\getContent.cs" />
+    <Compile Include="Ops\GetMMT.cs" />
+    <Compile Include="Ops\GetMMTList.cs" />
+    <Compile Include="Ops\MarkDel.cs" />
+    <Compile Include="Ops\MMTOps.cs" />
+    <Compile Include="Ops\Post.cs" />
+    <Compile Include="Ops\postContent.cs" />
+    <Compile Include="Ops\Recover.cs" />
+    <Compile Include="Ops\Update.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PSGMODE.cs" />
+    <Compile Include="RSSFeed.cs" />
+    <Compile Include="Sql\sqlMMTGetList.cs" />
+    <Compile Include="Sql\sqlMMTUpdate.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
