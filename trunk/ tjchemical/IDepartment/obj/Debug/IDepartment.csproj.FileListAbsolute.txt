@@ -1,0 +1,10 @@
+E:\学院网站\src\SSEWeb2009\IDepartment\bin\Debug\IDepartment.dll
+E:\学院网站\src\SSEWeb2009\IDepartment\bin\Debug\IDepartment.pdb
+E:\学院网站\src\SSEWeb2009\IDepartment\obj\Debug\ResolveAssemblyReference.cache
+E:\学院网站\src\SSEWeb2009\IDepartment\obj\Debug\IDepartment.dll
+E:\学院网站\src\SSEWeb2009\IDepartment\obj\Debug\IDepartment.pdb
+E:\医学院网站\src\IDepartment\obj\Debug\ResolveAssemblyReference.cache
+E:\医学院网站\src\IDepartment\obj\Debug\IDepartment.dll
+E:\医学院网站\src\IDepartment\bin\Debug\IDepartment.dll
+E:\医学院网站\src\IDepartment\bin\Debug\IDepartment.pdb
+E:\医学院网站\src\IDepartment\obj\Debug\IDepartment.pdb
