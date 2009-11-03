@@ -1,0 +1,159 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="default.master.cs" Inherits="MasterPages_default" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
+<%@ Register src="../UserControl/LoginAccess.ascx" tagname="LoginAccess" tagprefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>同济大学软件学院</title>
+
+<link href="~/CssClass/Bright.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="~/CssClass/jd.gallery.css" type="text/css" media="screen" charset="utf-8" />
+<asp:ContentPlaceHolder id="head" runat="server">
+</asp:ContentPlaceHolder>
+
+<!-- 学院图片栏  引入jQuery -->
+<script type="text/javascript" src="<%= ConstValue.PureURL%>JavaScript/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="<%= ConstValue.PureURL%>JavaScript/ddaccordion.js"></script>
+<script language="javascript" type="text/javascript">
+/*----------------加载活动板---------------------*/
+ddaccordion.init({
+	headerclass: "silverheader", //Shared CSS class name of headers group
+	contentclass: "submenu", //Shared CSS class name of contents group
+	revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 200, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+	defaultexpanded: [0], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	onemustopen: true, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){//custom code to run when headers have initalized
+		//do nothing
+		
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+
+})
+</script>
+<script type="text/javascript" src="<%= ConstValue.PureURL%>JavaScript/jcarousellite_1.0.1.pack.js"></script>
+<script type="text/javascript" src="<%= ConstValue.PureURL%>JavaScript/YlMarquee.js"></script>
+
+<script type="text/javascript">
+var $j = jQuery.noConflict();
+$j(document).ready(function () {
+/*--------------------导航栏加载-------------------------------*/
+
+/*----------------------------Ajax获取活动板内容---------------------*/
+$j("#loading").ajaxStart(function(){
+$j(this).show();
+});
+$j("#loading").ajaxStop(function(){
+$j(this).hide();
+});
+$j.ajax({
+url: 'XMLData/DefaultActivity.xml',
+type: 'GET',
+dataType: 'xml',
+timeout: 10000,
+cache:false,
+error: function(){
+},
+success: function(xml){
+    var i=1;
+    $j(xml).find('Activity').each(function(){
+        var Title =$j(this).find('Title').text();
+        var StartTime =$j(this).find('StartTime').text();
+        var EndTime =$j(this).find('EndTime').text();
+        var Location=$j(this).find('Location').text();
+        var ID=$j(this).find('ID').text();
+        var thediv=$j('#thediv'+i);
+        if(Title.length>35)
+        {
+        $j('<a></a>').attr("href","#").html(Title.substring(0,34)+'...').appendTo(
+        thediv);
+        }
+        else
+        {
+        $j('<a></a>').attr("href","#").html(Title).appendTo(
+        thediv);
+        }
+        var subdiv=$j('#subdiv'+i);
+        $j("#Title"+i).html(Title);
+        $j("#StartTime"+i).html(StartTime);
+        $j("#EndTime"+i).html(EndTime);
+        $j("#Location"+i).html(Location);
+        $j("#moredetails"+i).attr("href","ActivityDetail.aspx?MMTID="+ID);
+        i++;
+    });
+}
+});
+/*--------------学院图片加载----------------*/
+    $j(".scrollable_demo").jMarquee({
+     visible:5,
+     step:1,
+     direction:"left"
+   });  
+});
+</script>
+
+<script src="<%= ConstValue.PureURL%>JavaScript/mootools.v1.11.js" type="text/javascript"></script>
+<script src="<%= ConstValue.PureURL%>JavaScript/jd.gallery.js" type="text/javascript"></script>
+<script src="<%= ConstValue.PureURL%>JavaScript/jd.gallery.transitions.js" type="text/javascript"></script>
+<script type="text/javascript">
+/*-------------------新闻图片加载-------------------------------*/
+			function startGallery() {
+				var myGallery = new gallery($('myGallery'), {
+					timed: true,
+					showCarousel: false
+/*					defaultTransition: "fadeslideleft"*/
+				});
+			}
+			window.onload=function(){
+		    startGallery();
+            $j("#page").css("visibility","visible");
+            } ;
+</script>
+
+
+</head>
+<body>
+<form id="frm_default" runat="server">
+<asp:ScriptManager ID="scrptMgr" runat="server">
+</asp:ScriptManager>
+<div id="page">
+<div id="background">
+<div id="top"> 
+<div id="logo">
+    <span>热烈庆祝中华人民共和国建立60周年</span>
+</div> 
+<div id="top_right"> 
+<!--Quick Link--> 
+<div id="quicklinkdiv"> 
+<div class="text_part">
+<a class="index" href="<%= ConstValue.PureURL%>Default.aspx">首页</a><span>|</span>
+<a class="English" href="http://sse.tongji.edu.cn/English/">English</a><span>|</span>
+<a class="rss" href="#">RSS</a><span>|</span>
+</div>
+<div id="login"><uc1:LoginAccess ID="LoginAccess1" runat="server" /></div>
+</div> 
+</div> 
+</div>
+<!--Content-->
+<asp:ContentPlaceHolder id="phctnt_body" runat="server">
+</asp:ContentPlaceHolder>
+
+<div style="text-align: center;">
+<iframe id="ifrm_btmbar" runat="server" frameborder="0" height="100px" width="961px" scrolling="no"></iframe>
+</div>
+</div>
+</div>
+</form>
+</body>
+</html>
