@@ -1,0 +1,163 @@
+﻿/*
+body { font-family:Arial; color:#656565; font-size:14px; margin:0px}
+a{ text-decoration:none; color:#656565}
+a:hover{ text-decoration:underline}
+#top{ width:960px; margin-left:auto; margin-right:auto; padding:0; margin-top:0; margin-bottom:0;clear:both;}
+#top_left{ float:left}
+#top_right{ float:right}
+#top_right a:hover{ color:#bdd9f7}
+#body{ width:960px; margin-left:auto; margin-right:auto;clear:both;}
+#bottom{ width:960px; margin-left:auto; margin-right:auto;clear:both;}
+
+#content_left{ width:50%; float:left}
+#content_right{ width:50%; float:left}
+
+.BottomBar{ background-image:url(../Resources/Images/btm_bg.png); background-position:left top; background-repeat:repeat-x; width:920px; height:55px; float:left; font-size:12px; line-height:18px; padding-top:6px}
+.BottomSide{ float:left}
+.BtmLeft{ float:left}
+.BtmRight{ float:right}
+
+#memu{ width:960px;padding:0;margin-left:auto; margin-right:auto; margin-bottom:0; margin-top:0;clear:both;}
+#menu ul {	margin-left:auto;margin-right:auto; padding:0;width:962px;height:39px;list-style-type:none; font:15px "黑体"; background:url(../Resources/Images/menuback.jpg) no-repeat;}
+#menu ul li {position:relative;	top:0;left:38px;float:left; padding:0; margin:0 1px 0 0;width:109px;}
+#menu ul li dl { width:109px; margin: 0 1px 0 0; padding: 0;border: 0; }
+#menu ul li dt a,#menu ul li dd a{ display:block;}
+#menu ul li dt:hover{background: #DBEAFB;}
+#menu ul li dt { margin:0; padding: 10px 0;border:0;text-align:center;}
+#menu ul li dt a ,#menu ul li dt a:visited {display:block; color:#000;text-decoration:none;}
+#menu ul li dd{	width: 112px;margin: 0;	padding: 0;	border: 0;text-align: center;}
+#menu ul li dd.last {height:40px;background:url(../Resources/Images/menulast.png) no-repeat;}
+#menu ul li dd a, #menu ul li dd a:visited {display:block; color:#000; text-decoration:none; padding:4px 4px 4px 3px;background:url(../Resources/Images/menulist.jpg) no-repeat;height:20px;}
+#menu ul li dd { display:none;}
+#menu ul li:hover dd , #menu ul li a:hover dd { display:block;}
+#menu ul li:hover, #menu ul li a:hover { border:0;}
+#menu ul li dd a:hover {background:url(../Resources/Images/menusel.jpg) no-repeat; color:#000;}s	
+#menu ul table { border-collapse:collapse; padding:0; margin:-1px; font-size:20px;}
+*/
+
+body { font-family:Arial; color:#656565; font-size:14px; margin:0px; background-color:#fff;}
+#PageBody {width:960px; background:#fff; margin:0 auto;}
+
+a{ text-decoration:none; color:#656565}
+a:hover{ text-decoration:underline}
+
+#top{ width:960px; margin:0 auto; background-image:url(../Teaching/Resources/Images/TopLogo.jpg); background-repeat:no-repeat; height:90px;}
+#top_left{ float:left}
+#top_right{padding-top:3px;height: 13px; float:right; position:relative; right:20px}
+.text_part{ height: 13px; float:left; font-size:13px}
+#top_right span{ margin:0 5px; color:Gray}
+#login{ float:left; height:22px}
+#login a{ text-decoration:none; color:Gray; font-size:13px}
+#login a:hover{ text-decoration:underline}
+.index{ font-weight:bold; color:#ff2a00}
+.English{ color:#028bff; font-size:12px; font-weight:bold}
+.rss{ color:#ff2a00; font-size:12px}
+#body{ width:960px; margin-left:auto; margin-right:auto}
+
+h1{font-size:16px; font-family:黑体; font-weight:normal; margin:0px; padding: 15px 10px 10px 10px; clear:both;}
+#SiteMap{background:#fff url(../Teaching/Resources/Images/TransBar.jpg) top repeat-x; clear:both;}
+#SiteMapContainer{padding:0 10px 10px 10px; }
+
+#bottom{padding:15px;background:#ccc url(../Teaching/Resources/Images/BottomTop.jpg) top no-repeat; line-height:22px; font-size:12px; }
+
+#content_left{ width:50%; float:left}
+#content_right{ width:50%; float:left}
+
+.BottomBar{ background-image:url(../Resources/Images/btm_bg.png); background-position:left top; background-repeat:repeat-x; width:920px; height:55px; float:left; font-size:12px; line-height:18px; padding-top:6px}
+.BottomSide{ float:left}
+.BtmLeft{ float:left}
+.BtmRight{ float:right}
+
+#memu{ padding:0;	margin:0 auto;}
+#menu ul 
+{
+    padding:0;
+    margin:0;
+	width:960px;
+	height:36px;
+	list-style-type:none; 
+	font:15px "黑体"; 
+	color:#fff;
+	background-image:url(../Teaching/Resources/Images/MenuBar.jpg);
+	}
+
+#menu ul li {
+	position:relative;
+	top:0;
+	left:40px;
+	float:left;
+    padding:0; 
+	margin:0;
+	width:100px;
+	color:#fff;
+	}
+
+#menu ul li dl { 
+	width:100px;
+    margin: 0; 
+	padding:0px;
+	border: 0; 
+	height:36px;
+	}
+
+#menu ul li dt a{ display:block; font-size:16px; height:30px; padding-top:6px;}
+
+#menu ul li dt:hover{background: #333;}
+
+#menu ul li dt { 
+	margin:0;
+	padding:0px;
+	border:0;
+  	text-align:center;
+	}
+
+#menu ul li dt a ,#menu ul li dt a:visited {
+	display:block; 
+    color:#fff;
+    text-decoration:none;
+	}
+
+#menu ul li dd
+{
+	width: 100px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	text-align: center;
+}
+
+#menu ul li dd.last 
+{
+    border-bottom: 2px solid #000;
+	}
+
+#menu ul li dd a, #menu ul li dd a:visited {
+	display:block; 
+	color:#fff; 
+    text-decoration:none; 
+	background-color:#666;
+	padding:7px 0;
+	padding-left:5px;
+	font-family:Arial;
+    font-size:14px;
+    text-align:left;
+    }
+    
+#menu ul li dd a:hover {
+	background-color:#333;
+    color:#fff;
+	padding-left:5px;
+    font-family:Arial;
+    font-size:14px;
+	}
+
+#menu ul li dd { display:none;}
+
+#menu ul li:hover dd , #menu ul li a:hover dd { display:block;}
+
+#menu ul li:hover, #menu ul li a:hover { border:0;}
+	
+#menu ul table { border-collapse:collapse; 
+    padding:0; 
+	margin:-1px;
+	font-size:16px;}
