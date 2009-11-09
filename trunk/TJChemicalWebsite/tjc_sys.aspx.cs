@@ -14,7 +14,7 @@ public partial class tjc_sys : System.Web.UI.Page
 
             if (Session["IdentifyNumber"] == null)
                 SysCom.Login.LoginRedirect(Request.Url.ToString());
-          //  int i = 0;
+         
         }
 
     }
