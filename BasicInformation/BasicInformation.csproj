@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{38E01305-A85C-4042-89A8-463C491CBC0B}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -33,31 +33,31 @@
   <ItemGroup>
     <Reference Include="ADBS, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WebSite\Bin\ADBS.dll</HintPath>
+      <HintPath>..\TJChemicalWebsite\Bin\ADBS.dll</HintPath>
     </Reference>
     <Reference Include="AFS, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WebSite\Bin\AFS.dll</HintPath>
+      <HintPath>..\TJChemicalWebsite\Bin\AFS.dll</HintPath>
     </Reference>
     <Reference Include="Control, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WebSite\Bin\Control.dll</HintPath>
+      <HintPath>..\TJChemicalWebsite\Bin\Control.dll</HintPath>
     </Reference>
     <Reference Include="Core, Version=0.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WebSite\Bin\Core.dll</HintPath>
+      <HintPath>..\TJChemicalWebsite\Bin\Core.dll</HintPath>
     </Reference>
     <Reference Include="Global, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WebSite\Bin\Global.dll</HintPath>
+      <HintPath>..\TJChemicalWebsite\Bin\Global.dll</HintPath>
     </Reference>
     <Reference Include="Interface, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WebSite\Bin\Interface.dll</HintPath>
+      <HintPath>..\TJChemicalWebsite\Bin\Interface.dll</HintPath>
     </Reference>
     <Reference Include="Operation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WebSite\Bin\Operation.dll</HintPath>
+      <HintPath>..\TJChemicalWebsite\Bin\Operation.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
