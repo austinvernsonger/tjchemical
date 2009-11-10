@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicInformation", "BasicIn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInfo", "StudentInfo\StudentInfo.csproj", "{A7AEA0A1-DC97-42D9-8540-F665BBDD6567}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMBL.Core", "SMBL.Core\SMBL.Core.csproj", "{5948B67E-D0FA-4BE9-A214-F915E39D5E02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{A7AEA0A1-DC97-42D9-8540-F665BBDD6567}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7AEA0A1-DC97-42D9-8540-F665BBDD6567}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7AEA0A1-DC97-42D9-8540-F665BBDD6567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5948B67E-D0FA-4BE9-A214-F915E39D5E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5948B67E-D0FA-4BE9-A214-F915E39D5E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5948B67E-D0FA-4BE9-A214-F915E39D5E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5948B67E-D0FA-4BE9-A214-F915E39D5E02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
