@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>软件学院网站管理系统</title>
+    <title>医学院网站管理系统</title>
     
     <link rel="stylesheet" type="text/css" href="../CssClass/sysmgr_styles.css" />
     <link rel="stylesheet" type="text/css" href="../CssClass/sysmgr_contentstyle.css" />
@@ -24,7 +24,7 @@
             <div id="top_center">
             <div class="top_center"> 
                 <img alt="" src="../Resources/Images/sm_logo.png" />
-                <div class="h_span" style="position: relative"><span>欢迎使用软件学院网站管理系统  </span>
+                <div class="h_span" style="position: relative"><span>欢迎使用医学院网站管理系统  </span>
                 <a href="<%= ConstValue.PureURL%>Default.aspx" class="title_a">返回首页</a></div>
             </div>
             </div>
