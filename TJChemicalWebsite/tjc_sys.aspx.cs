@@ -12,11 +12,16 @@ public partial class tjc_sys : System.Web.UI.Page
         if (!IsPostBack)
         {
 
+
+        //    if (Session["IdentifyNumber"] == null)
+          //      SysCom.Login.LoginRedirect(Request.Url.ToString());
+
            // if (Session["IdentifyNumber"] == null)
                // SysCom.Login.LoginRedirect(Request.Url.ToString());
             Department.Interface.DepartmentList.GenerateNavigation(
                    ref pnl_nav, (String)Session["IdentifyNumber"],
                    "dpmntTitle", "treeCssClass", "ifrm_content");
+
          
         }
 
