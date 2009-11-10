@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>登录--同济大学软件学院</title>
+    <title>登录--同济大学医学院</title>
     <link href="../CssClass/login_bright.css" rel="stylesheet" type="text/css" />
     <link href="../CssClass/Bright.css" rel="stylesheet" type="text/css" />
     <script language='javascript' type='text/javascript'>    
@@ -62,11 +62,11 @@
     <asp:Panel id="bottom_bar" runat="server" CssClass="bottom_bar">
 	    <table border="0" cellpadding="0" id="bottom_table">
           <tr>
-            <td>上海市嘉定区曹安公路4800号</td>
-            <td style="text-align:right;">CopyRight 2009 SSE,TJU</td>
+            <td>上海市四平路</td>
+            <td style="text-align:right;">CopyRight</td>
           </tr>
           <tr>
-            <td>电话：69579374 | 传真：69589374 | E-mail：<a href="mailto:sse@tongji.edu.cn">sse@tongji.edu.cn</a></td>
+            <td>电话： | 传真：| E-mail：</a></td>
             <td style="text-align:right;">
                 <asp:HyperLink ID="lnk_dev" runat="server" NavigateUrl="#">Developer Team</asp:HyperLink>
             </td>
