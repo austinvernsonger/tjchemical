@@ -27,12 +27,9 @@ public class ConstValue
     {
         get
         {
-            if (_url == null)
-            {
                 _url = "http://" + HttpContext.Current.Request.Url.Authority + 
                     HttpContext.Current.Request.ApplicationPath;
                 if (!_url.EndsWith("/")) _url += "/";
-            }
             return _url;
         }
     }
