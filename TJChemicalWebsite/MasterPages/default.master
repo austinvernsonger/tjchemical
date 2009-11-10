@@ -7,7 +7,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<title>同济大学软件学院</title>
+<title>同济大学医学院</title>
 
 <link href="~/CssClass/Bright.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="~/CssClass/jd.gallery.css" type="text/css" media="screen" charset="utf-8" />
