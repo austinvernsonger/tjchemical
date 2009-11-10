@@ -21,8 +21,8 @@ namespace SysCom
         /// 端口：587
         /// 服务器：smtp.gmail.com
         /// </summary>
-        private static readonly String mailAccount = "admin.sse.tju@gmail.com";
-        private static readonly String mailPassword = "sunwell23";
+        private static readonly String mailAccount = "ttjc33@gmail.com";
+        private static readonly String mailPassword = "1123581321";
         private static readonly String mailServer = "smtp.gmail.com";
         private static readonly Int32 mailPort = 587;
         private static MailMessage reportMail;
