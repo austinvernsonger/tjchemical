@@ -89,7 +89,7 @@ namespace Department.Interface
         static public void GenerateNavigation(ref System.Web.UI.WebControls.Panel Container, String ID, 
             String SubTitleCssClass, String TreeCssClass, String TargetWindow)
         {
-            Boolean isStudent = false;  // Shoude be change to get the correct state.
+            Boolean isStudent = true;  // Shoude be change to get the correct state.
             for (int i = 0; i < gDepartments.Count; ++i)
             {
                 TreeView tmpTree = (isStudent) ?

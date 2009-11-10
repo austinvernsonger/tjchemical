@@ -28,7 +28,7 @@ public class WebSiteRegister
     public static Boolean RegisterDepartment()
     {
         Department.Interface.DepartmentList.Register("学生信息管理", new StudentInfo.StudentInfoRegister());
-
+      
 
         return true;
     }
