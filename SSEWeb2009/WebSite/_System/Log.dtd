@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-
-<!ELEMENT Log       (LogItem*)>
-<!ELEMENT LogItem   (Date, Message, User)>
-<!ELEMENT Date      (#PCDATA)>
-<!ELEMENT Message   (#PCDATA)>
-<!ELEMENT User      (#PCDATA)>
-
-<!ATTLIST LogItem   LID CDATA   #REQUIRED>
