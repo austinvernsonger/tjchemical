@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ReportDescriptor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>未命名问卷</Name>
+  <Type>REPORT</Type>
+  <ValidationDescriptor />
+  <DisplayDescriptor />
+  <ResultDescriptor>
+    <IsKey>false</IsKey>
+    <MustNotEmpty>false</MustNotEmpty>
+    <MaxSize>0</MaxSize>
+    <ResultEditMode>Both</ResultEditMode>
+    <ResultViewMode>View</ResultViewMode>
+  </ResultDescriptor>
+  <Items />
+</ReportDescriptor>

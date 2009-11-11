@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Engineering/MseHomePage.master" AutoEventWireup="false" CodeFile="Enrollment.master.cs" Inherits="Engineering_zs_Enrollment" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <link href="../../CssClass/EngineeringSubPage.css" rel="stylesheet" type="text/css" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContentPlace" Runat="Server">
+    <div id="banner_container">
+        <div id="banner_info">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">page info
+            </asp:ContentPlaceHolder>
+            
+        </div>
+        <div id="banner_pic">
+            
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">picpicpicpicpicpicpic
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    
+    <div id="bg_container">
+        <div id ="space">
+         
+        </div>
+        <div id = "menu_container">  
+            <div id = "menu_title">导向链接</div>
+            <ul>
+                <li><a href='<%=Request.ApplicationPath +"/Engineering/zs/regulation.aspx"%>'>招生章程</a></li>
+                <li><a href='<%=Request.ApplicationPath +"/Engineering/zs/process.aspx"%>'>招生流程</a></li>
+                <li><a href='<%=Request.ApplicationPath +"/Engineering/zs/FAQ.aspx"%>'>常见问题</a></li>
+                <li><a href='<%=Request.ApplicationPath +"/Engineering/zs/showhistory.aspx"%>'>成果展示</a></li>
+            </ul> 
+        </div>
+        <div id="content_container"  >
+            <div id="content_title">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                    <h1>标题信息</h1>
+                </asp:ContentPlaceHolder>
+            </div>
+            <div style="float:left;font-size:11px;background-color:#EEE;height:11px;width:688px;">
+             
+            </div>
+            <div class="bg_edge" style="background:url(../Resources/Images/bg_content_top.png) no-repeat"></div>
+            <div id="content_list">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                    list
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="bg_edge" style="padding-bottom:18px;background:url(../Resources/Images/bg_content_bottom.png) no-repeat"></div>
+        </div>
+    </div>
+</asp:Content>
+

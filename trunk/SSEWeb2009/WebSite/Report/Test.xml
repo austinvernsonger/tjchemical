@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<ReportDescriptor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>未命名问卷</Name>
+  <Type>REPORT</Type>
+  <ValidationDescriptor />
+  <DisplayDescriptor />
+  <ResultDescriptor>
+    <IsKey>false</IsKey>
+    <MustNotEmpty>false</MustNotEmpty>
+    <MaxSize>0</MaxSize>
+    <ResultEditMode>Both</ResultEditMode>
+    <ResultViewMode>View</ResultViewMode>
+  </ResultDescriptor>
+  <Items>
+    <Item xsi:type="ItemDescriptor">
+      <Name>学号</Name>
+      <Type>STUDENTID</Type>
+      <ValidationDescriptor />
+      <DisplayDescriptor />
+      <ResultDescriptor>
+        <IsKey>true</IsKey>
+        <MustNotEmpty>true</MustNotEmpty>
+        <MaxSize>0</MaxSize>
+        <ResultEditMode>Both</ResultEditMode>
+        <ResultViewMode>View</ResultViewMode>
+      </ResultDescriptor>
+      <Infos />
+    </Item>
+    <Item xsi:type="ItemDescriptor">
+      <Name>未命名项3</Name>
+      <Type>TEXT</Type>
+      <ValidationDescriptor />
+      <DisplayDescriptor />
+      <ResultDescriptor>
+        <IsKey>false</IsKey>
+        <MustNotEmpty>false</MustNotEmpty>
+        <MaxSize>0</MaxSize>
+        <ResultEditMode>Both</ResultEditMode>
+        <ResultViewMode>View</ResultViewMode>
+      </ResultDescriptor>
+      <Infos />
+    </Item>
+    <Item xsi:type="ItemDescriptor">
+      <Name>未命名项4</Name>
+      <Type>TEXT</Type>
+      <ValidationDescriptor />
+      <DisplayDescriptor />
+      <ResultDescriptor>
+        <IsKey>false</IsKey>
+        <MustNotEmpty>false</MustNotEmpty>
+        <MaxSize>0</MaxSize>
+        <ResultEditMode>Both</ResultEditMode>
+        <ResultViewMode>View</ResultViewMode>
+      </ResultDescriptor>
+      <Infos />
+    </Item>
+    <Item xsi:type="ReportDescriptor">
+      <Name>未命名问卷</Name>
+      <Type>REPORT</Type>
+      <ValidationDescriptor />
+      <DisplayDescriptor />
+      <ResultDescriptor>
+        <IsKey>false</IsKey>
+        <MustNotEmpty>false</MustNotEmpty>
+        <MaxSize>0</MaxSize>
+        <ResultEditMode>Both</ResultEditMode>
+        <ResultViewMode>View</ResultViewMode>
+      </ResultDescriptor>
+      <Items>
+        <Item xsi:type="ItemDescriptor">
+          <Name>未命名项</Name>
+          <Type>RICHTEXT</Type>
+          <ValidationDescriptor />
+          <DisplayDescriptor />
+          <ResultDescriptor>
+            <IsKey>false</IsKey>
+            <MustNotEmpty>false</MustNotEmpty>
+            <MaxSize>0</MaxSize>
+            <ResultEditMode>Both</ResultEditMode>
+            <ResultViewMode>View</ResultViewMode>
+          </ResultDescriptor>
+          <Infos />
+        </Item>
+      </Items>
+    </Item>
+    <Item xsi:type="ItemDescriptor">
+      <Name>未命名项</Name>
+      <Type>RICHTEXT</Type>
+      <ValidationDescriptor />
+      <DisplayDescriptor />
+      <ResultDescriptor>
+        <IsKey>false</IsKey>
+        <MustNotEmpty>false</MustNotEmpty>
+        <MaxSize>0</MaxSize>
+        <ResultEditMode>Both</ResultEditMode>
+        <ResultViewMode>View</ResultViewMode>
+      </ResultDescriptor>
+      <Infos />
+    </Item>
+    <Item xsi:type="ItemDescriptor">
+      <Name>我是单选</Name>
+      <Type>SINGLESELECT</Type>
+      <ValidationDescriptor />
+      <DisplayDescriptor />
+      <ResultDescriptor>
+        <IsKey>false</IsKey>
+        <MustNotEmpty>false</MustNotEmpty>
+        <MaxSize>0</MaxSize>
+        <ResultEditMode>Both</ResultEditMode>
+        <ResultViewMode>View</ResultViewMode>
+      </ResultDescriptor>
+      <Infos>
+        <string>123</string>
+        <string>1234</string>
+        <string>12345</string>
+        <string>123456</string>
+        <string>1234567</string>
+      </Infos>
+    </Item>
+    <Item xsi:type="ItemDescriptor">
+      <Name>审核</Name>
+      <Type>ADMINCHECK</Type>
+      <ValidationDescriptor />
+      <DisplayDescriptor />
+      <ResultDescriptor>
+        <IsKey>false</IsKey>
+        <MustNotEmpty>false</MustNotEmpty>
+        <MaxSize>0</MaxSize>
+        <ResultEditMode>Both</ResultEditMode>
+        <ResultViewMode>View</ResultViewMode>
+      </ResultDescriptor>
+      <Infos />
+    </Item>
+    <Item xsi:type="ItemDescriptor">
+      <Name>未命名项123</Name>
+      <Type>TEXT</Type>
+      <ValidationDescriptor />
+      <DisplayDescriptor />
+      <ResultDescriptor>
+        <IsKey>false</IsKey>
+        <MustNotEmpty>false</MustNotEmpty>
+        <MaxSize>0</MaxSize>
+        <ResultEditMode>Both</ResultEditMode>
+        <ResultViewMode>View</ResultViewMode>
+      </ResultDescriptor>
+      <Infos />
+    </Item>
+  </Items>
+</ReportDescriptor>

@@ -1,0 +1,37 @@
+﻿.EditItemLabel
+{
+	float:left;
+	font-size: small;
+	font-weight: bold;
+	margin: 0px;
+	padding: 4px 0 0 0;
+	width: 100px;
+	color: #333;
+}
+
+.EditItemControl
+{
+	margin: 0px;
+	padding: 0px;
+	color: #333;
+}
+
+.ReportHolderPanel
+{
+	margin: 0px 0px 5px 0px;
+	padding: 5px;
+	border: medium solid #3399FF;
+	font-size: medium;
+	font-weight: bold;
+	background-color: #C8E3FF;
+}
+
+.ReportSubItemHolderPanel
+{
+	margin: 5px 5px 5px 20px;
+}
+
+.GeneralEditorHolder
+{
+	float:right;
+}

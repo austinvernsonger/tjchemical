@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="RecruitmentNew_MasterPage" %>
+
+<%@ Register Src="../UserControl/ViewMMT.ascx" TagName="ViewMMT" TagPrefix="uc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Admission/css/MasterStyle.css" rel="stylesheet" type="text/css" />
+   
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="scrpt_admission" runat="server">
+    </asp:ScriptManager>
+    <div id="top">
+        <div id="top_left">
+        </div>
+        <div id="top_right">
+            <a href="#">主站</a> <a href="#">首页</a>
+        </div>
+    </div>
+    <div id="view">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="bottom" align="center" style="margin-top:10px">
+        同济大学软件学院 2009 &copy
+    </div>
+    </form>
+</body>
+</html>
