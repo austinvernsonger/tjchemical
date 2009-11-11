@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{38E01305-A85C-4042-89A8-463C491CBC0B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SysCom</RootNamespace>
+    <AssemblyName>BasicInformation</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ADBS, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebSite\Bin\ADBS.dll</HintPath>
+    </Reference>
+    <Reference Include="AFS, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebSite\Bin\AFS.dll</HintPath>
+    </Reference>
+    <Reference Include="Control, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebSite\Bin\Control.dll</HintPath>
+    </Reference>
+    <Reference Include="Core, Version=0.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebSite\Bin\Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Global, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebSite\Bin\Global.dll</HintPath>
+    </Reference>
+    <Reference Include="Interface, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebSite\Bin\Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Operation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebSite\Bin\Operation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicStudentInfo.cs" />
+    <Compile Include="BasicTeacherInfo.cs" />
+    <Compile Include="MMTInformation.cs" />
+    <Compile Include="Ops\OpBiExecute.cs" />
+    <Compile Include="Ops\OpBiQuery.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SavingTeacherInfo.cs" />
+    <Compile Include="Sql\SqlDeleteAccount.cs" />
+    <Compile Include="Sql\SqlDeleteTeacher.cs" />
+    <Compile Include="Sql\SqlDeleteTeacherExternal.cs" />
+    <Compile Include="Sql\SqlDeleteTeacherOrdinary.cs" />
+    <Compile Include="Sql\SqlGetActivityInformation.cs" />
+    <Compile Include="Sql\SqlGetStudentInfo.cs" />
+    <Compile Include="Sql\SqlGetStudentTable.cs" />
+    <Compile Include="Sql\SqlGetTeacherIdAndName.cs" />
+    <Compile Include="Sql\SqlStudentDelFromAccount.cs" />
+    <Compile Include="Sql\SqlStudentDelFromStudent.cs" />
+    <Compile Include="Sql\SqlStudentInsertToAccount.cs" />
+    <Compile Include="Sql\SqlStudentInsertToStudent.cs" />
+    <Compile Include="Sql\SqlUpdateStudent.cs" />
+    <Compile Include="Sql\SqlInsertAccount.cs" />
+    <Compile Include="Sql\SqlInsertTeacher.cs" />
+    <Compile Include="Sql\SqlInsertTeacherExternal.cs" />
+    <Compile Include="Sql\SqlInsertTeacherOrdinary.cs" />
+    <Compile Include="Sql\SqlSelectTeacher.cs" />
+    <Compile Include="Sql\SqlSelectTeacherAll.cs" />
+    <Compile Include="Sql\SqlSelectTeacherExternal.cs" />
+    <Compile Include="Sql\SqlSelectTeacherOrdinary.cs" />
+    <Compile Include="Sql\SqlTeacherUpdate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Login\Login.csproj">
+      <Project>{18237246-FA82-4C18-9A0E-0E7447C82BD4}</Project>
+      <Name>Login</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MultiMediaText\MultiMediaText.csproj">
+      <Project>{B7387BAE-6A53-479B-903B-FA338EA42F07}</Project>
+      <Name>MultiMediaText</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

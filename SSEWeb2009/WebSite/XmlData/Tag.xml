@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<TagXmlParse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ItemList>
+    <TagNum>1</TagNum>
+    <TagName>本科生</TagName>
+  </ItemList>
+  <ItemList>
+    <TagNum>2</TagNum>
+    <TagName>研究生</TagName>
+  </ItemList>
+  <ItemList>
+    <TagNum>3</TagNum>
+    <TagName>教务处</TagName>
+  </ItemList>
+  <ItemList>
+    <TagNum>4</TagNum>
+    <TagName>竞赛</TagName>
+  </ItemList>
+  <ItemList>
+    <TagNum>5</TagNum>
+    <TagName>党支部</TagName>
+  </ItemList>
+</TagXmlParse>

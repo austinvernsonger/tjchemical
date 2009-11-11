@@ -1,0 +1,138 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainFrame.master.cs" Inherits="Teaching_MainFrame" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Register src="../UserControl/LoginAccess.ascx" tagname="LoginAccess" tagprefix="uc1" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>同济大学教学部</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../CssClass/TeachingMaster.css" rel="stylesheet" type="text/css" />
+    <link href="../CssClass/TeachingFront.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="PageBody">
+    <form id="MainFrame" runat="server">
+    <div>
+        <div id="top">
+            <div id="top_left"></div>
+            <div id="top_right">
+                <div class="text_part">
+                <a class="index" href="<%= ConstValue.PureURL%>Default.aspx">首页</a><span>|</span>
+                <a class="English" href="http://sse.tongji.edu.cn/web/SSE_WEB_ENGLISH/homepage.html">English</a><span>|</span>
+                <a class="rss" href="#">RSS</a><span>|</span>
+                </div>
+                <div id="login"><uc1:LoginAccess ID="LoginAccess1" runat="server" /></div>
+            </div>
+        </div>
+        <div id="menu">
+            <ul>
+                <li>
+                    <!--[if lte IE 6]><a href="#nogo"><table><tr><td><![endif]-->
+                    <dl>
+                        <dt><a href="#">师资介绍</a></dt>
+                        <dd>
+                            <a href='<%=Request.ApplicationPath +"/Teaching/FrontEnd/TeacherInfo.aspx?Orientation=0"%>'>软件工程</a></dd>
+                        <dd>
+                            <a href='<%=Request.ApplicationPath +"/Teaching/FrontEnd/TeacherInfo.aspx?Orientation=1"%>'>嵌入式</a></dd>
+                        <dd>
+                            <a href='<%=Request.ApplicationPath +"/Teaching/FrontEnd/TeacherInfo.aspx?Orientation=2"%>'>大型主机</a></dd>
+                        <dd class="last">
+                            <a href='<%=Request.ApplicationPath +"/Teaching/FrontEnd/TeacherInfo.aspx?Orientation=3"%>'>媒体艺术</a></dd>
+                    </dl>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                </li>
+                <li>
+                    <!--[if lte IE 6]><a href="#nogo"><table><tr><td><![endif]-->
+                    <dl>
+                        <dt><a href="#">管理条例</a></dt>
+                        <dd>
+                            <a href='<%=Request.ApplicationPath +"/Teaching/FrontEnd/TeachingManagement.aspx?Type=0"%>'>教师管理</a></dd>
+                        <dd>
+                            <a href='<%=Request.ApplicationPath +"/Teaching/FrontEnd/TeachingManagement.aspx?Type=1"%>'>学生培养</a></dd>
+                        <dd class="last">
+                            <a href='<%=Request.ApplicationPath +"/Teaching/FrontEnd/TeachingManagement.aspx?Type=2"%>'>过程管理</a></dd>
+                    </dl>
+                   <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                </li>
+                <li>
+                   <!--[if lte IE 6]><a href="#nogo"><table><tr><td><![endif]-->
+                    <dl>
+                        <dt><a href="#">培养方案</a></dt>
+                        <dd>
+                            <a href='<%=Request.ApplicationPath +"/Teaching/FrontEnd/StudentTrainingPlan.aspx?type=0"%>'>本科生</a></dd>
+                        <dd class="last">
+                            <a href='<%=Request.ApplicationPath +"/Teaching/FrontEnd/StudentTrainingPlan.aspx?type=1"%>'>研究生</a></dd>
+                    </dl>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                </li>
+                <li>
+                    <!--[if lte IE 6]><a href="#nogo"><table><tr><td><![endif]-->
+                    <dl>
+                        <dt><a href='<%=Request.ApplicationPath +"/Teaching/FrontEnd/EnterpriseCooperation.aspx"%>'>企业合作</a></dt>
+                    </dl>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                </li>
+                <li>
+                   <!--[if lte IE 6]><a href="#nogo"><table><tr><td><![endif]-->
+                    <dl>
+                        <dt><a href="#">工作指导</a></dt>
+                        <dd>
+                            <a href='<%=Request.ApplicationPath +"/Teaching/FrontEnd/TeachingCommittee.aspx?ID=1"%>'>委员会组成</a></dd>
+                        <dd>
+                            <a href='<%=Request.ApplicationPath +"/Teaching/FrontEnd/TeachingCommittee.aspx?ID=0"%>'>委员会章程</a></dd>
+                        <dd class="last">
+                            <a href='<%=Request.ApplicationPath +"/Teaching/FrontEnd/TeachingCommRecord.aspx"%>'>会议记录</a></dd>
+                    </dl>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                </li>
+                <li>
+                    <!--[if lte IE 6]><a href="#nogo"><table><tr><td><![endif]-->
+                    <dl>
+                        <dt><a href='<%=Request.ApplicationPath +"/Teaching/FrontEnd/DownloadingPage.aspx"%>'>下载专区</a></dt>
+                    </dl>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                </li>
+                <li>
+                   <!--[if lte IE 6]><a href="#nogo"><table><tr><td><![endif]-->
+                    <dl>
+                        <dt><a href='<%=Request.ApplicationPath +"/Teaching/FrontEnd/TeachingReform.aspx"%>'>教改研究</a></dt>
+                    </dl>
+                   <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+                </li>
+                <li>
+                    <!--[if lte IE 6]><a href="#nogo"><table><tr><td><![endif]-->
+                    <dl>
+                        <dt><a href='<%=Request.ApplicationPath +"/sse_sys.aspx"%>'>个人空间</a></dt>
+                    </dl>
+                    <!--[if lte IE 6]></td></tr></table></a><![endif]-->
+               </li>
+            </ul>
+        </div>
+        <div id="body">
+            <asp:ContentPlaceHolder ID="MainContentPlace" runat="server">
+                this is content
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="bottom" style="clear: both;">
+            <div class="BtmLeft">
+                上海市嘉定区曹安公路4800号
+                <br />
+                电话：69589374 | 传真：69589374 | E-mail:sse@tongji.edu.cn
+            </div>
+            <div class="BtmRight">
+                Copyright 2009 SSE, TJU
+                <br />
+                <a href="#">Links</a> | <a href="#">Developer Team</a>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+    </form>
+    </div>
+</body>
+</html>
+

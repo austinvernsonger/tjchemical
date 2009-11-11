@@ -1,0 +1,122 @@
+﻿body { font-family:Arial; color:#656565; font-size:14px; margin:0px; background-color:#666;}
+#PageBody {width:960px; background:#fff; margin:0 auto;}
+
+a{ text-decoration:none; color:#656565}
+a:hover{ text-decoration:underline}
+
+#top{ width:960px; margin:0 auto; background-image:url(../Engineering/Resources/Images/MSETopLogo_1.jpg); height:120px;}
+#top_left{ float:left}
+#top_right{ float:right; width:270px; padding-top:3px;}
+#top_right a{ color:#fff; margin-left:50px;}
+#top_right a:hover{ color:#bdd9f7}
+
+#body{ width:960px; margin-left:auto; margin-right:auto}
+
+h1{font-size:16px; font-family:黑体; font-weight:normal; margin:0px; padding: 15px 10px 10px 10px; clear:both;}
+#SiteMap{background:#fff url(../Engineering/Resources/Images/TransBar.jpg) top repeat-x; clear:both;}
+#SiteMapContainer{padding:0 10px 10px 10px; }
+
+#bottom{padding:15px;background:#ccc url(../Engineering/Resources/Images/MSE_BottomTop.jpg) top no-repeat; line-height:22px; font-size:12px; }
+
+#content_left{ width:50%; float:left}
+#content_right{ width:50%; float:left}
+
+.BottomBar{ background-image:url(../Resources/Images/btm_bg.png); background-position:left top; background-repeat:repeat-x; width:920px; height:55px; float:left; font-size:12px; line-height:18px; padding-top:6px}
+.BottomSide{ float:left}
+.BtmLeft{ float:left}
+.BtmRight{ float:right}
+
+#memu{ padding:0;	margin:0 auto;}
+#menu ul 
+{
+    padding:0;
+    margin:0;
+	width:960px;
+	height:38px;
+	list-style-type:none; 
+	font:15px "黑体"; 
+	color:#fff;
+	background-image:url(../Engineering/Resources/Images/MSEMenuBar_crystal.jpg);
+	}
+
+#menu ul li {
+	position:relative;
+	top:0;
+	left:38px;
+	float:left;
+    padding:0; 
+	margin:0;
+	width:145px;
+	color:#f00;
+	}
+
+#menu ul li dl { 
+	width:145px;
+    margin: 0; 
+	padding:0px;
+	border: 0; 
+	height:38px;
+	}
+
+#menu ul li dt a{ display:block; font-size:16px; height:30px; padding-top:8px;}
+
+#menu ul li dt:hover{background: #0B75A4;}
+
+#menu ul li dt { 
+	margin:0;
+	padding:0px;
+	border:0;
+  	text-align:center;
+	}
+
+#menu ul li dt a ,#menu ul li dt a:visited {
+	display:block; 
+    color:#fff;
+    text-decoration:none;
+	}
+
+#menu ul li dd
+{
+	width: 145px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	text-align: center;
+}
+
+#menu ul li dd.last 
+{
+    border-bottom: 4px solid #0B75A4;
+	}
+
+#menu ul li dd a, #menu ul li dd a:visited {
+	display:block; 
+	color:#fff; 
+    text-decoration:none; 
+	background-color:#228DB7;
+	padding:7px 0;
+	padding-left:5px;
+	font-family:Arial;
+    font-size:14px;
+    text-align:left;
+    }
+    
+#menu ul li dd a:hover {
+	background-color:#0B75A4;
+    color:#fff;
+	padding-left:5px;
+    font-family:Arial;
+    font-size:14px;
+	}
+
+#menu ul li dd { display:none;}
+
+#menu ul li:hover dd , #menu ul li a:hover dd { display:block;}
+
+#menu ul li:hover, #menu ul li a:hover { border:0;}
+	
+#menu ul table { border-collapse:collapse; 
+    padding:0; 
+	margin:-1px;
+	font-size:16px;}
+	

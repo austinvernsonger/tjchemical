@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+    Example
+    <SundayMaker>
+        <DBProvider TYPE="SQLDB" MaxConn="1000">
+            <DBName>ExampleDB</DBName>
+            <DBPath>ExampleURL or IP</DBPath>
+            <UserName>sa</UserName>
+            <Password>pwd</Password>
+        </DBProvider>
+        
+        <ConnectionString TYPE="SQLDB">Provider Microsoft SQL Server...</ConnectionString>
+        
+        <FileLocate MaxSize="10000" MaxCacheSize="1000">
+            <Title>Error</Title>
+            <Path>/Logs/err.log</Path>
+        </FileLocate>
+        
+        <CacheReg>
+            <Cache Id="asdjag8wetsdasu5rqwha">
+                <Name>News</Name>
+            </Cache>
+        </CacheReg>
+        
+        <Page Code="404">
+            <Path>/System/404.aspx</Path>
+        </Page>
+    </SundayMaker>
+-->
+
+<!ELEMENT SundayMaker (DBProvider+,ConnectString+,CacheReg*,(FileLocate|Page)*)>
+
+<!--First Level-->
+<!ELEMENT DBProvider    (DBName,DBPath,UserName,Password)>
+<!ELEMENT ConnectString (#PCDATA)>
+<!ELEMENT CacheReg      (Cache*)>
+<!ELEMENT FileLocate    (Title,Path)>
+<!ELEMENT Page          (Path)>
+
+<!--Second Level-->
+<!ELEMENT DBName        (#PCDATA)>
+<!ELEMENT DBPath        (#PCDATA)>
+<!ELEMENT UserName      (#PCDATA)>
+<!ELEMENT Password      (#PCDATA)>
+
+<!ELEMENT String        (#PCDATA)>
+
+<!ELEMENT Cache         (Name)> <!--The name can be used to specified a cache file-->
+
+<!ELEMENT Title         (#PCDATA)>
+<!ELEMENT Path          (#PCDATA)>
+<!ELEMENT MaxSize       EMPTY>
+<!ELEMENT MaxCacheSize  EMPTY>
+
+<!--Third Level-->
+<!ELEMENT Name          (#PCDATA)>
+
+<!--Attribute-->
+<!ATTLIST DBProvider Name ID #REQUIRED>
+<!ATTLIST DBProvider TYPE (OLEDB|SQLDB|ORACLE|MYSQL) #REQUIRED>
+<!ATTLIST ConnectString TYPE (OLEDB|SQLDB|ORACLE|MYSQL) #REQUIRED>
+<!ATTLIST Cache Id ID #REQUIRED>
+<!ATTLIST DBProvider MaxConn CDATA #REQUIRED>
+<!ATTLIST FileLocate MaxSize CDATA #REQUIRED>
+<!ATTLIST FileLocate MaxCacheSize CDATA #REQUIRED>
+<!ATTLIST Page Code CDATA #REQUIRED>

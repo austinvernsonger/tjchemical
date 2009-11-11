@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<SendConfig>
+  <Sender>
+    <Address>labcenter.notice@gmail.com</Address>
+    <Password>icorelabcenter</Password>
+  </Sender>
+  <Host>
+    <Address>smtp.gmail.com</Address>
+    <Port>587</Port>
+  </Host>
+</SendConfig>

@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B0B4B186-866C-48CA-AB92-C22AAFFBE917}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LabCenter</RootNamespace>
+    <AssemblyName>LabCenter</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Core, Version=0.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebSite\Bin\Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Global, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebSite\Bin\Global.dll</HintPath>
+    </Reference>
+    <Reference Include="IDepartment, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebSite\Bin\IDepartment.dll</HintPath>
+    </Reference>
+    <Reference Include="Interface, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebSite\Bin\Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TeamSystem.Data.UnitTesting, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Operation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebSite\Bin\Operation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authority\Authority.cs" />
+    <Compile Include="Authority\AuthorityManage.cs" />
+    <Compile Include="Authority\ManagerConn.cs" />
+    <Compile Include="Authority\ManagerInfo.cs" />
+    <Compile Include="Authority\Ops\OpAuthorityExecute.cs" />
+    <Compile Include="Authority\Ops\OpAuthorityQuery.cs" />
+    <Compile Include="Authority\Sql\SqlAddAuthority.cs" />
+    <Compile Include="Authority\Sql\SqlAddManager.cs" />
+    <Compile Include="Authority\Sql\SqlDelAuthority.cs" />
+    <Compile Include="Authority\Sql\SqlDelManager.cs" />
+    <Compile Include="Authority\Sql\SqlGetAllManagers.cs" />
+    <Compile Include="Authority\Sql\SqlGetByID.cs" />
+    <Compile Include="Authority\Sql\SqlGetManager.cs" />
+    <Compile Include="Authority\Sql\SqlGetManagersByID.cs" />
+    <Compile Include="Authority\Sql\SqlGetManagersByName.cs" />
+    <Compile Include="Authority\Sql\SqlHasAuthority.cs" />
+    <Compile Include="Authority\Sql\SqlHasFunction.cs" />
+    <Compile Include="Authority\Sql\SqlIsSuper.cs" />
+    <Compile Include="Authority\Sql\SqlSetManagerSuper.cs" />
+    <Compile Include="Equipment\DeviceApplyTable.cs" />
+    <Compile Include="Equipment\DeviceApplyTableDelete.cs" />
+    <Compile Include="Equipment\DeviceApplyTableDetails.cs" />
+    <Compile Include="Equipment\DeviceApplyTableUpdate.cs" />
+    <Compile Include="Equipment\DeviceApplyTableView.cs" />
+    <Compile Include="Equipment\DeviceDeleteEquip.cs" />
+    <Compile Include="Equipment\DeviceInsertEquip.cs" />
+    <Compile Include="Equipment\DeviceReturnManager.cs" />
+    <Compile Include="Equipment\DeviceUpdateEquip.cs" />
+    <Compile Include="Equipment\EquipDetails.cs" />
+    <Compile Include="Equipment\EquipmentManager.cs" />
+    <Compile Include="Equipment\EquiView.cs" />
+    <Compile Include="Equipment\ExportEquiView.cs" />
+    <Compile Include="Equipment\MaterialApplyManage.cs" />
+    <Compile Include="Equipment\MaterialApplyTable.cs" />
+    <Compile Include="Equipment\MaterialApplyTableDelete.cs" />
+    <Compile Include="Equipment\MaterialApplyTableDetails.cs" />
+    <Compile Include="Equipment\MaterialApplyTableUpdate.cs" />
+    <Compile Include="Equipment\MaterialInfo.cs" />
+    <Compile Include="Equipment\MaterialInfoDelete.cs" />
+    <Compile Include="Equipment\MaterialInfoDetails.cs" />
+    <Compile Include="Equipment\MaterialInfoInsert.cs" />
+    <Compile Include="Equipment\MaterialInfoUpdate.cs" />
+    <Compile Include="Equipment\MaterialManage.cs" />
+    <Compile Include="Equipment\OpenDeviceDelete.cs" />
+    <Compile Include="Equipment\OpenDeviceDetails.cs" />
+    <Compile Include="Equipment\OpenDeviceInsert.cs" />
+    <Compile Include="Equipment\OpenDeviceList.cs" />
+    <Compile Include="Equipment\OpenDeviceManage.cs" />
+    <Compile Include="Equipment\OpenDeviceUpdate.cs" />
+    <Compile Include="Equipment\OpenEquipmentManager.cs" />
+    <Compile Include="Equipment\Ops\OpEquiExecute.cs" />
+    <Compile Include="Equipment\Ops\OpEquipmentExecute.cs" />
+    <Compile Include="Equipment\Ops\OpEquiQuery.cs" />
+    <Compile Include="Equipment\Sql\SqlAddEquipment.cs" />
+    <Compile Include="Equipment\Sql\SqlAddMaterial.cs" />
+    <Compile Include="Equipment\Sql\SqlAddOpenDevice.cs" />
+    <Compile Include="Equipment\Sql\SqlApplyMaterial.cs" />
+    <Compile Include="Equipment\Sql\SqlDeleteDeviceApplyTable.cs" />
+    <Compile Include="Equipment\Sql\SqlDeleteEquip.cs" />
+    <Compile Include="Equipment\Sql\SqlDeleteMaterialApplyTable.cs" />
+    <Compile Include="Equipment\Sql\SqlDeleteMaterialInfo.cs" />
+    <Compile Include="Equipment\Sql\SqlDeleteOpenDevice.cs" />
+    <Compile Include="Equipment\Sql\SqlDeviceApply.cs" />
+    <Compile Include="Equipment\Sql\SqlDeviceApplyTableDetails.cs" />
+    <Compile Include="Equipment\Sql\SqlGetDeviceApplyTableView.cs" />
+    <Compile Include="Equipment\Sql\SqlGetEquipDetails.cs" />
+    <Compile Include="Equipment\Sql\SqlGetEquipView.cs" />
+    <Compile Include="Equipment\Sql\SqlGetExportEquiView.cs" />
+    <Compile Include="Equipment\Sql\SqlGetMaterialApplyTable.cs" />
+    <Compile Include="Equipment\Sql\SqlGetMaterialInfo.cs" />
+    <Compile Include="Equipment\Sql\SqlGetMaterialInfoDetails.cs" />
+    <Compile Include="Equipment\Sql\SqlGetMaxId.cs" />
+    <Compile Include="Equipment\Sql\SqlGetOpenDevice.cs" />
+    <Compile Include="Equipment\Sql\SqlGetOpenDeviceDetails.cs" />
+    <Compile Include="Equipment\Sql\SqlGetOpenDeviceList.cs" />
+    <Compile Include="Equipment\Sql\SqlGetOpenMaterial.cs" />
+    <Compile Include="Equipment\Sql\SqlGetUserDeviceAppliedTable.cs" />
+    <Compile Include="Equipment\Sql\SqlGetUserDeviceApplyingTable.cs" />
+    <Compile Include="Equipment\Sql\SqlGetUserMaterialAppliedTable.cs" />
+    <Compile Include="Equipment\Sql\SqlGetUserMaterialApplyingTable.cs" />
+    <Compile Include="Equipment\Sql\SqlInsertEquip.cs" />
+    <Compile Include="Equipment\Sql\SqlInsertOpenDevice.cs" />
+    <Compile Include="Equipment\Sql\SqlMaterialApplyTableDetails.cs" />
+    <Compile Include="Equipment\Sql\SqlMaterialInfoInsert.cs" />
+    <Compile Include="Equipment\Sql\SqlReturnDevice.cs" />
+    <Compile Include="Equipment\Sql\SqlTest.cs" />
+    <Compile Include="Equipment\Sql\SqlUpdateDeviceApplyTable.cs" />
+    <Compile Include="Equipment\Sql\SqlUpdateEquip.cs" />
+    <Compile Include="Equipment\Sql\SqlUpdateMaterialApplyTable.cs" />
+    <Compile Include="Equipment\Sql\SqlUpdateMaterialInfo.cs" />
+    <Compile Include="Equipment\Sql\SqlUpdateOpenDevice.cs" />
+    <Compile Include="Equipment\TestManager.cs" />
+    <Compile Include="Authority\MngRegister.cs" />
+    <Compile Include="Equipment\UserDeviceAppliedTable.cs" />
+    <Compile Include="Equipment\UserDeviceApplyingTable.cs" />
+    <Compile Include="Equipment\UserMaterialAppliedTable.cs" />
+    <Compile Include="Equipment\UserMaterialApplyingTable.cs" />
+    <Compile Include="LabUtility\Demo.cs" />
+    <Compile Include="LabUtility\EmailUtility\SmtpMailer.cs" />
+    <Compile Include="LabUtility\GridDataUtility\ExcelDataCtrl.cs" />
+    <Compile Include="LabUtility\GridDataUtility\GridDataCtrl.cs" />
+    <Compile Include="LabUtility\GridDataUtility\IInputable.cs" />
+    <Compile Include="LabUtility\GridDataUtility\Person.cs" />
+    <Compile Include="LabUtility\GridDataUtility\TestGridDataCtrl.cs" />
+    <Compile Include="LabUtility\LabOut.cs" />
+    <Compile Include="LabUtility\LoginUtility\LoginCtrl.cs" />
+    <Compile Include="LabUtility\LogsUtility\ILog.cs" />
+    <Compile Include="LabUtility\LogsUtility\LogBase.cs" />
+    <Compile Include="LabUtility\LogsUtility\TxtLog.cs" />
+    <Compile Include="LabUtility\PerInfoUtility\PersonInfoCtrl.cs" />
+    <Compile Include="LabUtility\PublicUtility\Account.cs" />
+    <Compile Include="LabUtility\PublicUtility\OpQuery.cs" />
+    <Compile Include="LabUtility\PublicUtility\SqlGetStudentName.cs" />
+    <Compile Include="LabUtility\PublicUtility\SqlGetTeacherName.cs" />
+    <Compile Include="LabUtility\SimpleHtmlGenerator\IHtmlable.cs" />
+    <Compile Include="LabUtility\SimpleHtmlGenerator\SimpleHtmlbr.cs" />
+    <Compile Include="LabUtility\SimpleHtmlGenerator\SimpleHtmlBuilder.cs" />
+    <Compile Include="LabUtility\SimpleHtmlGenerator\SimpleHtmlDataset.cs" />
+    <Compile Include="LabUtility\SimpleHtmlGenerator\SimpleHtmlGridView.cs" />
+    <Compile Include="LabUtility\SimpleHtmlGenerator\SimpleHtmlLabel.cs" />
+    <Compile Include="LabUtility\SimpleHtmlGenerator\SimpleHtmlText.cs" />
+    <Compile Include="LabUtility\SimpleHtmlGenerator\SimpleHtmlTextbox.cs" />
+    <Compile Include="Authority\Sql\SqlAddSuper.cs" />
+    <Compile Include="Authority\Sql\SqlGetSuper.cs" />
+    <Compile Include="LabUtility\SuperUtility\SuperCtrl.cs" />
+    <Compile Include="LabUtility\TimeUtility\TermWeekTeller.cs" />
+    <Compile Include="LabUtility\TimeUtility\TimeTeller.cs" />
+    <Compile Include="LabUtility\XmlBase\TermList.cs" />
+    <Compile Include="LabUtility\XmlBase\Tree.cs" />
+    <Compile Include="LabUtility\XmlBase\XmlParseBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repair\ComputerFailureDescriptions.cs" />
+    <Compile Include="Repair\ComputerManager.cs" />
+    <Compile Include="Repair\ComputerNumbers.cs" />
+    <Compile Include="Repair\ComputerRecord.cs" />
+    <Compile Include="Repair\CpUnhandledRough.cs" />
+    <Compile Include="Repair\Ops\OpRepairExecute.cs" />
+    <Compile Include="Repair\Ops\OpRepairQuery.cs" />
+    <Compile Include="Repair\OtherManager.cs" />
+    <Compile Include="Repair\OtherRecord.cs" />
+    <Compile Include="Repair\Sql\SqlAddComputerOrder.cs" />
+    <Compile Include="Repair\Sql\SqlAddOtherOrder.cs" />
+    <Compile Include="Repair\Sql\SqlComputerCancel.cs" />
+    <Compile Include="Repair\Sql\SqlComputerConfirm.cs" />
+    <Compile Include="Repair\Sql\SqlCpOrderUnhandledDetail.cs" />
+    <Compile Include="Repair\Sql\SqlCpOrderUnhandledList.cs" />
+    <Compile Include="Repair\Sql\SqlCpStatistics.cs" />
+    <Compile Include="Repair\Sql\SqlGetCpRecords.cs" />
+    <Compile Include="Repair\Sql\SqlGetOtherRecords.cs" />
+    <Compile Include="Repair\Sql\SqlOtherCancel.cs" />
+    <Compile Include="Repair\Sql\SqlOtherConfirm.cs" />
+    <Compile Include="Repair\Sql\SqlOtherOrderUnhandledDetail.cs" />
+    <Compile Include="Repair\Sql\SqlOtherOrderUnhandledList.cs" />
+    <Compile Include="Repair\State.cs" />
+    <Compile Include="Reservation\BackManager.cs" />
+    <Compile Include="Reservation\BadRecordMgr.cs" />
+    <Compile Include="Reservation\BasicConfig.cs" />
+    <Compile Include="Reservation\CheckTotalInfoManager.cs" />
+    <Compile Include="Reservation\CurrentStudentUIPaging.cs" />
+    <Compile Include="Reservation\Experiment.cs" />
+    <Compile Include="Reservation\ExperimentManager.cs" />
+    <Compile Include="Reservation\FrontManager.cs" />
+    <Compile Include="Reservation\LoginIPCheck.cs" />
+    <Compile Include="Reservation\MultiStudentLab.cs" />
+    <Compile Include="Reservation\Ops\OpReservationExecute.cs" />
+    <Compile Include="Reservation\Ops\OpReservationQuery.cs" />
+    <Compile Include="Reservation\ReportUIPaging.cs" />
+    <Compile Include="Reservation\ResLog.cs" />
+    <Compile Include="Reservation\Sql\SqladdDateInfo.cs" />
+    <Compile Include="Reservation\Sql\SqladdExperiment.cs" />
+    <Compile Include="Reservation\Sql\SqladdRegInfo.cs" />
+    <Compile Include="Reservation\Sql\SqladdReservation.cs" />
+    <Compile Include="Reservation\Sql\SqladdStuLabInfo.cs" />
+    <Compile Include="Reservation\Sql\SqladdTimeinfo.cs" />
+    <Compile Include="Reservation\Sql\SqlcancelReservation.cs" />
+    <Compile Include="Reservation\Sql\SqlcheckAllRegInfo.cs" />
+    <Compile Include="Reservation\Sql\SqlcheckAllReservation.cs" />
+    <Compile Include="Reservation\Sql\SqlcheckRegInfo.cs" />
+    <Compile Include="Reservation\Sql\SqlcheckReservation.cs" />
+    <Compile Include="Reservation\Sql\SqldeleteTimeInfo.cs" />
+    <Compile Include="Reservation\Sql\SqlgetBadRecords.cs" />
+    <Compile Include="Reservation\Sql\SqlgetbegDayofweek.cs" />
+    <Compile Include="Reservation\Sql\SqlgetCurrentInfo.cs" />
+    <Compile Include="Reservation\Sql\SqlgetCurrentReservation.cs" />
+    <Compile Include="Reservation\Sql\SqlgetCurrentStudentDS.cs" />
+    <Compile Include="Reservation\Sql\SqlgetCurrentTimeSpan.cs" />
+    <Compile Include="Reservation\Sql\SqlgetDateInfo.cs" />
+    <Compile Include="Reservation\Sql\SqlgetDateInfoDetails.cs" />
+    <Compile Include="Reservation\Sql\SqlgetExistStuLabInfo.cs" />
+    <Compile Include="Reservation\Sql\SqlgetExperiment.cs" />
+    <Compile Include="Reservation\Sql\SqlgetHistoryExperiment.cs" />
+    <Compile Include="Reservation\Sql\SqlgetIncompleteRegInfo.cs" />
+    <Compile Include="Reservation\Sql\SqlgetLoginTime.cs" />
+    <Compile Include="Reservation\Sql\SqlgetNextInfo.cs" />
+    <Compile Include="Reservation\Sql\SqlgetRemainCount.cs" />
+    <Compile Include="Reservation\Sql\SqlgetReport.cs" />
+    <Compile Include="Reservation\Sql\SqlgetReportByName.cs" />
+    <Compile Include="Reservation\Sql\SqlgetReportByNN.cs" />
+    <Compile Include="Reservation\Sql\SqlgetReportByNo.cs" />
+    <Compile Include="Reservation\Sql\SqlgetReportByTNa.cs" />
+    <Compile Include="Reservation\Sql\SqlgetReportByTNN.cs" />
+    <Compile Include="Reservation\Sql\SqlgetReportByTNo.cs" />
+    <Compile Include="Reservation\Sql\SqlgetReportCount.cs" />
+    <Compile Include="Reservation\Sql\SqlgetReportsDS.cs" />
+    <Compile Include="Reservation\Sql\SqlgetReservation.cs" />
+    <Compile Include="Reservation\Sql\SqlgetReservationByStuid.cs" />
+    <Compile Include="Reservation\Sql\SqlgetReservationDetails.cs" />
+    <Compile Include="Reservation\Sql\SqlgetTermExperiments.cs" />
+    <Compile Include="Reservation\Sql\SqlgetTimeInfoRecordCount.cs" />
+    <Compile Include="Reservation\Sql\SqlgetTimeSpanByDay.cs" />
+    <Compile Include="Reservation\Sql\SqlgetTimeSpanByID.cs" />
+    <Compile Include="Reservation\Sql\SqlgetTimeSpanByYearWeek.cs" />
+    <Compile Include="Reservation\Sql\SqlgetTotalInfo.cs" />
+    <Compile Include="Reservation\Sql\SqlgetUniqueExperiment.cs" />
+    <Compile Include="Reservation\Sql\SqlgetValidExperiment.cs" />
+    <Compile Include="Reservation\Sql\SqlupdateRegInfo.cs" />
+    <Compile Include="Reservation\Sql\SqlupdateRemainCount.cs" />
+    <Compile Include="Reservation\Sql\SqlupdateReportState.cs" />
+    <Compile Include="Reservation\Sql\SqlupdateStuLabInfo.cs" />
+    <Compile Include="Reservation\Sql\SqlupdateStuReservationInfo.cs" />
+    <Compile Include="Reservation\Sql\SqlupdateUniqueExperiment.cs" />
+    <Compile Include="Reservation\TermList.cs" />
+    <Compile Include="Reservation\TimeSpanStd.cs" />
+    <Compile Include="Reservation\TimeSpanTableAdapter.cs" />
+    <Compile Include="Reservation\TimeTable.cs" />
+    <Compile Include="Reservation\TimeTableManager.cs" />
+    <Compile Include="Reservation\TimeTablePlus.cs" />
+    <Compile Include="Reservation\WeekList.cs" />
+    <Compile Include="Reservation\StudentNo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LabUtility\aaa.xls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LabUtility\MailConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Login\Login.csproj">
+      <Project>{18237246-FA82-4C18-9A0E-0E7447C82BD4}</Project>
+      <Name>Login</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

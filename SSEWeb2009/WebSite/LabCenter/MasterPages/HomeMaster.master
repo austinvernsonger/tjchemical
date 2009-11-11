@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="HomeMaster.master.cs" Inherits="LabCenter_MasterPages_HomeMaster"  %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>同济大学实验中心</title>
+    <link rel="stylesheet" type="text/css" href="../Resources/CssClass/style.css" />
+<script language="javascript" type="text/javascript">
+// <!CDATA[
+
+function blank_onclick() {
+
+}
+
+// ]]>
+</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="bg">
+	  <div id="border">
+		    <div id="logo"></div>
+		    <div id="menu">
+		        <ul>
+		            <li><asp:HyperLink ID="HyperLinkMain" runat="server"
+		                    NavigateUrl="~/Default.aspx" >主页</asp:HyperLink></li>	
+		            <li><asp:HyperLink ID="HyperLink1" runat="server" 
+                            NavigateUrl="~/LabCenter/Default.aspx" ToolTip="dd">首页</asp:HyperLink></li>
+		            <li><asp:HyperLink ID="HyperLink2" runat="server"
+		                    NavigateUrl="~/LabCenter/Introduction/Default.aspx" >实验中心介绍</asp:HyperLink></li>
+		            <li><asp:HyperLink ID="HyperLink3" runat="server"
+		                    NavigateUrl="~/LabCenter/News/List.aspx" >新闻</asp:HyperLink></li>
+		                    <li><asp:HyperLink ID="HP_HLNotice" runat="server"
+		                    NavigateUrl="~/LabCenter/Notice/List.aspx" >通知</asp:HyperLink></li>
+		            <li><asp:HyperLink ID="HyperLink4" runat="server">规章制度</asp:HyperLink></li>
+		            <li><asp:HyperLink ID="HyperLink5" runat="server">成果展示</asp:HyperLink></li>
+		            <li><asp:HyperLink ID="HyperLink6" runat="server">技术资料</asp:HyperLink></li>	
+		            <li><asp:HyperLink ID="HyperLinkLogin" runat="server"
+		                    NavigateUrl="~/Login/Login.aspx" >登陆</asp:HyperLink></li>			
+				</ul>
+		    </div>          
+		    <!--<div id="blank" onclick="return blank_onclick()"></div>-->
+            
+			<!--<div id="cebianlan" >		   
+				<ul>
+				     <li><asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/LabCenter/Reservation/LabReservation.aspx" ><b>实验预约</b></asp:HyperLink></li>
+				     <li><asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/LabCenter/Reservation/ReservationLogin_pre.aspx" ><b>实验登记</b></asp:HyperLink></li>
+				     <li><asp:HyperLink ID="HyperLink13" runat="server" NavigateUrl="~/LabCenter/Reservation/ViewReservation.aspx" ><b>查看取消预约</b></asp:HyperLink></li>
+				     <li><asp:HyperLink ID="HyperLink14" runat="server" NavigateUrl="~/LabCenter/Reservation/CheckReport.aspx" ><b>实验报告</b></asp:HyperLink></li>
+				     <li><asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/LabCenter/Repair/Order/Default.aspx"><b>设备报修</b></asp:HyperLink></li>
+				     <li><asp:HyperLink ID="HyperLink10" runat="server" NavigateUrl="~/LabCenter/Equipment/DeviceApply/DeviceApplyTable.aspx"><b>设备借用</b></asp:HyperLink></li>
+				     <li><asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="~/LabCenter/Equipment/MaterialApply/MaterialApply.aspx"><b>耗材领用</b></asp:HyperLink></li>
+				     <li><asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="~/sse_sys.aspx" ><b>管理后台</b></asp:HyperLink></li>    
+					
+				</ul>
+	            <div id="pic">
+				</div>
+		    </div>
+			-->
+			<div id="sidebar">
+			    <div class="sidebarBtn">
+			        <asp:HyperLink ID="lkExp" runat="server" 
+                        ImageUrl="~/LabCenter/Resources/Images/Lab_btnExp.jpg" 
+                        NavigateUrl="~/LabCenter/Reservation/ViewReservation.aspx" ToolTip="实验预约、实验登记、查看取消预约、实验报告"></asp:HyperLink>
+                </div>
+                <div class="sidebarBtn"><asp:HyperLink ID="lkEquip" runat="server" 
+                    ImageUrl="~/LabCenter/Resources/Images/Lab_btnEquipment.jpg" 
+                        NavigateUrl="~/LabCenter/Equipment/DeviceApply/DeviceApplyTable.aspx" ToolTip="设备借用、耗材领用"></asp:HyperLink></div>
+                <div class="sidebarBtn"><asp:HyperLink ID="lkRepair" runat="server" 
+                    ImageUrl="~/LabCenter/Resources/Images/Lab_btnRepair.jpg" 
+                        NavigateUrl="~/LabCenter/Repair/Order/Default.aspx" ToolTip="机房电脑报修、其他设备报修"></asp:HyperLink></div>
+            </div>
+            
+            <div id="PageContent">
+                <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                </asp:contentplaceholder>
+            </div>
+            <div id="footer">&copy; 2009 同济大学软件学院 - 实验中心</div>
+	  </div>
+	</div>
+    
+    </form>
+</body>
+</html>
