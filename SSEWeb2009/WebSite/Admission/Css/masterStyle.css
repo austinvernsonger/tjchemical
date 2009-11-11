@@ -1,0 +1,49 @@
+﻿body {
+}
+  #watermarked {
+            height: 20px;
+            width: 150px;
+            padding: 2px 0 0 2px;
+            border: 1px solid #BEBEBE;
+            background-color: #F0F8FF;
+            color: gray;
+        }
+        #top {
+            width: 955px;
+            margin: 0 auto;
+            background-image: url("../img/logo.jpg");
+            height: 150px;
+        }
+        #top_left {
+            float: left;
+        }
+        #top_right {
+            float: right;
+            width: 150px;
+            padding-top: 3px;
+        }
+        #top_right a {
+            color: #ff00ff;
+            margin-left: 25px;
+            text-decoration: none;
+            font-family:MS Serif;
+            font-size:small;
+        }
+        #top_right a:hover {
+            text-decoration: underline;
+        }
+        #body {
+            width: 955px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #view {
+            width: 955px;
+            margin: 0 auto;
+        }
+        #bottom {
+            width: 955px;
+            margin: 0 auto;
+            background-image: url("../img/bottom.jpg");
+            color:Gray;
+        }

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Report.Descriptor.AbstractDescriptor">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAIACAEICAAIAAAAAAQAQIAAECIAAEAUUAAABABAA=</HashCode>
+      <FileName>Descriptor\AbsractDescriptor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+      <Property Name="ControlAdapter" />
+      <Property Name="ValidationDescriptor" />
+      <Property Name="DisplayDescriptor" />
+      <Property Name="ResultDescriptor" />
+      <Property Name="Parent" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Report.Descriptor.ReportDescriptor">
+    <Position X="4.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAACACAAAAAAAAAAAAAAAAAAEAEQAAAAAAAA=</HashCode>
+      <FileName>Descriptor\ReportDescriptor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Items" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Report.Descriptor.ItemDescriptor">
+    <Position X="2.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACgAAAAAAAAAAAAAAAAAAAEAEQAAIAAAAA=</HashCode>
+      <FileName>Descriptor\ItemDescriptor.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Infos" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Report.Descriptor.DisplayDescriptor">
+    <Position X="0.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Descriptor\DisplayDescriptor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Report.Descriptor.ValidationDescriptor">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Descriptor\ValidationDescriptor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Report.Descriptor.ResultDescriptor">
+    <Position X="0.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAEAABAAAAAAAAAgAAAAAAgCA=</HashCode>
+      <FileName>Descriptor\ResultDescriptor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Report.Adapter.AdapterFactory">
+    <Position X="6.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAICAAAABAAAAAQAAAAAAAAgA=</HashCode>
+      <FileName>Adapter\AdapterFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Report.Adapter.AbstractControlAdapter">
+    <Position X="9.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAEAAAAAAAAAEIAIAAEAAAAAAAEAAQAAADBA=</HashCode>
+      <FileName>Adapter\AbstractControlAdapter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Report.Adapter.ReportControlAdapter">
+    <Position X="8" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Adapter\ReportControlAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Report.Adapter.TextControlAdapter">
+    <Position X="10.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Adapter\TextControlAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Report.Descriptor.Collection.StringList" Collapsed="true">
+    <Position X="2.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Descriptor\Collection\StringList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Report.Descriptor.Collection.ItemList" Collapsed="true">
+    <Position X="4.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Descriptor\Collection\ItemList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Report.Adapter.IControlAdapter">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAEAAIAAEAAAAAAAEAAAAAAABA=</HashCode>
+      <FileName>Adapter\IControlAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Report.Controls.IItemControl">
+    <Position X="14" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAIAAEAAAAAAAEAAAAAIAAA=</HashCode>
+      <FileName>Controls\IItemControl.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Report.Descriptor.ItemType" Collapsed="true">
+    <Position X="0.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAggAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Descriptor\ItemType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

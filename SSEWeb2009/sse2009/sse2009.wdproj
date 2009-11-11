@@ -1,0 +1,108 @@
+﻿<!-- 
+  Microsoft Visual Studio 2008 Web Deployment Project 
+  http://go.microsoft.com/fwlink/?LinkID=104956
+
+-->
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B28511BE-2737-4DA8-B5E1-69B5F5D74EDD}</ProjectGuid>
+    <SourceWebPhysicalPath>..\WebSite</SourceWebPhysicalPath>
+    <SourceWebProject>{8EC7CCF7-0D05-4267-9576-88E3FFEDCC7A}|C:\Documents and Settings\sun\桌面\sseweb2009\SSEWeb2009\WebSite</SourceWebProject>
+    <SourceWebVirtualPath>/WebSite</SourceWebVirtualPath>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\..\桌面\ssewebexport</OutputPath>
+    <EnableUpdateable>true</EnableUpdateable>
+    <UseMerge>true</UseMerge>
+    <SingleAssemblyName>sse2009</SingleAssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>.\Release</OutputPath>
+    <EnableUpdateable>true</EnableUpdateable>
+    <UseMerge>true</UseMerge>
+    <SingleAssemblyName>sse2009</SingleAssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Admission\Admission.csproj">
+      <Project>{71F4DE5A-1F23-4FDA-A7B8-7F46AAAAFAD4}</Project>
+      <Name>Admission</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AlumnusRecord\AlumnusRecord.csproj">
+      <Project>{2E6787E1-B7E1-4E27-A7E9-FC649567E475}</Project>
+      <Name>AlumnusRecord</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BasicInformation\BasicInformation.csproj">
+      <Project>{38E01305-A85C-4042-89A8-463C491CBC0B}</Project>
+      <Name>BasicInformation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Education\Education.csproj">
+      <Project>{26C55EFC-583F-4CB9-8C61-1F0067C5333A}</Project>
+      <Name>Education</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Engineering\Engineering.csproj">
+      <Project>{EEE07C41-928C-4532-A1E5-A2E1DBCD56B1}</Project>
+      <Name>Engineering</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IDepartment\IDepartment.csproj">
+      <Project>{4CE34F42-7153-48ED-9030-4C5708D864D4}</Project>
+      <Name>IDepartment</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LabCenter\LabCenter.csproj">
+      <Project>{B0B4B186-866C-48CA-AB92-C22AAFFBE917}</Project>
+      <Name>LabCenter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Login\Login.csproj">
+      <Project>{18237246-FA82-4C18-9A0E-0E7447C82BD4}</Project>
+      <Name>Login</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MultiMediaText\MultiMediaText.csproj">
+      <Project>{B7387BAE-6A53-479B-903B-FA338EA42F07}</Project>
+      <Name>MultiMediaText</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\News\News.csproj">
+      <Project>{3B5C7179-71C9-4A07-9D2F-AD3B7937E7B0}</Project>
+      <Name>News</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Report\Report.csproj">
+      <Project>{894809CD-BE97-42B2-9EFB-62FFDE099FF0}</Project>
+      <Name>Report</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSEFramework\SSEFramework.csproj">
+      <Project>{E26726DF-1ABF-4613-AEE2-293130568A19}</Project>
+      <Name>SSEFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StudentManage\StudentManage.csproj">
+      <Project>{D69E0F95-7B9C-4AF3-BE4E-6F8753055B8D}</Project>
+      <Name>StudentManage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Teaching\Teaching.csproj">
+      <Project>{26C32E76-C4F2-4B8F-9102-A3D505F103F5}</Project>
+      <Name>Teaching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XmlReader\SysMgrXmlReader.csproj">
+      <Project>{19BFD679-4072-4FE7-B8A9-15AF2EE0368F}</Project>
+      <Name>SysMgrXmlReader</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WebDeployment\v9.0\Microsoft.WebDeployment.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.WebDeployment.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="BeforeMerge">
+  </Target>
+  <Target Name="AfterMerge">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

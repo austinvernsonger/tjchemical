@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ManageSite.master.cs" Inherits="ManageSite" Debug="true" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>软件学院网站管理系统</title>
+    
+    <link rel="stylesheet" type="text/css" href="../CssClass/sysmgr_styles.css" />
+    <link rel="stylesheet" type="text/css" href="../CssClass/sysmgr_contentstyle.css" />
+	<script src="../JavaScript/jquery-1.2.1.pack.js" type="text/javascript"></script>
+	<script type="text/javascript" src="../JavaScript/sliding_effect.js"></script>
+	
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="MainForm" runat="server">
+    <asp:ScriptManager ID="scriptManager" runat="server">
+    </asp:ScriptManager>
+    <div class="whole_block">
+        <div id="sl_header" class="header">
+            <div class="top_left"> </div>
+            <div id="top_center">
+            <div class="top_center"> 
+                <img alt="" src="../Resources/Images/sm_logo.png" />
+                <div class="h_span" style="position: relative"><span>欢迎使用软件学院网站管理系统  </span>
+                <a href="<%= ConstValue.PureURL%>Default.aspx" class="title_a">返回首页</a></div>
+            </div>
+            </div>
+            <div class="top_right"> </div>
+        </div>
+        <div style="clear:both"></div>
+        <div id="navigation-block">
+                <ul id="sliding-navigation">
+                    <div style="margin-bottom: 5px">
+                         <b class="xtop">
+	                         <b class="xb1"></b>
+	                         <b class="xb2"></b>
+	                         <b class="xb3"></b>
+	                         <b class="xb4"></b>
+                         </b>
+                        <div class="xboxcontent">&nbsp;&nbsp;管理选项</div>
+                    </div>
+                    <li class="sliding-element"><a href="../SysMgr/MmtMgr.aspx">富文本管理</a></li>
+                    <li class="sliding-element"><a href="../SysMgr/MmtPost.aspx">富文本发布</a></li>
+                    <li class="sliding-element"><a href="../SysMgr/TagMgr.aspx">标签管理</a></li>  
+                    <li class="sliding-element"><a href="../SysMgr/SclPicMgr.aspx">学院图片管理</a></li>
+                    <li class="sliding-element"><a href="../SysMgr/NewsPicMgr.aspx">新闻图片管理</a></li>                            
+                    <li class="sliding-element"><a href="../SysMgr/BasicInfoMgr.aspx">基本信息管理</a></li>             
+                    <li class="sliding-element"><a href="../SysMgr/NewsAuthorityMgr.aspx">新闻权限管理</a></li>
+                    <li class="sliding-element"><a href="../SysMgr/QuickLinkMgr.aspx">快速链接管理</a></li>
+				    <li class="sliding-element"><a href="../SysMgr/AccountMgr.aspx">帐号管理</a></li>
+                </ul>
+                
+
+                <div id="content-block" >
+                      <b class="xtop">
+	                      <b class="xb1_s"></b>
+	                      <b class="xb2_s"></b>
+	                      <b class="xb3_s"></b>
+	                      <b class="xb4_s"></b>
+                      </b>
+                    <div id="defaultContent" class="xboxcontent_s">
+                        <asp:ContentPlaceHolder id="ContentPlaceHolderDefault" runat="server"/>
+                        <!--This is f***in important!-->
+                        <div style="clear:both"></div>
+                    </div>
+                       <b class="xbottom">
+                          <b class="xb4_s"></b>
+                          <b class="xb3_s"></b>
+                          <b class="xb2_s"></b>
+	                      <b class="xb1_s"></b>               
+                       </b>
+                </div>
+        </div>
+        <div style="position: relative; top: -20px;">
+            <hr size="0" noshade="noshade" color="#999999" width="98%" />
+            <div style="font-family: 'Arial Unicode MS'; font-size: small; color: #808080" 
+                align="right">Copyright 2009 (c) School of Software Engineering, Tongji University&nbsp;&nbsp;</div>
+         </div>
+     </div>
+    </form>
+</body>
+</html>

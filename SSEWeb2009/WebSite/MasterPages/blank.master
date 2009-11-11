@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="blank.master.cs" Inherits="MasterPages_blank" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Admin Only</title>
+    <asp:ContentPlaceHolder id="phctnt_head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="frm_admin" runat="server">
+    <asp:ScriptManager ID="scrptMgr" runat="server">
+    </asp:ScriptManager>
+    <div>
+        <asp:ContentPlaceHolder id="phctnt_body" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
