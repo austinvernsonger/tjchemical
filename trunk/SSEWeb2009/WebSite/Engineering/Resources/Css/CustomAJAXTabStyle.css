@@ -1,0 +1,57 @@
+﻿/* Following are tab control styles, Special for Outsourcing Set-up Process Page */
+/* Default tab */
+.AjaxTabStrip .ajax__tab_header
+{
+    font-size: 10pt;    
+    padding-left:0px;
+	height:28px!important;
+    height:20px;    
+    padding-top:2px;
+    border-bottom:#999999 1px solid;
+}
+
+/* 默认tab设置 */
+.AjaxTabStrip .ajax__tab_tab
+{
+    font-size: 11pt;
+    padding-top:4px!important;
+    padding-top:6px; 
+    color:Black; 
+    padding-bottom:1px;
+    padding-left:2px!important;
+    padding-left:0;
+    height:23px!important;
+    height:18px;      
+    width:100px;
+    background-color:#EAEAEA; 
+    border:#cccccc 1px solid;
+    CURSOR: pointer;
+    text-align:center;
+    vertical-align:middle;
+}
+
+/* 鼠标经过设置*/
+.AjaxTabStrip .ajax__tab_hover .ajax__tab_tab
+{
+    text-decoration: underline;
+    color:Red;
+}
+/* 当前激活选项卡设置*/
+.AjaxTabStrip .ajax__tab_active .ajax__tab_tab
+{
+    BORDER-RIGHT: #cccccc 1px solid;
+    BORDER-TOP: #cccccc 1px solid;
+    background-color:#ffffff;
+    BORDER-LEFT: #cccccc 1px solid;
+    CURSOR: pointer;
+    BORDER-BOTTOM:0;
+}
+
+
+/*Body设置*/
+.AjaxTabStrip .ajax__tab_body
+{
+	padding:25px 0 0 0;
+    background-color: #ffffff;
+    
+}

@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainFrame_BackEnd.master.cs" Inherits="Teaching_MainFrame_BackEnd" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>同济大学教学部</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../CssClass/TeachingMaster_BackEnd.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="MainFrame" runat="server">
+    <div id="bodies">
+        <div id="top">
+            <div id="top_left">
+                <asp:Image ID="logo" ImageUrl="~/Resources/Images/logo_teach.jpg" runat="server" /></div>
+            <div id="top_right">
+                <a href="#">首页</a> | <a href="#">主站</a> | <a href="#">RSS</a>
+            </div>
+        </div>
+        <div id="body">
+            <div id="menu">
+                <div id="menu_top">
+                </div>
+                <div id="menu_body">
+                    <asp:TreeView ID="tree" runat="server">
+                        <Nodes>
+                            <asp:TreeNode Text="师资介绍" Value="师资介绍">
+                                <asp:TreeNode Text="软件工程" Value="软件工程" NavigateUrl="TeacherInfo.aspx?Orientation=0">
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="嵌入式" Value="嵌入式" NavigateUrl="TeacherInfo.aspx?Orientation=1">
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="大型主机" Value="大型主机" NavigateUrl="TeacherInfo.aspx?Orientation=2">
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="媒体艺术" Value="媒体艺术" NavigateUrl="TeacherInfo.aspx?Orientation=3">
+                                </asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="管理条例" Value="管理条例">
+                                <asp:TreeNode Text="教师管理" Value="教师管理" NavigateUrl="TeachingManagement.aspx?Type=0">
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="学生培养" Value="学生培养" NavigateUrl="TeachingManagement.aspx?Type=1">
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="过程管理" Value="过程管理" NavigateUrl="TeachingManagement.aspx?Type=2">
+                                </asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="培养方案" Value="培养方案">
+                                <asp:TreeNode Text="本科生" Value="本科生" NavigateUrl="StudentTrainingPlan.aspx?type=0">
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="研究生" Value="研究生" NavigateUrl="StudentTrainingPlan.aspx?type=1">
+                                </asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="企业合作" Value="企业合作" NavigateUrl="EnterpriseCooperation.aspx">
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="工作指导" Value="工作指导">
+                                <asp:TreeNode Text="委员会组成" Value="委员会组成" NavigateUrl="TeachingCommittee.aspx?ID=1">
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="委员会章程" Value="委员会章程" NavigateUrl="TeachingCommittee.aspx?ID=0">
+                                </asp:TreeNode>
+                                <asp:TreeNode Text="会议记录" Value="会议记录" NavigateUrl="TeachingCommRecord.aspx"></asp:TreeNode>
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="下载专区" Value="下载专区" NavigateUrl="DownloadingPage.aspx"></asp:TreeNode>
+                            <asp:TreeNode Text="教改研究" Value="教改研究" NavigateUrl="TeachingReform.aspx"></asp:TreeNode>
+                            <asp:TreeNode Text="个人空间" Value="个人空间" NavigateUrl="../../sse_sys.aspx"></asp:TreeNode>
+                        </Nodes>
+                    </asp:TreeView>
+                </div>
+                <div id="menu_bottom">
+                </div>
+            </div>
+            <div id="mspacec">
+            </div>
+            <div id="content">
+                <div id="content_top">
+                </div>
+                <div id="content_body">
+                    <div id="content_body_content">
+                        <asp:ContentPlaceHolder ID="MainContentPlace" runat="server">
+                            this is content
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div id="content_body_side">
+                    </div>
+                </div>
+                <div id="content_bottom">
+                </div>
+            </div>
+        </div>
+        <div id="bottom" style="clear: both;">
+            <span class="BottomSide"><asp:Image ID="btm_left" ImageUrl="~/Resources/Images/btm_left.png" runat="server" /></span>
+            <div class="BottomBar">
+                <div class="BtmLeft">
+                    上海市嘉定区曹安公路4800号
+                    <br />
+                    电话：69589374 | 传真：69589374 | E-mail:sse@tongji.edu.cn
+                </div>
+                <div class="BtmRight">
+                    Copyright 2009 SSE, TJU
+                    <br />
+                    <a href="#">Links</a> | 
+                    <a href="#">Developer Team</a>
+                </div>
+            </div>
+            <span class="BottomSide"><asp:Image ID="btm_right" ImageUrl="~/Resources/Images/btm_right.png" runat="server" /></span>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

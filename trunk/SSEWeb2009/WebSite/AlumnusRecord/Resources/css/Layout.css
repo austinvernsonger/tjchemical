@@ -1,0 +1,378 @@
+@charset "utf-8";
+body  {
+	font: 12px Verdana, Arial, Helvetica, sans-serif;
+	background: #FFF;
+	margin: 0; 
+	padding: 0;
+	color: #000000;
+}
+
+img{border:0;}
+
+.Alumnus #Header { 
+	width: 960px;
+	background: #FFFFFF;
+	margin: 0 auto;
+	text-align: left;
+} 
+
+.Alumnus #Container { 
+	width: 940px;
+	background: #FFFFFF;
+	margin: 0 auto; 
+	text-align: left; 
+} 
+
+.Alumnus #LoginBar
+{
+    width: 941px;
+    height: 32px;
+    background: #00386B;
+    margin: 0 auto;
+    color: #FFF;
+    background-image: url('../new_images/bg_login.jpg');
+    background-position: left;
+    background-repeat: no-repeat;
+} 
+
+.Alumnus #LoginBarRight {
+	
+	float:right;
+	line-height:31px;
+	padding-right:20px;
+    margin-top: 0px;
+    margin-left: 88px;
+}
+
+#LoginBarRight input{
+    border:none;
+}
+#LoginBarRight a{
+    color:#ffffff;
+}
+
+.Alumnus #SideBarLeft {
+	margin-top:10px;
+	float:left;
+	width:566px;
+	
+	height:264px;
+	color:#FFF;
+}
+.Alumnus #SideBarLeft_Title {
+	background:url('../new_images/bg_title_interview.jpg');
+	height: 32px;
+}
+.Alumnus #SideBarLeft_Container {
+	padding: 10px 20px;
+	clear:both;
+}
+.Alumnus #SideBarLeft_Container_Left {
+	float:left;
+	background-color:#FFF;
+	width: 85px;
+	height:95px;
+	color:#000;
+}
+.Alumnus #SideBarLeft_Container_Right {
+	float:right;
+	color:#000;
+}
+.Alumnus .Talk{
+	background:url('../images/Talk.gif') no-repeat;
+	width:273px;
+	height:57px;
+	text-align:center;
+	padding-top:15px;
+	margin-bottom:5px;
+}
+.Alumnus a.Talk_title{
+	color:#069;
+	font-size:16px;
+	font-weight:bold;
+	margin-right:8px;
+	text-decoration:none;
+}
+
+.Alumnus a.Talk_title:hover{
+	text-decoration:underline;
+}
+
+.Alumnus .Talk_date {
+	color:#666;
+	font-size:11px;
+}
+
+.Alumnus .Talk_Alumnus {
+	color:#FFF;
+	font-size:12px;
+}
+
+.Alumnus .Talk_Alumnus a{
+	color:#FFF;
+	font-size:12px;
+}
+
+.Alumnus #SideBarRight {
+	margin-top:10px;
+	float:right;
+	width:367px;
+	background:url('../new_images/bg_news_temp.jpg') ;
+	height:264px;
+	
+}
+.Alumnus #SideBarRight_Title {
+    
+    height: 35px;
+}
+
+.Alumnus #SideBarRight_Container {
+	padding: 10px 20px;
+	clear:both;
+}
+.Alumnus #SideBarRight_Container_Left {
+	float:left;
+	width:320px;
+	height:20px;
+	line-height:22px;
+}
+.Alumnus #SideBarRight_Container_Left a{
+	color:#FFF;
+	text-decoration:none;
+}
+.Alumnus #SideBarRight_Container_Left a:hover{
+	text-decoration:underline;
+}
+.Alumnus #SideBarRight_Container_Right {
+	float:right;
+	width:145px;
+	height:20px;
+}
+.Alumnus #Gallery_Title {
+	background:url('../new_images/bg_gallery.jpg') no-repeat;
+	padding-top:35px;
+	height: 167px;
+	clear:both;
+}
+.Alumnus #Gallery_Container {
+	height:150px;
+    width: 940px;
+}
+
+.Alumnus #Footer{
+	background:url('../new_images/bg_footer.jpg') no-repeat top;
+	margin: 0 auto;
+	height:69px;
+	width:900px;
+	padding:20px;
+	color:#666;
+	text-align: center;
+}
+
+.Alumnus #Footer a{
+	color:#666;
+	text-decoration:underline;
+}
+
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+#MemuBar
+{
+    width: 940px;
+    height: 31px;
+    background: #3636C9;
+    color: #FFF;
+    margin-left: 10px;
+    font-family: 'Courier New' , Courier, monospace;
+    list-style-type: none;
+}
+
+#MenuBar ul
+{
+    float:left;
+}
+#MenuBar li
+{
+    list-style-type: none;
+    display: inline;
+}
+#MenuBar a:hover
+{
+    background-color: #f00;
+}
+
+.Alumnus .GreenBar
+{
+    background-position: url('../images/GreenBar_Bg.jpg') repeat-x;
+    background: url('../images/GreenBar_Bg.jpg') repeat-x;
+    text-align: left;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #00CC00;
+    height: 31px;
+    width:940px;
+    margin:0 auto;
+}
+.GreenBar a
+{
+    border: none;
+    color: #ffffff;
+    font-size: 13;
+    text-decoration: none;
+}
+
+.GreenBar .a2
+{
+    color: #C0C0C0; 
+    font-size: 11px
+}
+
+.GreenBar a:hover
+{
+    color: #CF8445;
+}
+
+.BlueBlock
+{
+    background: url('../images/SideBar_Bottom.jpg');
+    background-color: #3391E6;
+    background-repeat: repeat-y;
+    float:right;
+    width:250px;
+    height:267px;
+}
+
+.BlueBlock #BarTitle
+{
+    background-image: url('../images/SideBar_Title.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 33px;
+    width: 250px;
+    font-size: 13px;
+    color: #FFFFFF;
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 10px;
+    padding-top:10px;
+}
+
+.ContentPlaceHolderDiv
+{
+    width: 940px;
+    margin: 0px auto 0px auto;
+}
+
+.ImgBtn
+{
+    float:left;
+    vertical-align:middle;
+    padding-top:15%;
+    padding-bottom:15%;
+}
+
+.LeftBtn
+{
+    float: left;
+    height: 100px;
+    width: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.RightBtn
+{
+    float: right;
+    height: 100px;
+    width: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.scrollDiv
+{
+    float:left;
+}
+
+.scrollDiv ul
+{
+    margin:0; padding:0;overflow:hidden; width:100px; height:150px;
+}
+
+.scrollDiv ul li
+{
+    list-style:none;
+    display:inline;
+}
+
+.prev 
+{
+    display: block;
+    float: left;
+    text-decoration: none;
+    background: url('../images/prev.jpg') no-repeat;
+    height: 100px;
+    width: 20px;
+    margin-top:30px;
+    /*padding-top:40px;
+    padding-bottom:40px;*/
+}
+    
+.next    
+{
+    display: block;
+    text-decoration: none;
+    height: 100px;
+    width: 20px;
+    float:right;
+    margin-top:30px;
+    background: url('../images/next.jpg') no-repeat;
+}
+
+.a3
+{
+    text-decoration:none;
+}
+.a3:hover
+{
+    text-decoration:underline;
+}
+
+
+
+#logo
+{
+	background:#FFF url(../new_images/bg_LogoBar.jpg);
+	width: 940px;
+	height:112px;
+	margin:0 auto;
+	padding:0;
+}
+
+#shadow_login
+{
+	background-image:url(../new_images/bg_shadow.jpg);
+	margin:0 auto;
+	width:940px;
+	clear:both;
+}
+
+.Alumnus #interview_first
+{
+	background-image:url(../new_images/bg_interview_tmp1.jpg);
+	height:122px;
+	width:566px;
+	
+}
+
+.Alumnus #interview_second
+{
+	background-image:url(../new_images/bg_interview_tmp2.jpg);
+
+	height:111px;
+	width:566px;
+}

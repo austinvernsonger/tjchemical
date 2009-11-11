@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ArticleView.master.cs" Inherits="ArticleView" %>
+
+<%@ Register src="../UserControl/ViewMMT.ascx" tagname="ViewMMT" tagprefix="uc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../CssClass/ArticleView.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="PageBody">
+    <form id="MainFrame" runat="server">
+    <div>
+        <div id="top">
+            <div id="top_left"></div>
+        </div>
+        <div id="InfoBar"></div>
+        <div id="content_top"></div>
+        <div id="body">
+            <div id="article">
+           <asp:ContentPlaceHolder ID="MainContentPlace" runat="server">
+                this is content
+            </asp:ContentPlaceHolder>    
+            
+            </div>
+        </div>
+        <div id="content_bottom"></div>
+        
+        <div id="bottom" style="clear: both;">
+            <div class="BtmLeft">
+                上海市嘉定区曹安公路4800号
+                <br />
+                电话：69589374 | 传真：69589374 | E-mail:sse@tongji.edu.cn
+            </div>
+            <div class="BtmRight">
+                Copyright 2009 SSE, TJU
+                <br />
+                <a href="#">Links</a> | <a href="#">Developer Team</a>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+    </form>
+    </div>
+</body>
+</html>

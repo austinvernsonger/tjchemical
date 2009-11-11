@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>  
+    <link href="Resources/css/Layout.css" rel="stylesheet" type="text/css" />
+    <!--link href="Resources/css/StyleSheet.css" rel="stylesheet" type="text/css" /-->
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="Alumnus">
+<form id="form1" runat="server">
+
+
+<div id="Header">
+    <!--logo-->
+    <!--<%--<img src="Alumnus_topheader.jpg" alt="访问软件学院首页" 
+        onclick="javascript:window.location='http://sse.tongji.edu.cn'"/>--%>
+        
+    <asp:Image ID="Image1" runat="server" ImageUrl="~/AlumnusRecord/Resources/images/Alumnus_topheader.jpg" alt="访问软件学院首页" 
+        onclick="javascript:window.location='http://sse.tongji.edu.cn'"/>    --> 
+   
+        <div id="logo"></div>
+     <!--loginbar-->    
+        <div id="LoginBar">
+            <div id="btn_login"></div>
+        </div>
+    <!--shadow_division-->
+        <div id="shadow_login"></div>
+    <!--navigationbar-->
+       
+        <div id="navigationBar">
+            <asp:SiteMapPath runat="server" ID="smp1" Visible="true" />
+        </div>
+
+</div>
+<div class="ContentPlaceHolderDiv">
+<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+</asp:ContentPlaceHolder>
+</div>
+<div id="Footer">上海市嘉定区曹安公路4800号 Copyright (C) 2009 <a href="http://sse.tongji.edu.cn">同济大学软件学院</a>|学院开发团队<br />
+电话/传真：65989347|电子邮件：sse@tongji.edu.cn<br />
+
+</div>
+</form>
+</body>
+</html>
