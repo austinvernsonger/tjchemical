@@ -27,9 +27,9 @@ public class WebSiteRegister
     public static Boolean RegisterDepartment()
     {
         //Department.Interface.DepartmentList.Register(Myname, myInterface);
-        Department.Interface.DepartmentList.Register("工程硕士中心", new Department.Engineering.EngineerLogRegister());
-        Department.Interface.DepartmentList.Register("教学部", new Teaching.TeachingMngRegister());
-        Department.Interface.DepartmentList.Register("实验中心",new LabCenter.Authority.MngRegister());
+        //Department.Interface.DepartmentList.Register("工程硕士中心", new Department.Engineering.EngineerLogRegister());
+      //  Department.Interface.DepartmentList.Register("教学部", new Teaching.TeachingMngRegister());
+       
         //Department.Interface.DepartmentList.Register("教务处", new Education.src.EducationAuthRegister());
        // Department.Interface.DepartmentList.Register("院友之家", new AlumnusRecord.AlumnusRegister());
 
