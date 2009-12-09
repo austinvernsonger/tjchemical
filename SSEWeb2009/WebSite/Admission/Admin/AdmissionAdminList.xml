@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<AdminList>
-  <Admin>
-    <Id></Id>
-    <Pwd></Pwd>
-    <Authority></Authority>
-  </Admin>
-  <Admin></Admin>
-</AdminList>
