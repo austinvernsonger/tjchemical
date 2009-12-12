@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<SunMkrCfg>
+  <DBProvider Name="TjMedical" MaxConn="1000" Type="SQLDB">
+    <DBPath>192.168.93.174</DBPath>
+    <DBName>DCWRPT</DBName>
+    <UserName>sa</UserName>
+    <Password>test123</Password>
+  </DBProvider>
+
+  <FileLocation ID="ErrorSystem" Path="Error.xml" />
+
+  
+</SunMkrCfg>

@@ -1,0 +1,423 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SunMkr.AS.DB2.0</name>
+    </assembly>
+    <members>
+        <member name="T:SunMkr.AS.DBOp">
+            <summary>
+            The Abstarct class of Database Operation
+            </summary>
+        </member>
+        <member name="F:SunMkr.AS.DBOp.m_returnData">
+            <summary>
+            The DataSet to be returned.
+            </summary>
+        </member>
+        <member name="M:SunMkr.AS.DBOp.#ctor">
+            <summary>
+            Construction
+            </summary>
+        </member>
+        <member name="M:SunMkr.AS.DBOp.#ctor(System.String)">
+            <summary>
+            Construction
+            </summary>
+            <param name="BindString"></param>
+        </member>
+        <member name="M:SunMkr.AS.DBOp.processUnderControl">
+            <summary>
+            Process Under Control
+            </summary>
+        </member>
+        <member name="P:SunMkr.AS.DBOp.Result">
+            <summary>
+            Gets the return data.
+            </summary>
+        </member>
+        <member name="P:SunMkr.AS.DBOp.ASName">
+            <summary>
+            AS name.
+            </summary>
+        </member>
+        <member name="M:SunMkr.AS.genericOp.#ctor(System.String)">
+            <summary>
+            Construction
+            </summary>
+            <param name="ProviderName"></param>
+        </member>
+        <member name="M:SunMkr.AS.genericOp.processUnderControl">
+            <summary>
+            The process under control of CC.
+            </summary>
+        </member>
+        <member name="M:SunMkr.AS.genericOp.SetParameter(System.String,System.Boolean,System.Object[])">
+            <summary>
+            Set the variables.
+            </summary>
+            <param name="ProducerName"></param>
+            <param name="HasReturnValue"></param>
+            <param name="Parameters"></param>
+        </member>
+        <member name="P:SunMkr.AS.genericOp.ReturnValue">
+            <summary>
+            Return Value.
+            </summary>
+        </member>
+        <member name="T:SunMkr.AS.delDoTransaction">
+            <summary>
+            The Delegate of the Call back function used in TransAction
+            The function can only do the method provided by IProcessor,
+            those are: Execute, Query, Producer(2), Transaction.
+            @Author: Push
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SunMkr.AS.IDBProvider">
+            <summary>
+            Provider.
+            </summary>
+        </member>
+        <member name="M:SunMkr.AS.IDBProvider.GenerateConnString(SunMkr.Kernel.CfgElem.DBProvider)">
+            <summary>
+            Generate the connection string.
+            </summary>
+            <param name="DBP"></param>
+        </member>
+        <member name="M:SunMkr.AS.IDBProvider.GenerateBackUpString(SunMkr.Kernel.CfgElem.DBBackUp)">
+            <summary>
+            Generate the backup connection string.
+            </summary>
+            <param name="DBB"></param>
+        </member>
+        <member name="M:SunMkr.AS.IDBProvider.Execute(System.String)">
+            <summary>
+            Execute an SQL sentance.
+            </summary>
+            <param name="Sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.IDBProvider.Query(System.String)">
+            <summary>
+            Query the database.
+            </summary>
+            <param name="Sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.IDBProvider.Producer(System.String,System.Boolean,System.Object@,System.Object[])">
+            <summary>
+            Producer.
+            </summary>
+            <param name="ProducerName">Producer name</param>
+            <param name="HasReturnValue">If has Return Value</param>
+            <param name="ReturnValue">The object to recivie the return value.</param>
+            <param name="Parameters">Parameters.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.IDBProvider.Producer(System.String,System.Object@,System.Object[])">
+            <summary>
+            Producer.
+            </summary>
+            <param name="ProducerName">Producer name</param>
+            <param name="ReturnValue">The object to recivie the return value.</param>
+            <param name="Parameters">Parameters.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.IDBProvider.Producer(System.String,System.Object[])">
+            <summary>
+            Producer.
+            </summary>
+            <param name="ProducerName">Producer name</param>
+            <param name="Parameters">Parameters.</param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.IDBProvider.Transaction(SunMkr.AS.delDoTransaction)">
+            <summary>
+            Trans Action with the provider's connection and command
+            </summary>
+            <param name="DelegateTransaction"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SunMkr.AS.IDBProvider.ConnectionStr">
+            <summary>
+            The connection.
+            </summary>
+        </member>
+        <member name="P:SunMkr.AS.IDBProvider.IsStarted">
+            <summary>
+            The flag of statue.
+            </summary>
+        </member>
+        <member name="T:SunMkr.AS.SQLDB">
+            <summary>
+            SQL Database Provider.
+            </summary>
+        </member>
+        <member name="M:SunMkr.AS.SQLDB.GenerateConnString(SunMkr.Kernel.CfgElem.DBProvider)">
+            <summary>
+            Generate Connection String.
+            </summary>
+            <param name="DBP"></param>
+        </member>
+        <member name="M:SunMkr.AS.SQLDB.GenerateBackUpString(SunMkr.Kernel.CfgElem.DBBackUp)">
+            <summary>
+            Generate Backup Connection String.
+            </summary>
+            <param name="DBB"></param>
+        </member>
+        <member name="M:SunMkr.AS.SQLDB.Execute(System.String)">
+            <summary>
+            Execute the sql sentence.
+            </summary>
+            <param name="Sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.SQLDB.Query(System.String)">
+            <summary>
+            Querying according to the SQL sentenct.
+            </summary>
+            <param name="Sql"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.SQLDB.Producer(System.String,System.Boolean,System.Object@,System.Object[])">
+            <summary>
+            Producer.
+            </summary>
+            <param name="ProducerName"></param>
+            <param name="HasReturnValue"></param>
+            <param name="ReturnValue"></param>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.SQLDB.Producer(System.String,System.Object@,System.Object[])">
+            <summary>
+            Producer.
+            </summary>
+            <param name="ProducerName"></param>
+            <param name="ReturnValue"></param>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.SQLDB.Producer(System.String,System.Object[])">
+            <summary>
+            Producer.
+            </summary>
+            <param name="ProducerName"></param>
+            <param name="Parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.SQLDB.Transaction(SunMkr.AS.delDoTransaction)">
+            <summary>
+            Trans Action with the provider's connection and command
+            </summary>
+            <param name="DelegateTransaction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.SQLDB.Start">
+            <summary>
+            Start the connection.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.SQLDB.End">
+            <summary>
+            Close the connection.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.SQLDB.Restart">
+            <summary>
+            Restart the connection
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.SQLDB.LockLifeCycle">
+            <summary>
+            Lock the Life cycle
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.SQLDB.UnLockLifeCycle(System.Object)">
+            <summary>
+            UnLock Life Cycle.
+            </summary>
+            <param name="Token"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SunMkr.AS.SQLDB.ConnectionStr">
+            <summary>
+            Sets the connection string of the 
+            </summary>
+        </member>
+        <member name="P:SunMkr.AS.SQLDB.IsStarted">
+            <summary>
+            Check if the connection is open.
+            </summary>
+        </member>
+        <member name="P:SunMkr.AS.SQLDB.Key">
+            <summary>
+            The Guid to identified the token.
+            </summary>
+        </member>
+        <member name="T:SunMkr.AS.ProviderCache">
+            <summary>
+            Provider's Cache.
+            </summary>
+        </member>
+        <member name="M:SunMkr.AS.ProviderCache.#ctor(System.Int32)">
+            <summary>
+            Construction.
+            </summary>
+            <param name="MaxCount"></param>
+        </member>
+        <member name="M:SunMkr.AS.ProviderCache.Add(SunMkr.AS.IDBProvider@)">
+            <summary>
+            Add
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.ProviderCache.Get">
+            <summary>
+            Get
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.ProviderCache.Clear">
+            <summary>
+            Cleare
+            </summary>
+        </member>
+        <member name="P:SunMkr.AS.ProviderCache.IsEmpty">
+            <summary>
+            Is Empty
+            </summary>
+        </member>
+        <member name="P:SunMkr.AS.ProviderCache.IsFull">
+            <summary>
+            Is Full.
+            </summary>
+        </member>
+        <member name="T:SunMkr.AS.DBControl">
+            <summary>
+            DBControl
+            </summary>
+        </member>
+        <member name="M:SunMkr.AS.DBControl.GetIns">
+            <summary>
+            Get Instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.DBControl.GetProvider(System.String)">
+            <summary>
+            Get Provider
+            </summary>
+            <param name="KeyWord"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.DBControl.ReleaseProvider(System.String,SunMkr.AS.IDBProvider)">
+            <summary>
+            Release Provider
+            </summary>
+            <param name="KeyWord"></param>
+            <param name="UsedProvider"></param>
+        </member>
+        <member name="M:SunMkr.AS.DBControl.StartProvider(SunMkr.AS.IDBProvider)">
+            <summary>
+            Start Provider.
+            </summary>
+            <param name="CurrentProvider"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.DBControl.Start">
+            <summary>
+            Start the AS.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.DBControl.End">
+            <summary>
+            Terminate the AS.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.AS.DBControl.Restart">
+            <summary>
+            Restart the AS.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SunMkr.AS.DBControl.Statue">
+            <summary>
+            Statue of current AS
+            </summary>
+        </member>
+        <member name="T:SunMkr.AS.DbGOp">
+            <summary>
+            The global operation.
+            </summary>
+        </member>
+        <member name="M:SunMkr.AS.DbGOp.Do(System.String,System.String,System.Object[])">
+            <summary>
+            Execute the producer.
+            </summary>
+            <param name="ProviderName">DBProvider's Name</param>
+            <param name="ProducerName">Producer's Name</param>
+            <param name="Parameters">Parameters to be sent to the producer.</param>
+            <returns>The dataset returned by the producer.</returns>
+        </member>
+        <member name="M:SunMkr.AS.DbGOp.Do(System.String,System.String,System.Object@,System.Object[])">
+            <summary>
+            Execute the producer.
+            </summary>
+            <param name="ProviderName">DBProvider's Name</param>
+            <param name="ProducerName">Producer's Name</param>
+            <param name="ReturnValue">The object to receive the return value of the producer.</param>
+            <param name="Parameters">Parameters to be sent to the producer.</param>
+            <returns>The dataset returned by the producer.</returns>
+        </member>
+        <member name="M:SunMkr.AS.DbGOp.Do(System.String,System.Object@,System.Object[])">
+            <summary>
+            Execute the producer with the global bound provider.
+            </summary>
+            <param name="ProducerName">Producer's Name</param>
+            <param name="ReturnValue">The object to receive the return value of the producer.</param>
+            <param name="Parameters">Parameters to be sent to the producer.</param>
+            <returns>The dataset returned by the producer.</returns>
+        </member>
+        <member name="M:SunMkr.AS.DbGOp.Do(System.Boolean,System.String,System.Object[])">
+            <summary>
+            Execute the producer with the global bound provider.
+            </summary>
+            <param name="UseGlobal">UseGlobal</param>
+            <param name="ProducerName">Producer's Name</param>
+            <param name="Parameters">Parameters to be sent to the producer.</param>
+            <returns>The dataset returned by the producer.</returns>
+        </member>
+        <member name="M:SunMkr.AS.DbGOp.Execute(System.String,System.String,System.Object[])">
+            <summary>
+            Execute the producer with only return value.
+            </summary>
+            <param name="ProviderName">DBProvider's Name</param>
+            <param name="ProducerName">Producer's Name</param>
+            <param name="Parameters">Parameters to be sent to the producer.</param>
+            <returns>The Return Value</returns>
+        </member>
+        <member name="M:SunMkr.AS.DbGOp.Execute(System.Boolean,System.String,System.Object[])">
+            <summary>
+            Execute the producer with only return value and global bound provider.
+            </summary>
+            <param name="UseGlobal">UseGlobal</param>
+            <param name="ProducerName">Producer's Name</param>
+            <param name="Parameters">Parameters to be sent to the producer.</param>
+            <returns>he Return Value</returns>
+        </member>
+        <member name="M:SunMkr.AS.DbGOp.GlobalBindSingleProvider(System.String)">
+            <summary>
+            Bind a provider of the global use.
+            </summary>
+            <param name="ProviderName">DBProvider's Name</param>
+        </member>
+    </members>
+</doc>
