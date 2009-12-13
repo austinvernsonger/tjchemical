@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ASRegister>
+  <AS Name="DBControl" Assembly="SunMkr.AS.DB2.0.dll" NameSpace="SunMkr.AS" Class="DBControl" Instance="GetIns" Statue="Running" />
+</ASRegister>

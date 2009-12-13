@@ -1,0 +1,17 @@
+﻿
+<div id="Toolbars">
+  <a href="changepwd.sm">Change Password</a>&nbsp;|&nbsp;<a href="logout.sm">Log Out</a>
+</div>
+<div id="Tabs"> 
+    <ul>
+        <li><a href="admin.sm">Server Statue</a></li>
+        <li><a href="modules.sm">Modules</a></li>
+        <li id="selected"><a href="javascript: return false;">Administrators</a></li>
+        <li><a href="recenterrors.sm">Recent Errors</a></li>
+        <li><a href="websitesettings.sm">Website Settings</a></li>
+    </ul>
+</div>
+
+<div id="TabContents">
+    <p>Ispum schmipsum.</p>
+</div>

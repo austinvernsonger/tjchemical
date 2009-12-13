@@ -1,0 +1,6 @@
+C:\Users\Administrator\Documents\SundayMakerBaseLayer_rar\SundayMakerBaseLayer\SundayMakerBaseLayer\bin\SunMkr.BaseLayer.Core2.0.xml
+C:\Users\Administrator\Documents\SundayMakerBaseLayer_rar\SundayMakerBaseLayer\SundayMakerBaseLayer\bin\SunMkr.BaseLayer.Core2.0.dll
+C:\Users\Administrator\Documents\SundayMakerBaseLayer_rar\SundayMakerBaseLayer\SundayMakerBaseLayer\bin\SunMkr.BaseLayer.Core2.0.pdb
+C:\Users\Administrator\Documents\SundayMakerBaseLayer_rar\SundayMakerBaseLayer\SundayMakerBaseLayer\SunMkr.BaseLayer.Core\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\SundayMakerBaseLayer_rar\SundayMakerBaseLayer\SundayMakerBaseLayer\SunMkr.BaseLayer.Core\obj\Debug\SunMkr.BaseLayer.Core2.0.dll
+C:\Users\Administrator\Documents\SundayMakerBaseLayer_rar\SundayMakerBaseLayer\SundayMakerBaseLayer\SunMkr.BaseLayer.Core\obj\Debug\SunMkr.BaseLayer.Core2.0.pdb

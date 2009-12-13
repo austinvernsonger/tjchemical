@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<SunMkrCfg>
+  <DBProvider Name="SunMkr" MaxConn="1000" Type="SQLDB">
+    <DBPath>1.1.1.1</DBPath>
+    <DBName>SunMkr</DBName>
+    <UserName>sa</UserName>
+    <Password>U!@#dAatgUYS</Password>
+  </DBProvider>
+
+  <DBBackUp Name="BSunMkr" Source="SunMkr">
+    <DBPath>1.1.1.2</DBPath>
+    <DBName>SunMkr</DBName>
+    <UserName>sa</UserName>
+    <Password>89as^S#1jk</Password>
+  </DBBackUp>
+
+  <FileLocation ID="ErrorSystem" Path="Error.xml" />
+
+  <CacheGroup ID="1" Name="StaticPage" GroupSize="50">
+    <Page Relative="Default.aspx" TimeOut="0" />
+  </CacheGroup>
+  
+</SunMkrCfg>
