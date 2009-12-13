@@ -1,0 +1,959 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SunMkr2.0</name>
+    </assembly>
+    <members>
+        <member name="T:SunMkr.Com.Xml.XmlFile">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:SunMkr.Com.Xml.XmlFile.s_FileLockObjects">
+            <summary>
+            Static Lock Object List.
+            </summary>
+        </member>
+        <member name="F:SunMkr.Com.Xml.XmlFile.s_ListLockObj">
+            <summary>
+            Static Adding Lock Object
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Xml.XmlFile.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Xml.XmlFile.#ctor(System.String)">
+            <summary>
+            Construction
+            </summary>
+            <param name="FilePath"></param>
+        </member>
+        <member name="M:SunMkr.Com.Xml.XmlFile.LoadXml(System.String)">
+            <summary>
+            Load the XmL file.
+            </summary>
+            <param name="FilePath"></param>
+        </member>
+        <member name="M:SunMkr.Com.Xml.XmlFile.ForceReload">
+            <summary>
+            Force to reload the xml file.
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Xml.XmlFile.SaveXml">
+            <summary>
+            Save the Xml file according to the changes.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SunMkr.Com.Xml.XmlFile.FilePah">
+            <summary>
+            The File Path of the XML file.
+            Identify of XmlFile
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Xml.XmlFile.Nodes">
+            <summary>
+            Get Nodes
+            </summary>
+        </member>
+        <member name="T:SunMkr.Com.Mail.MailSender">
+            <summary>
+            Mail Sender Object.
+            Send a mail to more than one mail box.
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Mail.MailSender.#cctor">
+            <summary>
+            Static constructor providered to create static instance.
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Mail.MailSender.Finalize">
+            <summary>
+            Destructor of the Mail Sender
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Mail.MailSender.AutoMailSender">
+            <summary>
+            Send the mail automatically.
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Mail.MailSender.ProcessInActiveMail">
+            <summary>
+            Process In active mails.
+            Can invoke manually.
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Mail.MailSender.ProcessInValidateMail">
+            <summary>
+            Process Invalidate mails.
+            Can invoke manually.
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Mail.MailSender.Send(System.Net.Mail.SmtpClient,System.Net.Mail.MailMessage)">
+            <summary>
+            Send the mail
+            </summary>
+            <param name="SMTP"></param>
+            <param name="Mail"></param>
+        </member>
+        <member name="M:SunMkr.Com.Mail.MailSender.Send(System.String,System.String,System.String)">
+            <summary>
+            Send the mail use default SMTP Server.
+            </summary>
+            <param name="to"></param>
+            <param name="subject"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:SunMkr.Com.Mail.MailSender.Send(System.Net.Mail.SmtpClient,System.String,System.String,System.String,System.String)">
+            <summary>
+            Send the mail use specified SMPT Client
+            </summary>
+            <param name="SMTP"></param>
+            <param name="from">Email Address</param>
+            <param name="to"></param>
+            <param name="subject"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:SunMkr.Com.Mail.MailSender.CreateSmtpServer(System.String,System.Int32,System.Net.NetworkCredential,System.Boolean,System.Net.Mail.SmtpDeliveryMethod)">
+            <summary>
+            Create an SMTP Server
+            </summary>
+            <param name="host"></param>
+            <param name="port"></param>
+            <param name="credential"></param>
+            <param name="ssl"></param>
+            <param name="deliveryMethod"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.Com.Mail.MailSender.CreateSmtpServer(SunMkr.Com.Mail.MailSmtpServer,System.String,System.String)">
+            <summary>
+            Create Smtp Client via special Servername in the Mail Smtp Server List.
+            </summary>
+            <param name="ServerName"></param>
+            <param name="UserName"></param>
+            <param name="Password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.Com.Mail.MailSender.Start">
+            <summary>
+            For Test Usage.
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Mail.MailSender.InvalidaterMailProcessor">
+            <summary>
+            Delegate For Invalidate
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Mail.MailSender.InActiveMailProcessor">
+            <summary>
+            Delegate For Inactive
+            </summary>
+        </member>
+        <member name="T:SunMkr.Com.Mail.MailSender.ProcessUnSentMails">
+            <summary>
+            Delegate to process the unsent mail in the mail cache.
+            </summary>
+            <param name="mailItems"></param>
+        </member>
+        <member name="T:SunMkr.IContainer">
+            <summary>
+            Interface of a container.
+            </summary>
+        </member>
+        <member name="M:SunMkr.IContainer.Clear">
+            <summary>
+            Clear all elements in the container.
+            </summary>
+        </member>
+        <member name="P:SunMkr.IContainer.IsEmpty">
+            <summary>
+            If this container is empty.
+            </summary>
+        </member>
+        <member name="P:SunMkr.IContainer.IsFull">
+            <summary>
+            If this container is full.
+            </summary>
+        </member>
+        <member name="T:SunMkr.Com.Literal.MD5Hash">
+            <summary>
+            MD5 Hash
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Literal.MD5Hash.GetMD5Hash(System.String)">
+            <summary>
+            Hash an input string and return the hash as
+            a 32 character hexadecimal string.
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.Com.Literal.MD5Hash.VerifyMd5Hash(System.String,System.String)">
+            <summary>
+            Verify a hash against a string.
+            </summary>
+            <param name="input"></param>
+            <param name="hash"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SunMkr.Com.Mail.MailItem">
+            <summary>
+            Mail Item structure.
+            Contains the smtp client and the message body.
+            </summary>
+        </member>
+        <member name="F:SunMkr.Com.Mail.MailItem.SmtpClt">
+            <summary>
+            The SMTP Client to send the mail.
+            </summary>
+        </member>
+        <member name="F:SunMkr.Com.Mail.MailItem.MailMsg">
+            <summary>
+            The Mail Message contain the messages and the mail addresses.
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Mail.MailItem.IncreaseSendTimes">
+            <summary>
+            Increase the sending times of this mail item
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Mail.MailItem.#ctor(System.Net.Mail.SmtpClient,System.Net.Mail.MailMessage)">
+            <summary>
+            Construction to create a MailItem
+            </summary>
+            <param name="Client"></param>
+            <param name="Message"></param>
+        </member>
+        <member name="P:SunMkr.Com.Mail.MailItem.TryTimes">
+            <summary>
+            Times to try to send this itme.
+            </summary>
+        </member>
+        <member name="T:SunMkr.ICache`2">
+            <summary>
+            Interface of Cache.
+            </summary>
+            <typeparam name="Key">Key Type</typeparam>
+            <typeparam name="Value">Value Type</typeparam>
+        </member>
+        <member name="M:SunMkr.ICache`2.Add(`0,`1)">
+            <summary>
+            Add an pair of Key-Value to the cache.
+            </summary>
+            <param name="_key"></param>
+            <param name="_val"></param>
+        </member>
+        <member name="M:SunMkr.ICache`2.Get(`0)">
+            <summary>
+            Get the cached value by the key
+            </summary>
+            <param name="_key">Key specified</param>
+            <returns>The value specified by the key</returns>
+        </member>
+        <member name="M:SunMkr.ICache`2.Remove(`0)">
+            <summary>
+            Remove the item in the cache
+            </summary>
+            <param name="_key">Key specified</param>
+        </member>
+        <member name="T:SunMkr.AContainer">
+            <summary>
+            Abstarct class version of the interface IContainer.
+            </summary>
+        </member>
+        <member name="M:SunMkr.AContainer.Clear">
+            <summary>
+            Clear all elements in the container
+            </summary>
+        </member>
+        <member name="P:SunMkr.AContainer.IsEmpty">
+            <summary>
+            If the container is empty.
+            </summary>
+        </member>
+        <member name="P:SunMkr.AContainer.IsFull">
+            <summary>
+            If the container is full.
+            </summary>
+        </member>
+        <member name="T:SunMkr.IStatue">
+            <summary>
+            The interface defined the methods used by
+            the system to gather the information from all the 
+            subsystems.
+            </summary>
+        </member>
+        <member name="M:SunMkr.IStatue.CurrentStatue">
+            <summary>
+            Get current statue
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.IStatue.History(System.String,System.String)">
+            <summary>
+            Get the statue during the Start and End mark.
+            </summary>
+            <param name="Start"></param>
+            <param name="End"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.IStatue.ClearHistory">
+            <summary>
+            Clear the histroy log.
+            </summary>
+        </member>
+        <member name="T:SunMkr.Com.Mail.MailCache">
+            <summary>
+            Mail Message Cache.
+            </summary>
+        </member>
+        <member name="T:SunMkr.IQueue`1">
+            <summary>
+            Interface of a queue. Act as FIFO.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:SunMkr.IQueue`1.Add(`0@)">
+            <summary>
+            Add an object to the queue.
+            </summary>
+            <param name="obj">The object to be add.</param>
+            <returns>Add Statue</returns>
+        </member>
+        <member name="M:SunMkr.IQueue`1.Get">
+            <summary>
+            Get the object from the queue.
+            The object should be remove from the queue.
+            </summary>
+            <returns>The object</returns>
+        </member>
+        <member name="F:SunMkr.Com.Mail.MailCache.m_queue">
+            <summary>
+            The mail queue.
+            </summary>
+        </member>
+        <member name="F:SunMkr.Com.Mail.MailCache.m_maxCount">
+            <summary>
+            The max number of the queue can contain.
+            </summary>
+        </member>
+        <member name="F:SunMkr.Com.Mail.MailCache.m_currentCount">
+            <summary>
+            Current elements the queue contained.
+            </summary>
+        </member>
+        <member name="F:SunMkr.Com.Mail.MailCache.lockObj">
+            <summary>
+            Object to use as lock object.
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Mail.MailCache.#ctor(System.Int32)">
+            <summary>
+            Construction of the mail cache.
+            </summary>
+            <param name="MaxCount"></param>
+        </member>
+        <member name="M:SunMkr.Com.Mail.MailCache.#ctor">
+            <summary>
+            Default Construction set the default max count to 20.
+            </summary>
+        </member>
+        <member name="T:SunMkr.AQueue`1">
+            <summary>
+            Abstract class version of the interface IQueue
+            </summary>
+            <typeparam name="T">Type of the object</typeparam>
+        </member>
+        <member name="M:SunMkr.AQueue`1.Add(`0@)">
+            <summary>
+            Add an object to the Queue
+            </summary>
+            <param name="obj">The object to be added.</param>
+            <returns>Add Statue</returns>
+        </member>
+        <member name="M:SunMkr.AQueue`1.Get">
+            <summary>
+            Get the first object in the queue.
+            The object will be removed after the user get it.
+            </summary>
+            <returns>The first object.</returns>
+        </member>
+        <member name="M:SunMkr.AQueue`1.Clear">
+            <summary>
+            Clear the Queue.
+            </summary>
+        </member>
+        <member name="P:SunMkr.AQueue`1.IsEmpty">
+            <summary>
+            If the queue is empty
+            </summary>
+        </member>
+        <member name="P:SunMkr.AQueue`1.IsFull">
+            <summary>
+            If the queue is full.
+            </summary>
+        </member>
+        <member name="T:SunMkr.ILifeCycle">
+            <summary>
+            Life Cycle of an Server
+            </summary>
+        </member>
+        <member name="M:SunMkr.ILifeCycle.Start">
+            <summary>
+            Start the server.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.ILifeCycle.End">
+            <summary>
+            Terminate the server.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.ILifeCycle.Restart">
+            <summary>
+            Restart the server.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SunMkr.Com.Literal.Validate">
+            <summary>
+            String Validate.
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Literal.Validate.IsFileSysPath(System.String)">
+            <summary>
+            Validate if the input string is a file path.
+            </summary>
+            <param name="FilePath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.Com.Literal.Validate.IsMailAddress(System.String)">
+            <summary>
+            Validate if the input string is a mail address.
+            </summary>
+            <param name="MailAddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.Com.Literal.Validate.IsInFormat(System.String,System.String)">
+            <summary>
+            Check if the input string in the format of the regular expression.
+            </summary>
+            <param name="RegExpress"></param>
+            <param name="InputString"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XFilePath">
+            <summary>
+            Get a regex of File Path
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XMailAddress">
+            <summary>
+            Get a regex of MailAddress
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XInteger">
+            <summary>
+            Get a regex of Integer
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XNotNavigateInt">
+            <summary>
+            Get a regex of Not-Navigate-Integer
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XPositiveInt">
+            <summary>
+            Get a regex of Positive Integer
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XNotPositiveInt">
+            <summary>
+            Get a regex of Not-Positive Integer
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XNavigateInt">
+            <summary>
+            Get a regex of Navigate Integer
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XNotNavigateFloat">
+            <summary>
+            Get a regex of Not-Navigaet Float
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XPositiveFloat">
+            <summary>
+            Get a regex of Positive Float
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XNotPositiveFloat">
+            <summary>
+            Get a regex of Not-Positive Float
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XNavigateFloat">
+            <summary>
+            Get a regex of Navigate Float
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XFloat">
+            <summary>
+            Get a regex of Float
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XUpper">
+            <summary>
+            Get a regex of Upper-Case String
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XLower">
+            <summary>
+            Get a regex of Lower-Case String
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XLetters">
+            <summary>
+            Get a regex of All-Letter String
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XStringNumber">
+            <summary>
+            Get a regex of a string maybe with number
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XFormatString">
+            <summary>
+            Get a regex of a string may contain number and available characters. (like '_')
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XUrl">
+            <summary>
+            Get a regex of URL
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XTel">
+            <summary>
+            Get a regex of Telphone number.
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XIP">
+            <summary>
+            Get a regex of IP Address.
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XChinese">
+            <summary>
+            Get a regex of Chinese words.
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XEmptyLine">
+            <summary>
+            Get a regex of Empty Line.
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Literal.Validate.XHtml">
+            <summary>
+            Get a regex of html marks.
+            </summary>
+        </member>
+        <member name="T:SunMkr.Com.Xml.XmlElement">
+            <summary>
+            Xml Elements Structure.
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Xml.XmlElement.#ctor">
+            <summary>
+            Default Construction.
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Xml.XmlElement.#ctor(System.String)">
+            <summary>
+            Xml Element Node Construction 
+            </summary>
+            <param name="ElementName"></param>
+        </member>
+        <member name="M:SunMkr.Com.Xml.XmlElement.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Xml Element Node Construction with Input Node
+            </summary>
+            <param name="Node"></param>
+        </member>
+        <member name="M:SunMkr.Com.Xml.XmlElement.AddAttribute(SunMkr.Com.Xml.XmlAttribute)">
+            <summary>
+            Add Attribute
+            </summary>
+            <param name="Attribute"></param>
+        </member>
+        <member name="M:SunMkr.Com.Xml.XmlElement.AddAttribute(System.String,System.String)">
+            <summary>
+            Add Attribute
+            </summary>
+            <param name="Name"></param>
+            <param name="Value"></param>
+        </member>
+        <member name="M:SunMkr.Com.Xml.XmlElement.AddChildNode(SunMkr.Com.Xml.XmlElement)">
+            <summary>
+            Add new Child Node.
+            </summary>
+            <param name="Element"></param>
+        </member>
+        <member name="M:SunMkr.Com.Xml.XmlElement.Clone">
+            <summary>
+            Clone current Xml Element Node
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SunMkr.Com.Xml.XmlElement.Item(System.String)">
+            <summary>
+            Collection Of Element
+            </summary>
+            <param name="Name"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SunMkr.Com.Xml.XmlElement.Node">
+            <summary>
+            XmlNode in this element.
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Xml.XmlElement.Attributes">
+            <summary>
+            Attributes
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Xml.XmlElement.Name">
+            <summary>
+            Node's Name.
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Xml.XmlElement.InnerText">
+            <summary>
+            Inner Text in the Element.
+            </summary>
+        </member>
+        <member name="T:SunMkr.Com.PageCache.QueryStrings">
+            <summary>
+            QueryString
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.PageCache.QueryStrings.#ctor">
+            <summary>
+            Default Construction.
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.PageCache.QueryStrings.Clear">
+            <summary>
+            Clear the container
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.PageCache.QueryStrings.Add(System.String,System.String)">
+            <summary>
+            Add
+            </summary>
+            <param name="_key"></param>
+            <param name="_val"></param>
+        </member>
+        <member name="M:SunMkr.Com.PageCache.QueryStrings.Get(System.String)">
+            <summary>
+            Get
+            </summary>
+            <param name="_key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.Com.PageCache.QueryStrings.Remove(System.String)">
+            <summary>
+            Remove the item.
+            </summary>
+            <param name="_key"></param>
+        </member>
+        <member name="M:SunMkr.Com.PageCache.QueryStrings.ToString">
+            <summary>
+            Generate the query string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.Com.PageCache.QueryStrings.Clone">
+            <summary>
+            Clone the query string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SunMkr.Com.PageCache.QueryStrings.Item(System.String)">
+            <summary>
+            Gets or sets Key and Value
+            </summary>
+            <param name="Key"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SunMkr.Com.PageCache.QueryStrings.IsEmpty">
+            <summary>
+            If empty
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.PageCache.QueryStrings.IsFull">
+            <summary>
+            If full
+            </summary>
+        </member>
+        <member name="T:SunMkr.Com.Literal.FormatString">
+            <summary>
+            String Format.
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Literal.FormatString.AppFormat(System.String)">
+            <summary>
+            Format the input filepath to X:/Folder/File.EXT style
+            </summary>
+            <param name="FileName"></param>
+            <returns></returns>
+            <exception cref="T:System.FormatException"></exception>
+        </member>
+        <member name="M:SunMkr.Com.Literal.FormatString.GetFormatedDate(System.String)">
+            <summary>
+            Get current date time in format.
+            </summary>
+            <param name="Format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.Com.Literal.FormatString.GetFormatedDate(System.String,System.String)">
+            <summary>
+            Convert the source date string to a formated type.
+            </summary>
+            <param name="SourceDate"></param>
+            <param name="Format"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.Com.Literal.FormatString.GetFormatedDate(System.DateTime,System.String)">
+            <summary>
+            Convert the source date to formated type.
+            </summary>
+            <param name="SourceDate"></param>
+            <param name="Format"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SunMkr.Com.PageCache.PPool">
+            <summary>
+            Page Pool
+            </summary>
+        </member>
+        <member name="F:SunMkr.Com.PageCache.PPool.DefaultPoolSize">
+            <summary>
+            Default Pool Size, 30 pages.
+            </summary>
+        </member>
+        <member name="F:SunMkr.Com.PageCache.PPool.DefaultTimeOut">
+            <summary>
+            Default Timeout, 15 minutes.
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.PageCache.PPool.Clear">
+            <summary>
+            Clear the pool
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.PageCache.PPool.#ctor">
+            <summary>
+            Construction
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.PageCache.PPool.#ctor(System.Int32)">
+            <summary>
+            Pool's Construction
+            </summary>
+            <param name="PoolSize"></param>
+        </member>
+        <member name="M:SunMkr.Com.PageCache.PPool.Add(System.String,System.Int32)">
+            <summary>
+            Add a URL to the pool.
+            </summary>
+            <param name="Url"></param>
+            <param name="TimeOut"></param>
+        </member>
+        <member name="M:SunMkr.Com.PageCache.PPool.Add(System.String)">
+            <summary>
+            Add a URL to the pool.
+            </summary>
+            <param name="Url"></param>
+            <exception cref="T:System.Exception">Pool size full</exception>
+            <exception cref="T:System.Exception">Unreachable URL</exception>
+            <exception cref="T:System.Exception">URL existed in pool</exception>
+        </member>
+        <member name="M:SunMkr.Com.PageCache.PPool.GetUrls">
+            <summary>
+            Get all URLs in the pool
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.Com.PageCache.PPool.Remove(System.String)">
+            <summary>
+            Remove the Url.
+            </summary>
+            <param name="Url"></param>
+        </member>
+        <member name="M:SunMkr.Com.PageCache.PPool.ForceRefresh(System.String)">
+            <summary>
+            Force the cache to refresh the page.
+            </summary>
+            <param name="Url"></param>
+            <exception cref="T:System.Exception">Pool size full</exception>
+            <exception cref="T:System.Exception">Unreachable URL</exception>
+            <exception cref="T:System.Exception">URL existed in pool</exception>
+        </member>
+        <member name="M:SunMkr.Com.PageCache.PPool.RefreshAll">
+            <summary>
+            Refresh All
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.PageCache.PPool.PoolSize">
+            <summary>
+            Pool size.
+            </summary>
+            <exception cref="T:System.Exception">Too Small Pool Size</exception>
+        </member>
+        <member name="P:SunMkr.Com.PageCache.PPool.IsEmpty">
+            <summary>
+            If Is Empty.
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.PageCache.PPool.IsFull">
+            <summary>
+            If Full
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.PageCache.PPool.Item(System.String)">
+            <summary>
+            Return the page.
+            </summary>
+            <param name="Url"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SunMkr.Com.Xml.XmlAttribute">
+            <summary>
+            Xml Attributes
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Xml.XmlAttribute.#ctor">
+            <summary>
+            Default Construction.
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Xml.XmlAttribute.#ctor(System.String)">
+            <summary>
+            Copy Construction.
+            </summary>
+            <param name="Value"></param>
+        </member>
+        <member name="M:SunMkr.Com.Xml.XmlAttribute.#ctor(System.String,System.String)">
+            <summary>
+            Create the attribute with key and value.
+            </summary>
+            <param name="Name"></param>
+            <param name="Value"></param>
+        </member>
+        <member name="M:SunMkr.Com.Xml.XmlAttribute.op_Implicit(SunMkr.Com.Xml.XmlAttribute)~System.String">
+            <summary>
+            Implicit Conversition Operator
+            </summary>
+            <param name="rhs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SunMkr.Com.Xml.XmlAttribute.Clone">
+            <summary>
+            Return a cloned object.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:SunMkr.Com.Xml.XmlAttribute.Name">
+            <summary>
+            Name of the Attribute
+            </summary>
+        </member>
+        <member name="P:SunMkr.Com.Xml.XmlAttribute.Value">
+            <summary>
+            Value of the Attribute
+            </summary>
+        </member>
+        <member name="T:SunMkr.Com.Mail.MailSmtpServer">
+            <summary>
+            Mail Smtp Server Enumerate
+            </summary>
+        </member>
+        <member name="F:SunMkr.Com.Mail.MailSmtpServer.GMail">
+            <summary>
+            Gmail Smtp Server
+            </summary>
+        </member>
+        <member name="F:SunMkr.Com.Mail.MailSmtpServer.LiveMail">
+            <summary>
+            Live mail Smtp Server
+            </summary>
+        </member>
+        <member name="F:SunMkr.Com.Mail.MailSmtpServer.Sina">
+            <summary>
+            Sina free mail Smtp Server
+            </summary>
+        </member>
+        <member name="F:SunMkr.Com.Mail.MailSmtpServer.Mail163">
+            <summary>
+            163 mail Smtp Server
+            </summary>
+        </member>
+        <member name="F:SunMkr.Com.Mail.MailSmtpServer.Mail126">
+            <summary>
+            126 mail Smtp Server
+            </summary>
+        </member>
+        <member name="M:SunMkr.Com.Mail.SmtpServerList.GetSmtpServer(SunMkr.Com.Mail.MailSmtpServer)">
+            <summary>
+            Get an SmtpServer specified by the server name in SmtpServer Enumerate.
+            </summary>
+            <param name="ServerName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SunMkr.ACache`2">
+            <summary>
+            The abstract class version of ICache
+            </summary>
+            <typeparam name="Key">Key Type</typeparam>
+            <typeparam name="Value">Value Type</typeparam>
+        </member>
+        <member name="M:SunMkr.ACache`2.Add(`0,`1)">
+            <summary>
+            Add new object to the cache
+            </summary>
+            <param name="_key">Key to the object</param>
+            <param name="_val">The object value</param>
+        </member>
+        <member name="M:SunMkr.ACache`2.Get(`0)">
+            <summary>
+            Get the object form the cache
+            </summary>
+            <param name="_key">The key specified the value object</param>
+            <returns>The value object</returns>
+        </member>
+        <member name="M:SunMkr.ACache`2.Remove(`0)">
+            <summary>
+            Remove the Item in the cache.
+            </summary>
+            <param name="_key">Key specified</param>
+        </member>
+        <member name="M:SunMkr.ACache`2.Clear">
+            <summary>
+            Clear the cache.
+            </summary>
+        </member>
+        <member name="P:SunMkr.ACache`2.IsEmpty">
+            <summary>
+            If the cache is empty
+            </summary>
+        </member>
+        <member name="P:SunMkr.ACache`2.IsFull">
+            <summary>
+            If the cache is full
+            </summary>
+        </member>
+    </members>
+</doc>

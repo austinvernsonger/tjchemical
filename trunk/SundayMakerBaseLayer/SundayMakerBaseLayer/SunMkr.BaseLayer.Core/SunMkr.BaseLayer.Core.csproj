@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{16A37AEF-6963-43D0-B9C6-E570E5CF9367}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SunMkr</RootNamespace>
+    <AssemblyName>SunMkr.BaseLayer.Core2.0</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\SunMkr.BaseLayer.Core2.0.xml</DocumentationFile>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\bin\SunMkr.BaseLayer.Core2.0.xml</DocumentationFile>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Kernel\Authorization.cs" />
+    <Compile Include="Kernel\CfgElem\CacheGroup.cs" />
+    <Compile Include="Kernel\CfgElem\DatabaseType.cs" />
+    <Compile Include="Kernel\CfgElem\DBBackUp.cs" />
+    <Compile Include="Kernel\CfgElem\DBProvider.cs" />
+    <Compile Include="Kernel\CfgElem\FileLocation.cs" />
+    <Compile Include="Kernel\Handler\AdministratorsHandler.cs" />
+    <Compile Include="Kernel\Handler\ModulesHandler.cs" />
+    <Compile Include="Kernel\Handler\RecentErrorsHandler.cs" />
+    <Compile Include="Kernel\Handler\WebsiteSettingsHandler.cs" />
+    <Compile Include="Kernel\ICfgElem.cs" />
+    <Compile Include="Kernel\Handler\AdminHandler.cs" />
+    <Compile Include="Kernel\Handler\ErrorHandler.cs" />
+    <Compile Include="Kernel\Handler\HtmlPage.cs">
+    </Compile>
+    <Compile Include="Kernel\Handler\LoginHandler.cs" />
+    <Compile Include="Kernel\Handler\LogoutHandler.cs" />
+    <Compile Include="Kernel\Handler\PageCache.cs" />
+    <Compile Include="Kernel\ISunMkrHandler.cs" />
+    <Compile Include="Kernel\Platform.cs" />
+    <Compile Include="Kernel\SunMkrConfig.cs" />
+    <Compile Include="Kernel\SunMkrHandler.cs" />
+    <Compile Include="Proc\absOperation.cs" />
+    <Compile Include="Proc\ASLoader.cs" />
+    <Compile Include="Proc\ASRegister.cs" />
+    <Compile Include="Proc\ASStatue.cs" />
+    <Compile Include="Proc\ControlCenter.cs" />
+    <Compile Include="Proc\IAS.cs" />
+    <Compile Include="Proc\ILock.cs" />
+    <Compile Include="Proc\IOperation.cs" />
+    <Compile Include="Proc\IProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.cs" />
+    <Compile Include="Sys\ErrorSystem.cs" />
+    <Compile Include="Sys\ObjCache.cs" />
+    <Compile Include="Sys\RecentErrorList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SunMkr\SunMkr.csproj">
+      <Project>{BDF7D523-7597-4509-AF36-EF993A51F7CD}</Project>
+      <Name>SunMkr</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Authorization.xml" />
+    <EmbeddedResource Include="Config.xml" />
+    <EmbeddedResource Include="SunMkr.css">
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HtmlBegin.code" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HtmlEnd.code" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Login.sm" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Error.sm" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ASRegister.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ServerStatue.sm" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Administrators.sm" />
+    <EmbeddedResource Include="Modules.sm" />
+    <EmbeddedResource Include="RecentErrors.sm" />
+    <EmbeddedResource Include="WebsiteSettings.sm" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
