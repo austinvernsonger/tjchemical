@@ -1,8 +1,0 @@
-﻿
-<div style="position: absolute; left: 20px;">
-    <h1>Page Not Found</h1>
-</div>
-<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;<br />&nbsp;
-<div align="center" style="font-size: 15px;">
-    The page:&nbsp;<label class="eUrl">{0}</label> is not available.
-</div>
