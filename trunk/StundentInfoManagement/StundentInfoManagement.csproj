@@ -31,6 +31,58 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ADBS, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TjChemicalWeb\Bin\ADBS.dll</HintPath>
+    </Reference>
+    <Reference Include="AFS, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TjChemicalWeb\Bin\AFS.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit, Version=1.0.10920.32880, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TjChemicalWeb\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ConfigElement, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TjChemicalWeb\Bin\ConfigElement.dll</HintPath>
+    </Reference>
+    <Reference Include="Control, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TjChemicalWeb\Bin\Control.dll</HintPath>
+    </Reference>
+    <Reference Include="Core, Version=0.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TjChemicalWeb\Bin\Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FredCK.FCKeditorV2, Version=2.6.3.22451, Culture=neutral, PublicKeyToken=4f86767c9b519a06, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TjChemicalWeb\Bin\FredCK.FCKeditorV2.dll</HintPath>
+    </Reference>
+    <Reference Include="Global, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TjChemicalWeb\Bin\Global.dll</HintPath>
+    </Reference>
+    <Reference Include="Interface, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TjChemicalWeb\Bin\Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Excel, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TjChemicalWeb\Bin\Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="NExcel, Version=0.5.0.19524, Culture=neutral, PublicKeyToken=0e3813d1b3c88458">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TjChemicalWeb\Bin\NExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="Operation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TjChemicalWeb\Bin\Operation.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.102.2.20, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TjChemicalWeb\Bin\Oracle.DataAccess.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -45,8 +97,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Ops\OpStudentMngExec.cs" />
+    <Compile Include="Ops\OpStudentMngProducer.cs" />
+    <Compile Include="Ops\OpStudentMngQuery.cs" />
+    <Compile Include="StudentInfoEx.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sql\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
