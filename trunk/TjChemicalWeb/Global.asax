@@ -5,30 +5,38 @@
     void Application_Start(object sender, EventArgs e) 
     {
         // Code that runs on application startup
-        SunMkr.Kernel.Platform.Instance.Start();
+        SMBL.Global.WebSite.Boot();
+        // Cache the config file and 
+        // Start the error system and log system
+        SMBL.Core.Kernel.Initialize();
+        // Start the file system
+
+        // Start the database system
+        SMBL.ADBS.ConnectionControl.Initialize();
+        // Start the file system
+        SMBL.AFS.DocumentPool.Initialize();
+        WebSiteRegister.RegisterDepartment();
     }
     
     void Application_End(object sender, EventArgs e) 
     {
         //  Code that runs on application shutdown
-        SunMkr.Kernel.Platform.Instance.End();
+        SMBL.ADBS.ConnectionControl.Terminate();
     }
         
     void Application_Error(object sender, EventArgs e) 
     { 
         // Code that runs when an unhandled error occurs
         Exception exp = Server.GetLastError();
-        string ErrorID = SunMkr.Sys.ErrorSystem.CatchError(exp);
-        SunMkr.Com.Mail.MailSender.Send("jiasong.song@gmail.com", "医学院系统错误", "");
-        
-        Response.Clear();
-        Response.Write("System Error...<br />");
-        Response.Write("The Author has been notified by the system mail.");
-        Response.Close();
+
+        // Process the exception
+        //SMBL.Global.BasicErrorSystem.UnhandledError(exp);
+        Int64 ErrorId = SMBL.Core.ErrorSystem.CatchError(exp);
+        ConstValue._errorSession.Add(ErrorId, exp);
         Server.ClearError();
 
-        // Restart automactially
-        SunMkr.Kernel.Platform.Instance.Restart();
+        // Redirect to some page?
+        Response.Redirect("~/SystemError.aspx?err=" + ErrorId.ToString());
     }
 
     void Session_Start(object sender, EventArgs e) 
