@@ -1,0 +1,14 @@
+D:\医学院\Login\obj\Debug\ResolveAssemblyReference.cache
+D:\医学院\Login\bin\Debug\Login.dll
+D:\医学院\Login\bin\Debug\Login.pdb
+D:\医学院\Login\bin\Debug\Interface.dll
+D:\医学院\Login\bin\Debug\Operation.dll
+D:\医学院\Login\bin\Debug\Core.dll
+D:\医学院\Login\bin\Debug\AFS.dll
+D:\医学院\Login\bin\Debug\SunMkr2.0.dll
+D:\医学院\Login\bin\Debug\Control.dll
+D:\医学院\Login\bin\Debug\ConfigElement.dll
+D:\医学院\Login\obj\Debug\Login.dll
+D:\医学院\Login\obj\Debug\Login.pdb
+D:\医学院\Login\bin\Debug\Global.dll
+D:\医学院\Login\bin\Debug\ADBS.dll

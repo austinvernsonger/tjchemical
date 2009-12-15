@@ -88,7 +88,7 @@ namespace Department.Interface
         /// <param name="ID">The User's ID.</param>
         /// <param name="SubTitleCssClass">The title's CssClass.</param>
         /// <param name="TreeCssClass">The tree's CssClass.</param>
-        /*static public void GenerateNavigation(ref System.Web.UI.WebControls.Panel Container, String ID,
+        static public void GenerateNavigation(ref System.Web.UI.WebControls.Panel Container, String ID,
             String SubTitleCssClass, String TreeCssClass, String TargetWindow)
         {
             Boolean isStudent = false;  // Shoude be change to get the correct state.
@@ -127,24 +127,21 @@ namespace Department.Interface
                 AndTeacherAction(ref Container, ID, SubTitleCssClass, TreeCssClass, TargetWindow);
             }
         }
-        /*
-         * Unusable function in the new version.
-         * The department should return a TreeView directly.
-        static private void generate(DataStructure.Tree<AuthItem> SubTree, ref TreeNode TheRoot)
-        {
-            DataStructure.Tree<AuthItem> tmpTree = SubTree.GetNextSubTree();
-            while (tmpTree != null)
-            {
-                TreeNode tmpNode = new TreeNode(tmpTree.CurrentNode.AuthString, 
-                    null, null, tmpTree.CurrentNode.AuthUrl, "sysContainer");
-                TheRoot.ChildNodes.Add(tmpNode);
-                generate(tmpTree, ref tmpNode);
-                tmpTree = SubTree.GetNextSubTree(tmpTree);
-            }
-        }
-        */
-
-       /* static private void AndPublicAction(ref System.Web.UI.WebControls.Panel Container, String ID,
+       
+       
+//         static private void generate(DataStructure.Tree<AuthItem> SubTree, ref TreeNode TheRoot)
+//         {
+//             DataStructure.Tree<AuthItem> tmpTree = SubTree.GetNextSubTree();
+//             while (tmpTree != null)
+//             {
+//                 TreeNode tmpNode = new TreeNode(tmpTree.CurrentNode.AuthString, 
+//                     null, null, tmpTree.CurrentNode.AuthUrl, "sysContainer");
+//                 TheRoot.ChildNodes.Add(tmpNode);
+//                 generate(tmpTree, ref tmpNode);
+//                 tmpTree = SubTree.GetNextSubTree(tmpTree);
+//             }
+//         }
+      static private void AndPublicAction(ref System.Web.UI.WebControls.Panel Container, String ID,
             String SubTitleCssClass, String TreeCssClass, String TargetWindow)
         {
 
@@ -153,10 +150,10 @@ namespace Department.Interface
             String SubTitleCssClass, String TreeCssClass, String TargetWindow)
         {
             TreeView TeacherActionTree = new TreeView();
-            if (SysCom.NewsAuthority.HaveAuthority(System.Web.HttpContext.Current.Session["IdentifyNumber"].ToString()))
-            {
-                AndMMT(ref TeacherActionTree);
-            }
+           // if (SysCom.NewsAuthority.HaveAuthority(System.Web.HttpContext.Current.Session["IdentifyNumber"].ToString()))
+          //  {
+               AndMMT(ref TeacherActionTree);
+          //  }
             TeacherActionTree.Target = TargetWindow;
             TeacherActionTree.CssClass = TreeCssClass;
 
@@ -189,13 +186,6 @@ namespace Department.Interface
             subnode = new TreeNode("活动发布", "", "", "~/News/ActivityPost.aspx", "");
             mmtpost.ChildNodes.Add(subnode);
 
-            //             subnode = new TreeNode("新闻管理", "", "", "~/News/NewsMgr.aspx", "");
-            //             mmtmgr.ChildNodes.Add(subnode);
-            //             subnode = new TreeNode("通知管理", "", "", "~/News/NoticeMgr.aspx", "");
-            //             mmtmgr.ChildNodes.Add(subnode);
-            //             subnode = new TreeNode("活动管理", "", "", "~/News/ActivityMgr.aspx", "");
-            //             mmtmgr.ChildNodes.Add(subnode);
-            //            mmtnode.ChildNodes.Add(mmtmgr);
             TreeNode specialhtml = new TreeNode("学院概况发布", "学院概况发布");
             specialhtml.SelectAction = TreeNodeSelectAction.Expand;
             subnode = new TreeNode("学院介绍发布", "", "", "~/News/EditAboutSSE.aspx", "");
@@ -220,6 +210,6 @@ namespace Department.Interface
             String SubTitleCssClass, String TreeCssClass, String TargetWindow)
         {
 
-        }*/
+        }
     }
 }
