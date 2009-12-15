@@ -63,6 +63,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\TjChemicalWeb\Bin\Global.dll</HintPath>
     </Reference>
+    <Reference Include="IDepartment, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\IDepartment\bin\Debug\IDepartment.dll</HintPath>
+    </Reference>
     <Reference Include="Interface, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\TjChemicalWeb\Bin\Interface.dll</HintPath>
@@ -87,6 +91,7 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -97,10 +102,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MngRegister.cs" />
     <Compile Include="Ops\OpStudentMngExec.cs" />
     <Compile Include="Ops\OpStudentMngProducer.cs" />
     <Compile Include="Ops\OpStudentMngQuery.cs" />
-    <Compile Include="StudentInfoEx.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -14,7 +14,11 @@
         同济大学医学院后台管理系统
     </div>
     <div id="Sidebar">
-        Side Bar
+        <div style="width: 960px; margin-left: auto; margin-right: auto;">
+        <div id="Navigation">
+            <asp:Panel ID="pnl_nav" runat="server" Width="100%" BackColor="#EDEDED">
+            </asp:Panel>
+        </div>
     </div>
     <div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
