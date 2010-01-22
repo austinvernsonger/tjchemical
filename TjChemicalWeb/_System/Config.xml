@@ -12,9 +12,9 @@
 <!DOCTYPE SundayMaker SYSTEM 'Config.dtd'>
 
 <SundayMaker>
-  <DBProvider Name="TjMedical" MaxConn="1000" Type="SQLDB">
-    <DBPath>10.60.43.9</DBPath>
+  <DBProvider Name="TjMedical" MaxConn="1000" TYPE="SQLDB">
     <DBName>tjmedicine</DBName>
+    <DBPath>10.60.43.9</DBPath>
     <UserName>tjMdc_student</UserName>
     <Password>1234</Password>
   </DBProvider>
