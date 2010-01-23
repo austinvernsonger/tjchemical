@@ -16,10 +16,10 @@ namespace SysCom.Sql
         #endregion
 
 
-        public sqlCheckInfo(LoginInfo ToCheck)
+        public sqlCheckInfo(string Student_ID)
         {
             this.key = new Object[] { "@AccountID" };
-            this.value = new Object[] {ToCheck.Username};
+            this.value = new Object[] {Student_ID.Trim()};
         }
     }
 }

@@ -18,6 +18,12 @@
     <UserName>tjMdc_student</UserName>
     <Password>1234</Password>
   </DBProvider>
+  <DBProvider Name="Account" MaxConn="1000" TYPE="SQLDB">
+    <DBName>tjmedicine</DBName>
+    <DBPath>10.60.43.9</DBPath>
+    <UserName>Account_owner</UserName>
+    <Password>1234</Password>
+  </DBProvider>
   
    <ConnectString TYPE='SQLDB'>Persist Security Info=True;Initial Catalog=</ConnectString>
 
