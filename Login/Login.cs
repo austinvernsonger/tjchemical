@@ -21,9 +21,10 @@ namespace SysCom
         /// <returns>验证结果</returns>
         public static LoginType CheckInfo(LoginInfo ToCheck,bool SaveCookie)
         {
-            SysCom.Ops.OpCheckInfo op = new SysCom.Ops.OpCheckInfo("TjMedical", new sqlCheckInfo(ToCheck), ToCheck.Username);
+            SysCom.Sql.sqlCheckInfo qu = new SysCom.Sql.sqlCheckInfo(ToCheck.Username);
+            SysCom.Ops.OpLoginQuery op = new SysCom.Ops.OpLoginQuery("Account", qu);
             op.Do();
-            DataSet ds = op.LoginInfoDs;
+            DataSet ds = op.Ds;
             if(ds.Tables[0].Rows.Count==0)
             {
                 return LoginType.Nouser;
