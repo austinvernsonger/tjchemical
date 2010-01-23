@@ -41,7 +41,30 @@ namespace SysCom
             {
                 return LoginType.NotSure;
             }
+
+            SysCom.Sql.sqlAdminInfo ai = new SysCom.Sql.sqlAdminInfo(ToCheck.Username);
+            SysCom.Ops.OpAdminQuery aq = new SysCom.Ops.OpAdminQuery("Account", ai);
+            aq.Do();
+            DataSet ds2 = aq.Ds;
+
             return LoginType.Succeed;
+        }
+
+        /// <summary>
+        /// 验证权限信息
+        /// </summary>
+        /// <param name="ToCheck">需要验证的信息</param>
+       
+        /// <returns>验证结果</returns>
+        public static Boolean CheckAuthority(LoginInfo ToCheck)
+        {
+            SysCom.Sql.sqlAdminInfo ai = new SysCom.Sql.sqlAdminInfo(ToCheck.Username);
+            SysCom.Ops.OpAdminQuery aq = new SysCom.Ops.OpAdminQuery("Account", ai);
+            aq.Do();
+            DataSet ds = aq.Ds;
+            return ds.Tables[0].Rows.Count != 0;
+         
+           
         }
         /// <summary>
         /// 根据ID找到密码
