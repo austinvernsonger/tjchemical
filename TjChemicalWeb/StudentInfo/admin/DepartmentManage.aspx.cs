@@ -57,13 +57,13 @@ public partial class StudentInfo_admin_DepartmentManage : System.Web.UI.Page
     {
         int index = e.RowIndex;
         String SelectId = GridViewDepartment.DataKeys[index].Value.ToString().Trim();
-        ERRORMessage.Text = SelectId;
+        //ERRORMessage.Text = SelectId;
         
-        /*if (!DepartmentInfoEx.DeleteDepartName(SelectId))
+        if (!DepartmentInfoEx.DeleteDepartName(SelectId))
         {
             ERRORMessage.Text = "删除失败！";
             return;
         }
-        Rebind();*/
+        Rebind();
     }
 }
