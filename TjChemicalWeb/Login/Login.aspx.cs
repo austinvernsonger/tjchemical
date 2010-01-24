@@ -14,7 +14,8 @@ public partial class Login_Login : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["IdentifyNumber"] != null)
+        String tmp = Session["Authority"].ToString();
+        if (Session["IdentifyNumber"] != null && tmp.Equals("Admin"))
         {
             Response.Redirect("../Default.aspx");
         }
