@@ -65,7 +65,7 @@
     </Reference>
     <Reference Include="IDepartment, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\IDepartment\bin\Debug\IDepartment.dll</HintPath>
+      <HintPath>..\IDepartment\obj\Debug\IDepartment.dll</HintPath>
     </Reference>
     <Reference Include="Interface, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -102,17 +102,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DepartmentInfoEx.cs" />
     <Compile Include="MngRegister.cs" />
     <Compile Include="Ops\OpStudentMngExec.cs" />
     <Compile Include="Ops\OpStudentMngProducer.cs" />
     <Compile Include="Ops\OpStudentMngQuery.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sql\SqlAddDepartmentName.cs" />
+    <Compile Include="Sql\SqlCheckAdmin.cs" />
+    <Compile Include="Sql\SqlDeleteDepartmentName.cs" />
+    <Compile Include="Sql\SqlSelectAllDepartment.cs" />
+    <Compile Include="Sql\SqlSelectAllStudentBasicInfo.cs" />
+    <Compile Include="StudentBasicInfoEx.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Sql\" />
+    <ProjectReference Include="..\Login\Login.csproj">
+      <Project>{18237246-FA82-4C18-9A0E-0E7447C82BD4}</Project>
+      <Name>Login</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
