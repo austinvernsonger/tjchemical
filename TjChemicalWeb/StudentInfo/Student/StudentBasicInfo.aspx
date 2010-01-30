@@ -17,7 +17,11 @@
 </p>
 <p>
    系所
-   <asp:TextBox ID="txtDepartment" runat="server"></asp:TextBox> 
+   <asp:DropDownList ID="DropDownListDepartment" runat="server"></asp:DropDownList>
+</p>
+<p>
+    目前所在单位
+    <asp:DropDownList ID="DropDownListWorkUnit" runat="server"></asp:DropDownList>
 </p>
 <p>
     学号
