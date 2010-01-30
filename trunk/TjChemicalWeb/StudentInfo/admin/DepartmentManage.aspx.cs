@@ -19,7 +19,7 @@ public partial class StudentInfo_admin_DepartmentManage : System.Web.UI.Page
     {
         if (Session["IdentifyNumber"] == null)
             SysCom.Login.LoginRedirect(Request.Url.ToString());
-        if (Session["Authority"]!="Admin")
+        if (Session["Authority"].ToString()!="Admin")
         {
             SysCom.Login.LoginRedirect(Request.Url.ToString());
         }
