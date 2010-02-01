@@ -11,70 +11,10 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using StundentInfoManagement;
+
 public partial class StudentInfo_StudentBasicInfo : System.Web.UI.Page
 {
-    protected String strPersonalPhoto;
-    protected String strCollege;
-    protected Int32 iDepartment;
-    protected Int32 iWorkUnit;
     protected String strStudentID;
-    protected String strName;
-    protected String strOriginalName;
-    protected Int32 iGender;
-    protected String strNativeProvince;
-    protected DateTime dt_BirthDay;
-    protected String strNation;
-    protected String strBirthPlace;
-    protected String strHomeBirth;
-    protected Int32 iPoliticalStatus;
-    protected String strPaperworktype;
-    protected String strPaperworkNum;
-    protected Int32 iMarriage;
-    protected String strConsortName;
-    protected String strConsortPhoneNumber;
-    protected String strConsortWorkingPlace;
-    protected String strEntranceYear;
-    protected Int32 iEntranceSeason;
-    protected String strGrade;
-    protected String strClass;
-    protected String strStudyTime;
-    protected String strWorkingPlaceBeforeSchool;
-    protected Int32 iStudyType;
-    protected Int32 iNowCondition;
-    protected Int32 iContinent;
-    protected String strCountry;
-    protected String strStudentSource;
-    protected Int32 iStudentTyp;
-    protected Int32 iTrainType;
-    protected Int32 iSubsidizeType;
-    protected String strField;
-    protected String strFieldDirection;
-    protected String strTeacher;
-    protected String strHealth;
-    protected String strBloodtype;
-    protected String strGraduation;
-    protected Int32 iGraduationSeason;
-    protected String strGraduationTime;
-    protected Int32 iGraduationType;
-    protected String strTrainArriveDestination;
-    protected String strDormitoryNum;
-    protected String strDormitoryRoom;
-    protected String strDormitoryPhone;
-    protected String strEmailAddress;
-    protected String strQQ;
-    protected String strMSN;
-    protected String strHomePhone;
-    protected String strHomeAddress;
-    protected String strPostCode;
-    protected String strRegisteredResidence;
-    protected String strRegisteredResidenceProperty;
-    protected String strFatherNam;
-    protected String strFatherPhone;
-    protected String strFatherWorkingPlace;
-    protected String strMotherName;
-    protected String strMotherPhone;
-    protected String strMotherWorkingPlace;
-
     protected void Page_Load(object sender, EventArgs e)
     {
         CheckID();
@@ -215,5 +155,158 @@ public partial class StudentInfo_StudentBasicInfo : System.Web.UI.Page
         txtMotherName.Text = CheckContent(QueryRs.Tables[0].Rows[0][58]);
         txtMotherPhone.Text = CheckContent(QueryRs.Tables[0].Rows[0][59]);
         txtMotherWorkingPlace.Text = CheckContent(QueryRs.Tables[0].Rows[0][60]);
+        Int16 ivalidate = Convert.ToInt16(QueryRs.Tables[0].Rows[0][62]);
+        switch (ivalidate)
+        {
+            case 0:
+                btConfirm.Visible = true;
+                btConfirm.Enabled = true;
+                lbErrorMessage.Text = "状态：未审核";
+        	    break;
+            case 1:
+                btConfirm.Visible = true;
+                btConfirm.Enabled = true;
+                lbErrorMessage.Text = "状态：未通过审核\r\n";
+                lbErrorMessage.Text += "原因：\r\n" + CheckContent(QueryRs.Tables[0].Rows[0][61]);
+                break;
+            case 2:
+                btConfirm.Visible = false;
+                btConfirm.Enabled = false;
+                lbErrorMessage.Text = "状态：通过审核";
+                break;
+            default:
+                lbErrorMessage.Text = "网络或数据原因状态读取错误！请与管理员联系！";
+                break;
+        }
+    }
+
+    protected void btConfirm_Click(object sender, EventArgs e)
+    {
+        String strPersonalPhoto = ImgPersonalPhoto.ImageUrl;
+        String strCollege = txtCollege.Text.Trim();
+        String iDepartment = DropDownListDepartment.SelectedValue;
+        String iWorkUnit = DropDownListWorkUnit.SelectedValue;
+        String strStudentName = lbName.Text.Trim();
+        String strOriginalName = txtOriginalName.Text.Trim();
+        String iGender = DropDownListGender.SelectedValue;
+        String strNativeProvince = txtNativeProvince.Text.Trim();
+        DateTime dt_BirthDay = Convert.ToDateTime(txtBirthDay.Text.Trim());
+        String strNation = txtNation.Text.Trim();
+        String strBirthPlace = txtBirthPlace.Text.Trim();
+        String strHomeBirth = txtHomeBirth.Text.Trim();
+        String iPoliticalStatus = DropDownListPoliticalStatus.Text.Trim();
+        String strPaperworktype = txtPaperworktype.Text.Trim();
+        String strPaperworkNum = txtPaperworkNum.Text.Trim();
+        String iMarriage = DropDownListMarriage.SelectedValue;
+        String strConsortName = txtConsortName.Text.Trim();
+        String strConsortPhoneNumber = txtConsortPhoneNumber.Text.Trim();
+        String strConsortWorkingPlace = txtConsortWorkingPlace.Text.Trim();
+        String strEntranceYear = txtEntranceYear.Text.Trim();
+        String iEntranceSeason = DropDownListEntranceSeason.SelectedValue;
+        String strGrade = txtGrade.Text.Trim();
+        String strClass = txtClass.Text.Trim();
+        String strStudyTime = txtStudyTime.Text.Trim();
+        String strWorkingPlaceBeforeSchool = txtWorkingPlaceBeforeSchool.Text.Trim();
+        String iStudyType = DropDownListStudyType.SelectedValue;
+        String iNowCondition = DropDownListNowCondition.SelectedValue;
+        String iContinent = DropDownListContinent.SelectedValue;
+        String strCountry = txtCountry.Text.Trim();
+        String strStudentSource = txtStudentSource.Text.Trim();
+        String iStudentTyp = DropDownListStudentType.SelectedValue;
+        String iTrainType = DropDownListTrainType.SelectedValue;
+        String iSubsidizeType = DropDownListSubsidizeType.SelectedValue;
+        String strField = txtField.Text.Trim();
+        String strFieldDirection = txtFieldDirection.Text.Trim();
+        String strTeacher = txtTeacher.Text.Trim();
+        String strHealth = txtHealth.Text.Trim();
+        String strBloodtype = txtBloodType.Text.Trim();
+        String strGraduation = txtGraduation.Text.Trim();
+        String iGraduationSeason = DropDownListGraduationSeason.SelectedValue;
+        String strGraduationTime = txtGraduationTime.Text.Trim();
+        String iGraduationType = DropDownListGraduationType.SelectedValue;
+        String strTrainArriveDestination = txtTrainArriveDestination.Text.Trim();
+        String strDormitoryNum = txtDormitoryNum.Text.Trim();
+        String strDormitoryRoom = txtDormitoryRoom.Text.Trim();
+        String strDormitoryPhone = txtDormitoryPhone.Text.Trim();
+        String strEmailAddress = txtEmailAddress.Text.Trim();
+        String strQQ = txtQQ.Text.Trim();
+        String strMSN = txtMSN.Text.Trim();
+        String strHomePhone = txtHomePhone.Text.Trim();
+        String strHomeAddress = txtHomeAddress.Text.Trim();
+        String strPostCode = txtPostCode.Text.Trim();
+        String strRegisteredResidence = txtRegisteredResidence.Text.Trim();
+        String strRegisteredResidenceProperty = txtRegisteredResidenceProperty.Text.Trim();
+        String strFatherName = txtFatherName.Text.Trim();
+        String strFatherPhone = txtFatherPhone.Text.Trim();
+        String strFatherWorkingPlace = txtFatherWorkingPlace.Text.Trim();
+        String strMotherName = txtMotherName.Text.Trim();
+        String strMotherPhone = txtMotherPhone.Text.Trim();
+        String strMotherWorkingPlace = txtMotherWorkingPlace.Text.Trim();
+        if(!StudentBasicInfoEx.InsertStudentInfo(strPersonalPhoto,
+         strCollege,
+         iDepartment,
+         iWorkUnit,
+         strStudentID,
+         strStudentName,
+         strOriginalName,
+         iGender,
+         strNativeProvince,
+         dt_BirthDay,
+         strNation,
+         strBirthPlace,
+         strHomeBirth,
+         iPoliticalStatus,
+         strPaperworktype,
+         strPaperworkNum,
+         iMarriage,
+         strConsortName,
+         strConsortPhoneNumber,
+         strConsortWorkingPlace,
+         strEntranceYear,
+         iEntranceSeason,
+         strGrade,
+         strClass,
+         strStudyTime,
+         strWorkingPlaceBeforeSchool,
+         iStudyType,
+         iNowCondition,
+         iContinent,
+         strCountry,
+         strStudentSource,
+         iStudentTyp,
+         iTrainType,
+         iSubsidizeType,
+         strField,
+         strFieldDirection,
+         strTeacher,
+         strHealth,
+         strBloodtype,
+         strGraduation,
+         iGraduationSeason,
+         strGraduationTime,
+         iGraduationType,
+         strTrainArriveDestination,
+         strDormitoryNum,
+         strDormitoryRoom,
+         strDormitoryPhone,
+         strEmailAddress,
+         strQQ,
+         strMSN,
+         strHomePhone,
+         strHomeAddress,
+         strPostCode,
+         strRegisteredResidence,
+         strRegisteredResidenceProperty,
+         strFatherName,
+         strFatherPhone,
+         strFatherWorkingPlace,
+         strMotherName,
+         strMotherPhone,
+         strMotherWorkingPlace))
+        {
+            lbErrorMessage.Text = "数据插入失败！";
+            return;
+        }
+        lbErrorMessage.Text = "数据插入成功！";
     }
 }
