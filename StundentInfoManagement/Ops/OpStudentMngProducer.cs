@@ -22,7 +22,7 @@ namespace StundentInfoManagement.Ops
         {
             parms = Parameters;
             PName = ProducerName;
-            BindDBName = "StudentManage";
+            BindDBName = "TjMedical";
         }
 
         public override void processDelegate()
