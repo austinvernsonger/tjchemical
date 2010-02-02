@@ -171,6 +171,13 @@ namespace StundentInfoManagement
             return false;
 		
         }
+        public static DataSet QueryStudentInfo(String strStudentID, String strName, String strNation, Int16 strDepartment,
+        String strField, Int32 strEntranceYear,Int16 strStudentType, Int16 strGraduationType, Int16 strWorkUnit)
+        {
+            OpStudentMngProducer op = new OpStudentMngProducer("P_QUERY_STUDENT", strDepartment, strWorkUnit, strStudentID, strName, strNation, strEntranceYear, strStudentType, strField, strGraduationType);
+            op.Do();
+            return op.ExecuteResult as DataSet;
+        }
     }
 
 }

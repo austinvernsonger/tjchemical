@@ -25,9 +25,9 @@ public partial class MasterPage_BackSys : System.Web.UI.MasterPage
             }
             else
             {
-                Department.Interface.DepartmentList.GenerateNavigation(
+               /* Department.Interface.DepartmentList.GenerateNavigation(
                     ref pnl_nav, (String)Session["IdentifyNumber"],
-                    "dpmntTitle", "treeCssClass", "ifrm_content");
+                    "dpmntTitle", "treeCssClass", "ifrm_content");*/
             }
         }
     }

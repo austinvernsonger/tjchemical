@@ -116,6 +116,7 @@
     <Compile Include="Sql\SqlSelectAllDepartment.cs" />
     <Compile Include="Sql\SqlSelectAllStudentBasicInfo.cs" />
     <Compile Include="Sql\SqlSelectAllWorkUnitName.cs" />
+    <Compile Include="Sql\SqlStudentInfoQuery.cs" />
     <Compile Include="StudentBasicInfoEx.cs" />
     <Compile Include="WorkUnitInfoEx.cs" />
   </ItemGroup>
