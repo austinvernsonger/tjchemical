@@ -23,7 +23,9 @@
         <asp:TableRow ID="TableRow2" runat="server">
          <asp:TableCell ID="TableCell4" runat="server">
          系所：
-         <asp:TextBox ID="txtDepartment" runat="server"></asp:TextBox>
+         <asp:DropDownList ID="DropDownListDepartment" runat="server">
+            <asp:ListItem Value="-1" Text=" "></asp:ListItem>
+         </asp:DropDownList>
          </asp:TableCell>
          <asp:TableCell ID="TableCell5" runat="server">
          现在专业:
@@ -38,29 +40,34 @@
          <asp:TableCell ID="TableCell7" runat="server">
          学生类别：
          <asp:DropDownList ID="DropDownListStudentType" runat="server">
+            <asp:ListItem Value="-1" Text=" "></asp:ListItem>
             <asp:ListItem Value="0">本科生</asp:ListItem>
             <asp:ListItem Value="1">研究生</asp:ListItem>
             <asp:ListItem Value="2">博士生</asp:ListItem>
          </asp:DropDownList>
          </asp:TableCell>
          <asp:TableCell ID="TableCell8" runat="server">
-         毕业身份:
-         <asp:DropDownList ID="DropDownList1" runat="server">
+         毕业身份：
+         <asp:DropDownList ID="DropDownListGraduationType" runat="server">
+            <asp:ListItem Value="-1" Text=" "></asp:ListItem>
             <asp:ListItem Value="0">本科生</asp:ListItem>
             <asp:ListItem Value="1">研究生</asp:ListItem>
             <asp:ListItem Value="2">博士生</asp:ListItem>
          </asp:DropDownList>
          </asp:TableCell>
          <asp:TableCell ID="TableCell9" runat="server">
-         <asp:Button ID="btQuery" Text="查询" runat="server" />
+            目前所在单位：
+            <asp:DropDownList ID="DropDownListWorkUnit" runat="server">
+                <asp:ListItem Value="-1" Text=" "></asp:ListItem>
+            </asp:DropDownList>
          </asp:TableCell>
        </asp:TableRow>             
     </asp:Table>
+    <asp:Button ID="btQuery" Text="查询" runat="server" onclick="btQuery_Click" />
 </p>
 <p>
-    <asp:DataGrid ID="dataGrid_QueryResult" runat="server" AllowPaging="True" 
-        AllowSorting="True">
-    </asp:DataGrid>
+    <asp:GridView ID="GridViewStudentInfo" runat="server">
+    </asp:GridView>
 </p>
 </asp:Content>
 
