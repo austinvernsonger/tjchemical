@@ -20,9 +20,9 @@ public partial class tjm_sys : System.Web.UI.Page
                 SysCom.Login.LoginRedirect(Request.Url.ToString());
             else
             {
-              //  Department.Interface.DepartmentList.GenerateNavigation(
-              //      ref pnl_nav, (String)Session["IdentifyNumber"],
-              //      "dpmntTitle", "treeCssClass", "ifrm_content");
+                Department.Interface.DepartmentList.GenerateNavigation(
+                    ref pnl_nav, (String)Session["IdentifyNumber"],
+                    "dpmntTitle", "treeCssClass", "ifrm_content");
             }
         }
     }
