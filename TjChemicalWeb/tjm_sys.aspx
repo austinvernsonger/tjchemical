@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <link href="CssClass/sse_sys.css" rel="stylesheet" type="text/css" />
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="phctnt_body" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server"><%--phctnt_body--%>
 <div style="width: 960px; margin-left: auto; margin-right: auto;">
         <div id="Navigation">
             <asp:Panel ID="pnl_nav" runat="server" Width="100%" BackColor="#EDEDED">
