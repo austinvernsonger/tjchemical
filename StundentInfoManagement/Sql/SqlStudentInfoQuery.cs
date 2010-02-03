@@ -13,7 +13,7 @@ namespace StundentInfoManagement.Sql
         {
             this.key = new object[] {"@StudentID","@Name","@Nation","@Department","@Field","@EntranceYear","@StudentType","@GraduationType","@WorkUnit"};
             this.value = new object[] {strStudentID.Trim(),strName.Trim(),strNation.Trim(),strDepartment,strField.Trim(),strEntranceYear,strStudentType,strGraduationType,strWorkUnit };
-            returnString = "select StudentID, Name, Nation, DepartmentID,WorkUnitID,Major,EntryYear,TypeofStudent,GraduationType from Student where 1=1";
+            returnString = "select S.StudentID, S.Name, S.Nation, P.DepartmentName,Q.WorkUnitName,S.Major,S.EntryYear,S.TypeofStudent,S.GraduationType from [Student] as S,[Department] as P,[WorkUnit] as Q where S.DepartmentID = P.DepartmentID and S.WorkUnitID = Q.WorkUnitID";
             if (strStudentID.Trim() != String.Empty)
             {
                 returnString += " and StudentID like @StudentID";

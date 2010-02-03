@@ -184,6 +184,13 @@ namespace StundentInfoManagement
             return op.Ds;
 
         }
+        public static bool DeleteStudentInfo(String StudentID)
+        {
+            Sql.SqlDeleteStudentInfo exstr = new StundentInfoManagement.Sql.SqlDeleteStudentInfo();
+            exstr.SetSelectedID(StudentID);
+            OpStudentMngExec op = new OpStudentMngExec(exstr);
+            return op.Do();
+        }
     }
 
 }

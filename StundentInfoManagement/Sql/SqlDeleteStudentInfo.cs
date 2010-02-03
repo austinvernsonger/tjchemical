@@ -5,7 +5,7 @@ using System.Text;
 using SMBL.Interface.Database;
 namespace StundentInfoManagement.Sql
 {
-    class SqlDeleteDepartmentName : OldtoNewSql
+    class SqlDeleteStudentInfo : OldtoNewSql
     {
         public void SetSelectedID(string id)
         {
@@ -14,7 +14,7 @@ namespace StundentInfoManagement.Sql
         }
         public override string GetSql()
         {
-            return "delete from [Department] where DepartmentID = @Id";
+            return "delete from [Student] where StudentID = @Id";
         }
     }
 }
