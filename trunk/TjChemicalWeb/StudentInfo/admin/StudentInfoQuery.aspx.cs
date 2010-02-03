@@ -17,6 +17,18 @@ public partial class StudentInfo_StudentInfoQuery : System.Web.UI.Page
     private DataSet Rs;
     protected void Rebind()
     {
+        String strStudentID = txtStudentID.Text.Trim();
+        String strName = txtName.Text.Trim();
+        String strNation = txtNation.Text.Trim();
+        Int16 strDepartment = CheckDropDownListContent(DropDownListDepartment);
+        String strField = txtField.Text.Trim();
+        Int32 strEntranceYear = txtEntranceYear.Text.Trim() == String.Empty ? 0 : Convert.ToInt32(txtEntranceYear.Text.Trim());
+        Int16 strStudentType = CheckDropDownListContent(DropDownListStudentType);
+        Int16 strGraduationType = CheckDropDownListContent(DropDownListGraduationType);
+        Int16 strWorkUnit = CheckDropDownListContent(DropDownListWorkUnit);
+
+        Rs = StudentBasicInfoEx.QueryStudentInfo(strStudentID, strName, strNation, strDepartment, strField,
+            strEntranceYear, strStudentType, strGraduationType, strWorkUnit);
         GridViewStudentInfo.DataSource = Rs;
         GridViewStudentInfo.DataBind();
     }
@@ -39,8 +51,8 @@ public partial class StudentInfo_StudentInfoQuery : System.Web.UI.Page
     }
     protected void ControlInitalize()
     {
-        DataSet dtDepartmentName = DepartmentInfoEx.SelectAllDepartName();
 
+        DataSet dtDepartmentName = DepartmentInfoEx.SelectAllDepartName();
 
         for (int i = 0; i != dtDepartmentName.Tables[0].Rows.Count; i++)
         {
@@ -71,18 +83,32 @@ public partial class StudentInfo_StudentInfoQuery : System.Web.UI.Page
     }
     protected void btQuery_Click(object sender, EventArgs e)
     {
-        String strStudentID = txtStudentID.Text.Trim();
-        String strName = txtName.Text.Trim();
-        String strNation = txtNation.Text.Trim();
-        Int16 strDepartment = CheckDropDownListContent(DropDownListDepartment);
-        String strField = txtField.Text.Trim();
-        Int32 strEntranceYear = txtEntranceYear.Text.Trim()==String.Empty ? 0:Convert.ToInt32(txtEntranceYear.Text.Trim());
-        Int16 strStudentType = CheckDropDownListContent(DropDownListStudentType);
-        Int16 strGraduationType = CheckDropDownListContent(DropDownListGraduationType);
-        Int16 strWorkUnit = CheckDropDownListContent(DropDownListWorkUnit);
-
-        Rs = StudentBasicInfoEx.QueryStudentInfo(strStudentID, strName, strNation, strDepartment, strField, 
-            strEntranceYear, strStudentType, strGraduationType, strWorkUnit);
         Rebind();
+    }
+    protected void OnPageIndexChanging(object sender, GridViewPageEventArgs e)
+    {
+        this.GridViewStudentInfo.PageIndex = e.NewPageIndex;
+        Rebind();
+    }
+    protected void OnRowDataBound(object sender, GridViewRowEventArgs e)
+    {
+        if (e.Row.RowType == DataControlRowType.DataRow)
+        {
+            //鼠标经过时，行背景色变 
+            e.Row.Attributes.Add("onmouseover", "this.style.backgroundColor='#ECF3E1'");
+            //鼠标移出时，行背景色变 
+            e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor='#FFFFFF'");
+        }
+    }
+    protected void OnRowDeleting(object sender, GridViewDeleteEventArgs e)
+    {
+        int index = e.RowIndex;
+        String SelectId = this.GridViewStudentInfo.DataKeys[index].Value.ToString().Trim();
+        StundentInfoManagement.StudentBasicInfoEx.DeleteStudentInfo(SelectId);
+        Rebind();
+    }
+    protected void OnRowEditing(object sender, GridViewEditEventArgs e)
+    {
+
     }
 }

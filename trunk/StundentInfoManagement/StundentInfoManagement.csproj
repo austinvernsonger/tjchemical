@@ -112,6 +112,7 @@
     <Compile Include="Sql\SqlAddWorkUnitName.cs" />
     <Compile Include="Sql\SqlCheckAdmin.cs" />
     <Compile Include="Sql\SqlDeleteDepartmentName.cs" />
+    <Compile Include="Sql\SqlDeleteStudentInfo.cs" />
     <Compile Include="Sql\SqlDeleteWorkUnitName.cs" />
     <Compile Include="Sql\SqlSelectAllDepartment.cs" />
     <Compile Include="Sql\SqlSelectAllStudentBasicInfo.cs" />
