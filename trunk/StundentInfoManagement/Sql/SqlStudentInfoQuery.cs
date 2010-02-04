@@ -12,8 +12,8 @@ namespace StundentInfoManagement.Sql
         String strField, Int32 strEntranceYear,Int16 strStudentType, Int16 strGraduationType, Int16 strWorkUnit)
         {
             this.key = new object[] {"@StudentID","@Name","@Nation","@Department","@Field","@EntranceYear","@StudentType","@GraduationType","@WorkUnit"};
-            this.value = new object[] {strStudentID.Trim(),strName.Trim(),strNation.Trim(),strDepartment,strField.Trim(),strEntranceYear,strStudentType,strGraduationType,strWorkUnit };
-            returnString = "select S.StudentID, S.Name, S.Nation, P.DepartmentName,Q.WorkUnitName,S.Major,S.EntryYear,S.TypeofStudent,S.GraduationType from [Student] as S,[Department] as P,[WorkUnit] as Q where S.DepartmentID = P.DepartmentID and S.WorkUnitID = Q.WorkUnitID";
+            this.value = new object[] {"%"+strStudentID.Trim()+"%","%"+strName.Trim()+"%","%"+strNation.Trim()+"%",strDepartment,"%"+strField.Trim()+"%",strEntranceYear,strStudentType,strGraduationType,strWorkUnit };
+            returnString = "select S.StudentID, S.Name, S.Nation, P.DepartmentName,Q.WorkUnitName,S.Major,S.EntryYear,S.TypeofStudent,S.GraduationType,S.Validity from [Student] as S,[Department] as P,[WorkUnit] as Q where S.DepartmentID = P.DepartmentID and S.WorkUnitID = Q.WorkUnitID";
             if (strStudentID.Trim() != String.Empty)
             {
                 returnString += " and StudentID like @StudentID";

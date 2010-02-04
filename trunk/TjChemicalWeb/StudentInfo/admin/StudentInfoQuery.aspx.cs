@@ -109,6 +109,11 @@ public partial class StudentInfo_StudentInfoQuery : System.Web.UI.Page
     }
     protected void OnRowEditing(object sender, GridViewEditEventArgs e)
     {
-
+        int index = e.NewEditIndex;
+        String SelectId = this.GridViewStudentInfo.DataKeys[index].Value.ToString().Trim();
+        String strurl = "http://" + HttpContext.Current.Request.Url.Authority + HttpContext.Current.Request.ApplicationPath;
+        if (!strurl.EndsWith("/")) strurl += "/";
+        strurl += "StudentInfo/admin/StudentInfoEdit.aspx"+"?id="+SelectId;
+        Response.Redirect(strurl);
     }
 }

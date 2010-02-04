@@ -114,6 +114,7 @@
     <Compile Include="Sql\SqlDeleteDepartmentName.cs" />
     <Compile Include="Sql\SqlDeleteStudentInfo.cs" />
     <Compile Include="Sql\SqlDeleteWorkUnitName.cs" />
+    <Compile Include="Sql\SqlInsertVal.cs" />
     <Compile Include="Sql\SqlSelectAllDepartment.cs" />
     <Compile Include="Sql\SqlSelectAllStudentBasicInfo.cs" />
     <Compile Include="Sql\SqlSelectAllWorkUnitName.cs" />
