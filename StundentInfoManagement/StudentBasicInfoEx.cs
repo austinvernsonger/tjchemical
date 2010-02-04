@@ -191,6 +191,13 @@ namespace StundentInfoManagement
             OpStudentMngExec op = new OpStudentMngExec(exstr);
             return op.Do();
         }
+        public static bool InsertValidity(String StudentID,String strContent,Int16 Val)
+        {
+            Sql.SqlInsertVal exstr = new StundentInfoManagement.Sql.SqlInsertVal();
+            exstr.GetContent(StudentID, strContent, Val);
+            OpStudentMngExec op = new OpStudentMngExec(exstr);
+            return op.Do();
+        }
     }
 
 }

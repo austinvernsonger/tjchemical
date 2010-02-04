@@ -126,6 +126,15 @@
                     </asp:DropDownList>
                 </ItemTemplate>
             </asp:TemplateField>
+            <asp:TemplateField HeaderText="审核状态">
+                <ItemTemplate>
+                    <asp:DropDownList ID="DropDownListValidity" runat="server" SelectedValue='<%# Eval("Validity") %>'>
+                        <asp:ListItem Value="0">未审核</asp:ListItem>
+                        <asp:ListItem Value="1">未通过</asp:ListItem>
+                        <asp:ListItem Value="2">通过</asp:ListItem>
+                    </asp:DropDownList>
+                </ItemTemplate>
+            </asp:TemplateField>
         </Columns>
     </asp:GridView>
 </p>
