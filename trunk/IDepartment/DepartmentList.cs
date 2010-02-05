@@ -150,10 +150,6 @@ namespace Department.Interface
             String SubTitleCssClass, String TreeCssClass, String TargetWindow)
         {
             TreeView TeacherActionTree = new TreeView();
-           // if (SysCom.NewsAuthority.HaveAuthority(System.Web.HttpContext.Current.Session["IdentifyNumber"].ToString()))
-          //  {
-               AndMMT(ref TeacherActionTree);
-          //  }
             TeacherActionTree.Target = TargetWindow;
             TeacherActionTree.CssClass = TreeCssClass;
 
@@ -171,40 +167,7 @@ namespace Department.Interface
 
         }
 
-        static private void AndMMT(ref System.Web.UI.WebControls.TreeView Container)
-        {
-            TreeNode node = new TreeNode("院办系统", "院办系统");
-            node.SelectAction = TreeNodeSelectAction.Expand;
-            TreeNode mmtpost = new TreeNode("富文本发布", "富文本发布");
-            mmtpost.SelectAction = TreeNodeSelectAction.Expand;
-            //             TreeNode mmtmgr = new TreeNode("富文本管理", "富文本管理");
-            //             mmtmgr.SelectAction = TreeNodeSelectAction.Expand;
-            TreeNode subnode = new TreeNode("新闻发布", "", "", "~/News/NewsPost.aspx", "");
-            mmtpost.ChildNodes.Add(subnode);
-            subnode = new TreeNode("通知发布", "", "", "~/News/NoticePost.aspx", "");
-            mmtpost.ChildNodes.Add(subnode);
-            subnode = new TreeNode("活动发布", "", "", "~/News/ActivityPost.aspx", "");
-            mmtpost.ChildNodes.Add(subnode);
-
-            TreeNode specialhtml = new TreeNode("学院概况发布", "学院概况发布");
-            specialhtml.SelectAction = TreeNodeSelectAction.Expand;
-            subnode = new TreeNode("学院介绍发布", "", "", "~/News/EditAboutSSE.aspx", "");
-            specialhtml.ChildNodes.Add(subnode);
-            subnode = new TreeNode("学院领导发布", "", "", "~/News/EditLeaderSSE.aspx", "");
-            specialhtml.ChildNodes.Add(subnode);
-            subnode = new TreeNode("党团建设发布", "", "", "~/News/EditPartyInfo.aspx", "");
-            specialhtml.ChildNodes.Add(subnode);
-            subnode = new TreeNode("机构设置发布", "", "", "~/News/EditFacilitySSE.aspx", "");
-            specialhtml.ChildNodes.Add(subnode);
-            subnode = new TreeNode("规章制度发布", "", "", "~/News/EditRegulationSSE.aspx", "");
-            specialhtml.ChildNodes.Add(subnode);
-            subnode = new TreeNode("学院历程发布", "", "", "~/News/EditHistorySSE.aspx", "");
-            specialhtml.ChildNodes.Add(subnode);
-
-            node.ChildNodes.Add(mmtpost);
-            node.ChildNodes.Add(specialhtml);
-            Container.Nodes.Add(node);
-        }
+        
 
         static private void AndStudentAction(ref System.Web.UI.WebControls.Panel Container, String ID,
             String SubTitleCssClass, String TreeCssClass, String TargetWindow)
