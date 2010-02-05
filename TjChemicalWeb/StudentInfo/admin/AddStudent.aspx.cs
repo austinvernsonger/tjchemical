@@ -46,4 +46,11 @@ public partial class StudentInfo_admin_AddStudent : System.Web.UI.Page
         lbErrorMessage.Text = "插入成功!";
         Rebind();
     }
+    protected void OnRowDeleting(object sender, GridViewDeleteEventArgs e)
+    {
+        int index = e.RowIndex;
+        String SelectId = this.GridViewStudentInfo.DataKeys[index].Value.ToString().Trim();
+        StundentInfoManagement.StudentBasicInfoEx.DeleteStudentInfo(SelectId);
+        Rebind();
+    }
 }
