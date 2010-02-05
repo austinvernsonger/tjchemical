@@ -16,19 +16,6 @@ public partial class MasterPage_BackSys : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!IsPostBack)
-        {
-
-            if (Session["IdentifyNumber"] == null)
-            {
-                //SysCom.Login.LoginRedirect(Request.Url.ToString());
-            }
-            else
-            {
-               /* Department.Interface.DepartmentList.GenerateNavigation(
-                    ref pnl_nav, (String)Session["IdentifyNumber"],
-                    "dpmntTitle", "treeCssClass", "ifrm_content");*/
-            }
-        }
+       
     }
 }
