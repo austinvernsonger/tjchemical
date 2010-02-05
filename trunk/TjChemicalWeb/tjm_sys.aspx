@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage/BackSys.master" AutoEventWireup="true" CodeFile="tjm_sys.aspx.cs" Inherits="tjm_sys" Title="欢迎使用同济大学医学院网站系统" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage/tjm_Sys.master" AutoEventWireup="true" CodeFile="tjm_sys.aspx.cs" Inherits="tjm_sys" Title="欢迎使用同济大学医学院网站系统" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <link href="CssClass/sse_sys.css" rel="stylesheet" type="text/css" />
