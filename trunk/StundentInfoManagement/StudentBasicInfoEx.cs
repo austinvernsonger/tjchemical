@@ -186,10 +186,24 @@ namespace StundentInfoManagement
         }
         public static bool DeleteStudentInfo(String StudentID)
         {
-            Sql.SqlDeleteStudentInfo exstr = new StundentInfoManagement.Sql.SqlDeleteStudentInfo();
+            /*Sql.SqlDeleteStudentInfo exstr = new StundentInfoManagement.Sql.SqlDeleteStudentInfo();
             exstr.SetSelectedID(StudentID);
             OpStudentMngExec op = new OpStudentMngExec(exstr);
-            return op.Do();
+            if (!op.Do())
+            {
+                return false;
+            }
+            Sql.SqlDeleteStudentAccount exs = new StundentInfoManagement.Sql.SqlDeleteStudentAccount();
+            exs.GetId(StudentID);
+            OpStudentMngExec ops = new OpStudentMngExec(exs);
+            ops.Do();*/
+            OpStudentMngProducer op = new OpStudentMngProducer("P_DELETE_STUDENT", StudentID);
+            op.Do();
+            if (Convert.ToBoolean(op.ExecuteResult))
+            {
+                return true;
+            }
+            return false;
         }
         public static bool InsertValidity(String StudentID,String strContent,Int16 Val)
         {
@@ -197,6 +211,23 @@ namespace StundentInfoManagement
             exstr.GetContent(StudentID, strContent, Val);
             OpStudentMngExec op = new OpStudentMngExec(exstr);
             return op.Do();
+        }
+        public static DataSet SelectStudentAccount()
+        {
+            Sql.SqlSelectStudentAccount qs = new StundentInfoManagement.Sql.SqlSelectStudentAccount();
+            OpStudentMngQuery op = new OpStudentMngQuery(qs);
+            op.Do();
+            return op.Ds;
+        }
+        public static bool InsertStudent(String StudentID,String StudentName)
+        {
+            OpStudentMngProducer op = new OpStudentMngProducer("P_ADD_ACCOUNT", StudentID, StudentName);
+            op.Do();
+            if (Convert.ToBoolean(op.ExecuteResult))
+            {
+                return true;
+            }
+            return false;
         }
     }
 
