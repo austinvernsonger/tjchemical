@@ -91,6 +91,7 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -105,10 +106,27 @@
     <Compile Include="Ops\OpStudentFileProducer.cs" />
     <Compile Include="Ops\OpStudentFileQuery.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sql\SqlDeleteArchivesNew.cs" />
+    <Compile Include="Sql\SqlDeleteStudentArchivesContent.cs" />
+    <Compile Include="Sql\SqlDeleteStudentFile.cs" />
+    <Compile Include="Sql\SqlInsertStudentArchivesContent.cs" />
+    <Compile Include="Sql\SqlInsertStudentArchivesNew.cs" />
+    <Compile Include="Sql\SqlInsertStudentFile.cs" />
+    <Compile Include="Sql\SqlSelectAllStudentFile.cs" />
+    <Compile Include="Sql\SqlSelectSingleStudent.cs" />
+    <Compile Include="Sql\SqlSelectSingleStudentFileInfo.cs" />
+    <Compile Include="Sql\SqlSelectStudentArchivesContent.cs" />
+    <Compile Include="Sql\SqlSelectStudentArchivesNew.cs" />
+    <Compile Include="Sql\SqlSelectStudentFileQuery.cs" />
+    <Compile Include="Sql\SqlSelectStudentSingleInStudent.cs" />
     <Compile Include="StudentFileEx.cs" />
+    <Compile Include="StudentFileRegister.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Sql\" />
+    <ProjectReference Include="..\IDepartment\IDepartment.csproj">
+      <Project>{2290975C-C0A3-4F29-AB03-D24EA357562B}</Project>
+      <Name>IDepartment</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

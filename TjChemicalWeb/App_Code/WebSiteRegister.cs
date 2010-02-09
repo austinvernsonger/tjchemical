@@ -30,6 +30,7 @@ public class WebSiteRegister
        
       //  Department.Interface.DepartmentList.Register("院友会", new AlumusRecordsrc.EducationAuthRegister());
         Department.Interface.DepartmentList.Register("学生信息管理", new StundentInfoManagement.MngRegister());
+        Department.Interface.DepartmentList.Register("学生档案", new StudentFile.StudentFileRegister());
         
 
         return true;
