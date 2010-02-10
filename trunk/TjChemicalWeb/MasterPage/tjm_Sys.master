@@ -10,24 +10,16 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div id="Header">
-        同济大学医学院后台管理系统
-    </div>
-    <div id="Sidebar">
-        <div style="width: 960px; margin-left: auto; margin-right: auto;">
-        <div id="Navigation">
-            <asp:Panel ID="pnl_nav" runat="server" Width="100%" BackColor="#EDEDED">
-            </asp:Panel>
+        <div id="Header">
+            同济大学医学院后台管理系统
+        </div>       
+        <div id="Content">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">        
+            </asp:ContentPlaceHolder>
         </div>
-    </div>
-    <div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
-    <div id="Footer">
-        Footer
-    </div>
+        <div id="Footer">
+            Footer
+        </div>
     </form>
 </body>
 </html>

@@ -1,0 +1,27 @@
+﻿.treeCssClass{
+font-family: Arial;
+color: #333333; 
+text-decoration: none;
+line-height:25px;
+}
+
+.treeCssClass a:link, .treeCssClass a:visited{
+text-decoration: none;
+color: #333333;
+}
+
+.treeCssClass a:hover{
+text-decoration: none;
+color: #0066ff;
+font-weight:bold
+}
+
+.dpmntTitle{
+font-size: 13px;
+font-family: Arial;
+color: Black;
+font-weight: bold;
+
+}
+#Navigation{float: left; width: 180px; font-size:13px; background-color:White; padding:10px; border-left:solid 1px silver}
+#Content{  float:left; width:748px; padding-left:10px; border-left:solid 1px silver; background-color:White}
