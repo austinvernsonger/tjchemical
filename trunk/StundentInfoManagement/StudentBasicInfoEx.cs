@@ -24,7 +24,7 @@ namespace StundentInfoManagement
             QueryString.SetSelectId(ID);
             OpStudentMngQuery OpsQuery = new OpStudentMngQuery(QueryString);
             OpsQuery.Do();
-            if (OpsQuery.Ds.Tables[0].Columns.Count == 0)
+            if (OpsQuery.Ds.Tables[0].Rows.Count == 0)
             {
                 return false;
             }

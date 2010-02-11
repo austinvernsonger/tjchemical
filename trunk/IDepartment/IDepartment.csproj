@@ -103,6 +103,12 @@
     <Compile Include="IGetAuthList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StundentInfoManagement\StundentInfoManagement.csproj">
+      <Project>{49669F96-A2F7-4E45-8E9F-026EA6181D6D}</Project>
+      <Name>StundentInfoManagement</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
