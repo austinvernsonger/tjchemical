@@ -101,7 +101,6 @@ public partial class StudentFile_StudentFileBasicInfo : System.Web.UI.Page
     }
     private void InitializeControl()
     {
-        strStudentID = Request.QueryString["id"];
         DataSet QuestRS = StudentFileEx.SelectSingleStudentFileInfo(strStudentID);
         lbStudentID.Text = strStudentID;
         lbName.Text = CheckContent(QuestRS.Tables[0].Rows[0][0]);
@@ -126,7 +125,7 @@ public partial class StudentFile_StudentFileBasicInfo : System.Web.UI.Page
     }
     private void GridViewFileBind()
     {
-        strStudentID = Request.QueryString["id"];
+        strStudentID = lbStudentID.Text.Trim();
         DataSet QueryRS = StudentFileEx.SelectStudentArchivesContent(strStudentID);
         this.GridViewFile.DataSource = QueryRS;
         GridViewFile.DataBind();
@@ -139,7 +138,7 @@ public partial class StudentFile_StudentFileBasicInfo : System.Web.UI.Page
             lbErrorMessage.Text = "标题不可为空！";
             return;
         }
-        strStudentID = Request.QueryString["id"];
+        strStudentID = lbStudentID.Text.Trim();
         if (!StudentFileEx.InsertStudentArchivesContent(txtContentTitle.Text.Trim(), txtFileContent.Text.Trim(), txtFileRemark.Text.Trim(), strStudentID))
         {
             lbErrorMessage.Visible = true;
@@ -152,7 +151,7 @@ public partial class StudentFile_StudentFileBasicInfo : System.Web.UI.Page
     }
     protected void OnRowDeleting(object sender, GridViewDeleteEventArgs e)
     {
-        strStudentID = Request.QueryString["id"];
+        strStudentID = lbStudentID.Text.Trim();
         int index = e.RowIndex;
         String SelectedID = this.GridViewFile.DataKeys[index].Value.ToString().Trim();
         if (!StudentFileEx.DeleteStudentArchivesContent(SelectedID,strStudentID))
@@ -167,7 +166,23 @@ public partial class StudentFile_StudentFileBasicInfo : System.Web.UI.Page
     }
     protected void bt_SaveArchives_Click(object sender, EventArgs e)
     {
-        strStudentID = Request.QueryString["id"];
+        strStudentID = lbStudentID.Text.Trim();
+        if (txtFileCreateTime.Text.Trim()==String.Empty)
+        {
+            txtFileCreateTime.Text = "1900/1/1";
+        }
+        if (txtFileSendTime.Text.Trim() == String.Empty)
+        {
+            txtFileSendTime.Text = "1900/1/1";
+        }
+        if (txtGradutaionTime.Text.Trim() == String.Empty)
+        {
+            txtGradutaionTime.Text = "1900/1/1";
+        }
+        if (txtStoreFileStartTime.Text.Trim() == String.Empty)
+        {
+            txtStoreFileStartTime.Text = "1900/1/1";
+        }
         if (!StudentFileEx.UpdateStudentArchives(Convert.ToInt16(DropDownListMemberInfo.SelectedValue),Convert.ToInt16(DropDownListPartyMemberInfo.SelectedValue),
             txtFileCreateTime.Text.Trim(),txtFileSource.Text.Trim(),txtFileSourceType.Text.Trim(),txtGradutaionTime.Text.Trim(),txtFileSendTime.Text.Trim(),
             txtFileSendCompany.Text.Trim(),txtFileSendCompanyAddress.Text.Trim(),txtFileSendCompanyPost.Text.Trim(),txtFileSendCompanyContact.Text.Trim(),
@@ -183,14 +198,20 @@ public partial class StudentFile_StudentFileBasicInfo : System.Web.UI.Page
     }
     private void GridViewArchivesNewBind()
     {
-        strStudentID = Request.QueryString["id"];
+        strStudentID = lbStudentID.Text.Trim();
         DataSet ArchivesNewRs = StudentFileEx.SelectStudentArchivesNew(strStudentID);
         this.GridViewArchivesNew.DataSource = ArchivesNewRs;
         this.GridViewArchivesNew.DataBind();
     }
     protected void bt_AddArchivesNew_Click(object sender, EventArgs e)
     {
-        strStudentID = Request.QueryString["id"];
+        strStudentID = lbStudentID.Text.Trim();
+        if (txtAddTime.Text.Trim() == String.Empty)
+        {
+            lbErrorMessage.Visible = true;
+            lbErrorMessage.Text = "添加时间不可为空！";
+            return;
+        }
         if (!StudentFileEx.InsertArchivesNew(txtAddTime.Text.Trim(),txtArchivesNewContent.Text.Trim(),txtAddPeople.Text.Trim(),txtArchivesNewRemark.Text.Trim(),strStudentID))
         {
             lbErrorMessage.Visible = true;
@@ -203,7 +224,7 @@ public partial class StudentFile_StudentFileBasicInfo : System.Web.UI.Page
     }
     protected void ArchivesNewOnRowDeleting(object sender, GridViewDeleteEventArgs e)
     {
-        strStudentID = Request.QueryString["id"];
+        strStudentID = lbStudentID.Text.Trim();
         int index = e.RowIndex;
         String SelectedID = this.GridViewArchivesNew.DataKeys[index].Value.ToString().Trim();
         if (!StudentFileEx.DeleteArchivesNew(Convert.ToInt64(SelectedID),strStudentID))

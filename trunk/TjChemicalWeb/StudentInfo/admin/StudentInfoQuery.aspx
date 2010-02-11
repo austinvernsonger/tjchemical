@@ -110,7 +110,7 @@
             </asp:TemplateField>
             <asp:TemplateField HeaderText="学生类别">
                 <ItemTemplate>
-                    <asp:DropDownList ID="DropDownListStudentType" runat="server" SelectedValue='<%# Eval("TypeOfStudent") %>'>
+                    <asp:DropDownList ID="DropDownListStudentType" runat="server" SelectedValue='<%# Eval("TypeOfStudent") %>' Enabled="false">
                         <asp:ListItem Value="0">本科生</asp:ListItem>
                         <asp:ListItem Value="1">研究生</asp:ListItem>
                         <asp:ListItem Value="2">博士生</asp:ListItem>
@@ -119,7 +119,7 @@
             </asp:TemplateField>
             <asp:TemplateField HeaderText="毕业身份">
                 <ItemTemplate>
-                    <asp:DropDownList ID="DropDownListGraduationType" runat="server" SelectedValue='<%# Eval("GraduationType") %>'>
+                    <asp:DropDownList ID="DropDownListGraduationType" runat="server" SelectedValue='<%# Eval("GraduationType") %>' Enabled="false">
                         <asp:ListItem Value="0">本科生</asp:ListItem>
                         <asp:ListItem Value="1">研究生</asp:ListItem>
                         <asp:ListItem Value="2">博士生</asp:ListItem>
@@ -128,7 +128,7 @@
             </asp:TemplateField>
             <asp:TemplateField HeaderText="审核状态">
                 <ItemTemplate>
-                    <asp:DropDownList ID="DropDownListValidity" runat="server" SelectedValue='<%# Eval("Validity") %>'>
+                    <asp:DropDownList ID="DropDownListValidity" runat="server" SelectedValue='<%# Eval("Validity") %>' Enabled="false">
                         <asp:ListItem Value="0">未审核</asp:ListItem>
                         <asp:ListItem Value="1">未通过</asp:ListItem>
                         <asp:ListItem Value="2">通过</asp:ListItem>

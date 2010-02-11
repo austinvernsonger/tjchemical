@@ -72,7 +72,7 @@
             建档时间：
         </td>
         <td>
-            <asp:TextBox ID="txtFileCreateTime" runat="server" ReadOnly ="true"></asp:TextBox>
+            <asp:TextBox ID="txtFileCreateTime" runat="server" ReadOnly ="false"></asp:TextBox>
                 <cc1:CalendarExtender ID="CalendarExtender1" runat="server"
                     TargetControlID="txtFileCreateTime" Format="yyyy/MM/dd">
                 </cc1:CalendarExtender>
@@ -99,7 +99,7 @@
             毕业时间：
         </td>
         <td>
-            <asp:TextBox ID="txtGradutaionTime" runat="server" ReadOnly="true"></asp:TextBox>
+            <asp:TextBox ID="txtGradutaionTime" runat="server" ReadOnly="false"></asp:TextBox>
                 <cc1:CalendarExtender ID="CalendarExtender3" runat="server"
                     TargetControlID="txtGradutaionTime" Format="yyyy/MM/dd">
                 </cc1:CalendarExtender>
@@ -108,7 +108,7 @@
             档案寄出时间:
         </td>
         <td>
-            <asp:TextBox ID="txtFileSendTime" runat="server" ReadOnly="true"></asp:TextBox>
+            <asp:TextBox ID="txtFileSendTime" runat="server" ReadOnly="false"></asp:TextBox>
                 <cc1:CalendarExtender ID="CalendarExtender4" runat="server"
                     TargetControlID="txtFileSendTime" Format="yyyy/MM/dd">
                 </cc1:CalendarExtender>
@@ -170,7 +170,7 @@
             办理保留档案的起始日期：
         </td>
         <td>
-            <asp:TextBox ID="txtStoreFileStartTime" runat="server" ReadOnly="true"></asp:TextBox>
+            <asp:TextBox ID="txtStoreFileStartTime" runat="server" ReadOnly="false"></asp:TextBox>
                 <cc1:CalendarExtender ID="CalendarExtender2" runat="server"
                     TargetControlID="txtStoreFileStartTime" Format="yyyy/MM/dd">
                 </cc1:CalendarExtender>
@@ -264,7 +264,7 @@
 </p>
 <p>
     添加时间：
-    <asp:TextBox ID="txtAddTime" runat="server" ReadOnly="true"></asp:TextBox>
+    <asp:TextBox ID="txtAddTime" runat="server" ReadOnly="false"></asp:TextBox>
         <cc1:CalendarExtender ID="CalendarExtender5" runat="server"
                     TargetControlID="txtAddTime" Format="yyyy/MM/dd">
                 </cc1:CalendarExtender>
