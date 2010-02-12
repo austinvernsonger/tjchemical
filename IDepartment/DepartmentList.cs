@@ -19,7 +19,8 @@ namespace Department.Interface
         Global = 0,
         StudentManage = 1,
         StudentFile = 2,
-        MaxCount = 3,  // Increase this when register new department.
+        StraitStudent = 3,
+        MaxCount = 4,  // Increase this when register new department.
 
         // Revised On 8/22      
         Recruitment = 8
@@ -92,7 +93,7 @@ namespace Department.Interface
         static public void GenerateNavigation(ref System.Web.UI.WebControls.Panel Container, String ID,
             String SubTitleCssClass, String TreeCssClass, String TargetWindow)
         {
-            Boolean isStudent = false;  // Shoude be change to get the correct state.
+            Boolean isStudent = true;  // Shoude be change to get the correct state.
             if (StundentInfoManagement.StudentBasicInfoEx.CheckAdmin(ID))
             {
                 isStudent = false;

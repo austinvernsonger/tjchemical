@@ -4,7 +4,7 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TjChemicalWeb", "TjChemicalWeb\", "{0D32426C-4BFA-4870-9091-0E0F9500EC9D}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFramework = "3.5"
-		ProjectReferences = "{2290975C-C0A3-4F29-AB03-D24EA357562B}|IDepartment.dll;{18237246-FA82-4C18-9A0E-0E7447C82BD4}|Login.dll;{49669F96-A2F7-4E45-8E9F-026EA6181D6D}|StundentInfoManagement.dll;{552A9CD7-B9F2-4091-A578-B16DA7A11CEF}|StudentFile.dll;"
+		ProjectReferences = "{2290975C-C0A3-4F29-AB03-D24EA357562B}|IDepartment.dll;{18237246-FA82-4C18-9A0E-0E7447C82BD4}|Login.dll;{49669F96-A2F7-4E45-8E9F-026EA6181D6D}|StundentInfoManagement.dll;{552A9CD7-B9F2-4091-A578-B16DA7A11CEF}|StudentFile.dll;{E17C29EE-1060-4477-BDF1-858D1C9E3583}|StraitStudentInfo.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/TjChemicalWeb"
 		Debug.AspNetCompiler.PhysicalPath = "TjChemicalWeb\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\TjChemicalWeb\"
@@ -30,6 +30,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "Login\Login.csproj", "{18237246-FA82-4C18-9A0E-0E7447C82BD4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentFile", "StudentFile\StudentFile.csproj", "{552A9CD7-B9F2-4091-A578-B16DA7A11CEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StraitStudentInfo", "StraitStudentInfo\StraitStudentInfo.csproj", "{E17C29EE-1060-4477-BDF1-858D1C9E3583}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +93,16 @@ Global
 		{552A9CD7-B9F2-4091-A578-B16DA7A11CEF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{552A9CD7-B9F2-4091-A578-B16DA7A11CEF}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{552A9CD7-B9F2-4091-A578-B16DA7A11CEF}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E17C29EE-1060-4477-BDF1-858D1C9E3583}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{E17C29EE-1060-4477-BDF1-858D1C9E3583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E17C29EE-1060-4477-BDF1-858D1C9E3583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E17C29EE-1060-4477-BDF1-858D1C9E3583}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E17C29EE-1060-4477-BDF1-858D1C9E3583}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E17C29EE-1060-4477-BDF1-858D1C9E3583}.Release|.NET.ActiveCfg = Release|Any CPU
+		{E17C29EE-1060-4477-BDF1-858D1C9E3583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E17C29EE-1060-4477-BDF1-858D1C9E3583}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E17C29EE-1060-4477-BDF1-858D1C9E3583}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E17C29EE-1060-4477-BDF1-858D1C9E3583}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
