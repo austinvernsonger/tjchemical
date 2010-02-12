@@ -11,15 +11,10 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 
-public partial class StraitStudentInfo_StraitStudentInfoLogin : System.Web.UI.Page
+public partial class StraitStudentInfo_admin_SubsidyManage : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Session["IdentifyNumber"] == null)
-            SysCom.Login.LoginRedirect(Request.Url.ToString());
-        if (Session["Authority"].ToString() != "Student")
-        {
-            SysCom.Login.LoginRedirect(Request.Url.ToString());
-        }
+
     }
 }
