@@ -1,0 +1,56 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Getting Content from an External Source</title>
+    <link href="../CssClass/Bright.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+/*margin and padding on body element
+  can introduce errors in determining
+  element position and are not recommended;
+  we turn them off as a foundation for YUI
+  CSS treatments. */
+body {
+	margin:0;
+	padding:0;
+}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../CssClass/tabview.css" />
+<script type="text/javascript" src="../JavaScript/yahoo-dom-event.js"></script>
+
+<script type="text/javascript" src="../JavaScript/connection-min.js"></script>
+<script type="text/javascript" src="../JavaScript/element-min.js"></script>
+<script type="text/javascript" src="../JavaScript/tabview-min.js"></script>
+<script type="text/javascript" src="../JavaScript/TagControl.js"></script>
+
+<!--begin custom header content for this example-->
+<style type="text/css">
+.yui-navset div.loading div {
+    background:url(../Resources/Images/loading.gif) no-repeat center center;
+    height:8em; /* hold some space while loading */
+}
+
+#example-canvas h2 {padding: 0 0 .5em 0;}
+.yui-skin-sam ul li a{ text-decoration:none; color:#424242}
+.yui-skin-sam ul li a:hover{ text-decoration:underline}
+.yui-skin-sam ul li span{ font-size:10px; color:#ff6000}
+.yui-skin-sam ul{ list-style-image:url(../Resources/Bright/notice_arrow.png); margin-top:10px}
+.notice_bottom{ position:relative; bottom:35px; left:190px; font-size:12px; z-index:1000}
+</style>
+
+<!--end custom header content for this example-->
+
+</head>
+
+<body class="yui-skin-sam" onload="showName()">
+<div id="container"></div>
+<div class="notice_bottom">
+<div class="btn_more">
+    <a href="../MoreNotice.aspx" target="_parent"><img  src="../Resources/Bright/BtnMore.png"/><span>更多</span></a>
+</div> 
+</div>
+</body>
+</html>
