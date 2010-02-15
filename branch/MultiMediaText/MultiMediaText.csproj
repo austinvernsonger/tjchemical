@@ -5,12 +5,12 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{49669F96-A2F7-4E45-8E9F-026EA6181D6D}</ProjectGuid>
+    <ProjectGuid>{B7387BAE-6A53-479B-903B-FA338EA42F07}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StundentInfoManagement</RootNamespace>
-    <AssemblyName>StundentInfoManagement</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <RootNamespace>SysCom</RootNamespace>
+    <AssemblyName>MultiMediaText</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -49,7 +49,7 @@
     </Reference>
     <Reference Include="Control, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\TjChemicalWeb\Bin\Control.dll</HintPath>
+      <HintPath>..\..\medical\TjChemicalWeb\Bin\Control.dll</HintPath>
     </Reference>
     <Reference Include="Core, Version=0.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -83,54 +83,59 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\TjChemicalWeb\Bin\Oracle.DataAccess.dll</HintPath>
     </Reference>
+    <Reference Include="SunMkr2.0, Version=3.4.3681.26548, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TjChemicalWeb\Bin\SunMkr2.0.dll</HintPath>
+    </Reference>
+    <Reference Include="SysLog, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TjChemicalWeb\Bin\SysLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Web" />
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
     <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TjChemicalWeb\Bin\System.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TjChemicalWeb\Bin\System.Web.Extensions.Design.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DepartmentInfoEx.cs" />
-    <Compile Include="MngRegister.cs" />
-    <Compile Include="Ops\OpStudentMngExec.cs" />
-    <Compile Include="Ops\OpStudentMngProducer.cs" />
-    <Compile Include="Ops\OpStudentMngQuery.cs" />
+    <Compile Include="Attachment.cs" />
+    <Compile Include="Filter.cs" />
+    <Compile Include="IdGenerator.cs" />
+    <Compile Include="MMT.cs" />
+    <Compile Include="MMTContent.cs" />
+    <Compile Include="MMTContentEx.cs" />
+    <Compile Include="MMTDelegate.cs" />
+    <Compile Include="MMTInformation.cs" />
+    <Compile Include="MMTStatic.cs" />
+    <Compile Include="Ops\addAttechment.cs" />
+    <Compile Include="Ops\addLabel.cs" />
+    <Compile Include="Ops\delAttachment.cs" />
+    <Compile Include="Ops\Delete.cs" />
+    <Compile Include="Ops\delLabel.cs" />
+    <Compile Include="Ops\doProducer.cs" />
+    <Compile Include="Ops\getContent.cs" />
+    <Compile Include="Ops\GetMMT.cs" />
+    <Compile Include="Ops\GetMMTList.cs" />
+    <Compile Include="Ops\MarkDel.cs" />
+    <Compile Include="Ops\MMTOps.cs" />
+    <Compile Include="Ops\OpBiQuery.cs" />
+    <Compile Include="Ops\Post.cs" />
+    <Compile Include="Ops\postContent.cs" />
+    <Compile Include="Ops\Recover.cs" />
+    <Compile Include="Ops\Update.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sql\SqlAddDepartmentName.cs" />
-    <Compile Include="Sql\SqlAddWorkUnitName.cs" />
-    <Compile Include="Sql\SqlCheckAdmin.cs" />
-    <Compile Include="Sql\SqlDeleteDepartmentName.cs" />
-    <Compile Include="Sql\SqlDeleteStudentInfo.cs" />
-    <Compile Include="Sql\SqlDeleteWorkUnitName.cs" />
-    <Compile Include="Sql\SqlInsertVal.cs" />
-    <Compile Include="Sql\SqlSelectAllDepartment.cs" />
-    <Compile Include="Sql\SqlSelectAllStudentBasicInfo.cs" />
-    <Compile Include="Sql\SqlSelectAllWorkUnitName.cs" />
-    <Compile Include="Sql\SqlSelectStudentAccount.cs" />
-    <Compile Include="Sql\SqlStudentInfoQuery.cs" />
-    <Compile Include="StudentBasicInfoEx.cs" />
-    <Compile Include="WorkUnitInfoEx.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\IDepartment\IDepartment.csproj">
-      <Project>{2290975C-C0A3-4F29-AB03-D24EA357562B}</Project>
-      <Name>IDepartment</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Login\Login.csproj">
-      <Project>{18237246-FA82-4C18-9A0E-0E7447C82BD4}</Project>
-      <Name>Login</Name>
-    </ProjectReference>
+    <Compile Include="PSGMODE.cs" />
+    <Compile Include="RSSFeed.cs" />
+    <Compile Include="Sql\SqlGetActivityInformation.cs" />
+    <Compile Include="Sql\sqlMMTGetList.cs" />
+    <Compile Include="Sql\sqlMMTUpdate.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

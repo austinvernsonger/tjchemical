@@ -93,14 +93,7 @@ namespace Department.Interface
             String SubTitleCssClass, String TreeCssClass, String TargetWindow)
         {
             Boolean isStudent = false;  // Shoude be change to get the correct state.
-            if (StundentInfoManagement.StudentBasicInfoEx.CheckAdmin(ID))
-            {
-                isStudent = false;
-            }
-            else
-            {
-                isStudent = true;
-            }
+
             
             for (int i = 0; i < gDepartments.Count; ++i)
             {
