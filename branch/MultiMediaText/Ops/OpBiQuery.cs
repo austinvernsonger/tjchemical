@@ -24,7 +24,7 @@ namespace SysCom.Ops
         public OpBiQuery(String DBName, ISql TheISql)
         {
             SetISql = TheISql;
-            BindDBName = DBName;
+            BindDBName = "TjMedical";
         }
 
         public override void processDelegate()

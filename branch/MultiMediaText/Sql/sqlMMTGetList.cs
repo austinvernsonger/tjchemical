@@ -81,16 +81,7 @@ namespace SysCom.Sql
         {
             if (myLabel == null)
             {
-                string a = "SELECT ID, Title, ClickCount, CONVERT(varchar(30), LastModifyTime, 23) as LastModifyTime, State,LastModifyTime as Ptime FROM Information,InformationExtends as E" +
-                    " WHERE " + myMode +
-                    ((myDepartment == null) ? null : " AND " + myDepartment) +
-                    ((myKeyWord == null) ? null : " AND " + myKeyWord) +
-                    ((mylastModifyTime == null) ? null : " AND " + mylastModifyTime) +
-                    ((myInternal == null) ? null : " AND " + myInternal) +
-                    ((myMgrUse == null) ? null : " AND " + myMgrUse) +
-                    ((myReport == null) ? null : " AND " + myReport) +
-                    " ORDER BY Ptime DESC";
-                return "SELECT ID, Title, ClickCount, CONVERT(varchar(30), LastModifyTime, 23) as LastModifyTime, State,LastModifyTime as Ptime FROM Information,InformationExtends as E" +
+                return "SELECT ID, Title, ClickCount, CONVERT(varchar(30), LastModifyTime, 23) as LastModifyTime, State,LastModifyTime as Ptime FROM Information"+((myReport==null)?null:",InformationExtends as E") +
                     " WHERE " + myMode +
                     ((myDepartment == null) ? null : " AND " + myDepartment) +
                     ((myKeyWord == null) ? null : " AND " + myKeyWord) +
@@ -102,7 +93,7 @@ namespace SysCom.Sql
             }
             else
             {
-                return "SELECT I.ID, I.Title, I.ClickCount, CONVERT(varchar(30), I.LastModifyTime, 23) as LastModifyTime, I.State,I.LastModifyTime as Ptime FROM Information as I, Information_Label as L,InformationExtends as E" + 
+                return "SELECT I.ID, I.Title, I.ClickCount, CONVERT(varchar(30), I.LastModifyTime, 23) as LastModifyTime, I.State,I.LastModifyTime as Ptime FROM Information as I, Information_Label as L+"+((myReport==null)?null:",InformationExtends as E") + 
                     " WHERE I." + myMode + " AND L." + myLabel + " AND L.InformationID=I.ID" + 
                     ((myDepartment == null) ? null : " AND I." + myDepartment) +
                     ((myKeyWord == null) ? null : " AND I." + myKeyWord) +

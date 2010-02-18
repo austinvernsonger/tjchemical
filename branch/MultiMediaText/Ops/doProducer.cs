@@ -8,7 +8,7 @@ namespace SysCom.Ops
     {
         private doProducer( string ProducerName, object [] Params )
         {
-            myBindDBName = "Information";
+            BindDBName = "TjMedical";
             _params = Params;
             _p_name = ProducerName;
         }

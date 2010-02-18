@@ -18,7 +18,7 @@ namespace SysCom.Ops
         public GetMMTList(Sql.sqlMMTGetList Sql)
         {
             mySql = Sql;
-            myBindDBName = "Information";
+           BindDBName = "TjMedical";
         }
 
         public override void processDelegate()

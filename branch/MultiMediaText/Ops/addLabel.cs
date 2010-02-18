@@ -18,7 +18,7 @@ namespace SysCom.Ops
         {
             myId = Id;
             myLabel = Label;
-            myBindDBName = "Information";
+            BindDBName = "TjMedical";
         }
 
         public override void processDelegate()

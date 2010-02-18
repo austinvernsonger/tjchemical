@@ -19,7 +19,8 @@ namespace Department.Interface
         Global = 0,
         StudentManage = 1,
         StudentFile = 2,
-        MaxCount = 3,  // Increase this when register new department.
+        Notice = 3,
+        MaxCount = 4,  // Increase this when register new department.
 
         // Revised On 8/22      
         Recruitment = 8

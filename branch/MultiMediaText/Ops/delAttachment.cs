@@ -23,7 +23,7 @@ namespace SysCom.Ops
             myId = Id;
             myFileName = FileName;
             myFileExtension = FileExtension;
-            myBindDBName = "Information";
+            BindDBName = "TjMedical";
         }
 
         public override void processDelegate()

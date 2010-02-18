@@ -14,7 +14,7 @@ namespace SysCom.Ops
     {
         public MMTOps()
         {
-            myBindDBName = "Information";
+           BindDBName = "TjMedical";
         }
         /// <summary>
         /// The Content

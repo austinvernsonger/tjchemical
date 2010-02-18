@@ -7,7 +7,6 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
-
 /// <summary>
 /// Summary description for WebSiteRegister
 /// </summary>
@@ -31,6 +30,7 @@ public class WebSiteRegister
       //  Department.Interface.DepartmentList.Register("院友会", new AlumusRecordsrc.EducationAuthRegister());
         Department.Interface.DepartmentList.Register("学生信息管理", new StundentInfoManagement.MngRegister());
         Department.Interface.DepartmentList.Register("学生档案", new StudentFile.StudentFileRegister());
+        Department.Interface.DepartmentList.Register("通知", new News.NoticeRegister());
         
 
         return true;

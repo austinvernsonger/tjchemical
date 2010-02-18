@@ -37,11 +37,11 @@
     </Reference>
     <Reference Include="AFS, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WebSite\Bin\AFS.dll</HintPath>
+      <HintPath>..\TjChemicalWeb\Bin\AFS.dll</HintPath>
     </Reference>
     <Reference Include="ConfigElement, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WebSite\Bin\ConfigElement.dll</HintPath>
+      <HintPath>..\TjChemicalWeb\Bin\ConfigElement.dll</HintPath>
     </Reference>
     <Reference Include="Control, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -49,11 +49,11 @@
     </Reference>
     <Reference Include="Core, Version=0.2.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WebSite\Bin\Core.dll</HintPath>
+      <HintPath>..\TjChemicalWeb\Bin\Core.dll</HintPath>
     </Reference>
     <Reference Include="Global, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\WebSite\Bin\Global.dll</HintPath>
+      <HintPath>..\TjChemicalWeb\Bin\Global.dll</HintPath>
     </Reference>
     <Reference Include="Interface, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -66,10 +66,12 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NoticeRegister.cs" />
     <Compile Include="Ops\OpsNewsExecute.cs" />
     <Compile Include="Ops\OpsNewsQuery.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,6 +80,12 @@
     <Compile Include="Sql\sqlDeleteNewsAuthority.cs" />
     <Compile Include="Sql\sqlGetAuthority.cs" />
     <Compile Include="Sql\sqlGetNewsAthuoutyList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IDepartment\IDepartment.csproj">
+      <Project>{2290975C-C0A3-4F29-AB03-D24EA357562B}</Project>
+      <Name>IDepartment</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
