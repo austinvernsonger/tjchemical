@@ -5,8 +5,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-  
-    <uc1:EditMMT ID="EditMMT1" runat="server" DepartmentId="3" Mode="notice" NewPost="True" Registration="true" AllowAttachment="true" />
-  
+    <uc1:EditMMT ID="EditMMT_NEW" runat="server" DepartmentId="0" Mode="Notice" NewPost="true" Registration="true" AllowAttachment="true" />
 </asp:Content>
 
