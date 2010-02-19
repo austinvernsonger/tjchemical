@@ -1,5 +1,4 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Calendar.ascx.cs" Inherits="UserControl_Calendar" %>
-<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <div style="width: 100%;">
     <div style="float: left;">
         <asp:DropDownList ID="ddl_year" runat="server" 
