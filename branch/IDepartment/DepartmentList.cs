@@ -93,14 +93,21 @@ namespace Department.Interface
         static public void GenerateNavigation(ref System.Web.UI.WebControls.Panel Container, String ID,
             String SubTitleCssClass, String TreeCssClass, String TargetWindow)
         {
-            Boolean isStudent = false;  // Shoude be change to get the correct state.
-
             
+
+            IdentifyLibrary.Identity isStudent = new IdentifyLibrary.Identity(ID);
             for (int i = 0; i < gDepartments.Count; ++i)
             {
-                TreeView tmpTree = (isStudent) ?
-                    gDepartments[i].Value.GetStudentAuthorityList(ID) :
-                    gDepartments[i].Value.GetTeacherAuthorityList(ID);
+                TreeView tmpTree = new TreeView();
+                if (isStudent.isStudent)
+                {
+                    tmpTree = gDepartments[i].Value.GetStudentAuthorityList(ID);
+                } 
+                else if(isStudent.isTeacher)
+                {
+                    tmpTree = gDepartments[i].Value.GetTeacherAuthorityList(ID);
+                }
+              
                 // No Authorization for current user.
                 if (tmpTree == null || tmpTree.Nodes.Count == 0) continue;
 
@@ -122,7 +129,7 @@ namespace Department.Interface
                 //                Container.Controls.Add(divTitle);
                 Container.Controls.Add(divTree);
             }
-            if (isStudent)
+            if (isStudent.isStudent)
             {
                 AndStudentAction(ref Container, ID, SubTitleCssClass, TreeCssClass, TargetWindow);
             }

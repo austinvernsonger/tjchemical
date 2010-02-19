@@ -14,7 +14,7 @@
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
     <uc1:EditMMT ID="EditMMT1" runat="server" AllowAttachment="False" 
-        DepartmentId="1" Mode="News" NewPost="True" />
+        DepartmentId="3" Mode="Notice" NewPost="True" Registration="true"/>
 
 </asp:Content>
 
