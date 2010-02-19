@@ -67,18 +67,18 @@ public partial class Report_Control_EditorDragable : System.Web.UI.UserControl, 
         CreateControl();
 
         //...
-        this.ImageButton_Text.Attributes.Add("onmouseover", "Javascript:ChangeImg(this,'/WebSite/Report/Resource/Image/yellow_text.png');");
-        this.ImageButton_Text.Attributes.Add("onmouseout", "Javascript:ChangeImg(this,'/WebSite/Report/Resource/Image/blue_text.png');");
-        this.ImageButton_Report.Attributes.Add("onmouseover", "Javascript:ChangeImg(this,'/WebSite/Report/Resource/Image/yellow_report.png');");
-        this.ImageButton_Report.Attributes.Add("onmouseout", "Javascript:ChangeImg(this,'/WebSite/Report/Resource/Image/blue_report.png');");
-        this.ImageButton_SingleSelect.Attributes.Add("onmouseover", "Javascript:ChangeImg(this,'/WebSite/Report/Resource/Image/yellow_singleselect.png');");
-        this.ImageButton_SingleSelect.Attributes.Add("onmouseout", "Javascript:ChangeImg(this,'/WebSite/Report/Resource/Image/blue_singleselect.png');");
-        this.ImageButton_RichText.Attributes.Add("onmouseover", "Javascript:ChangeImg(this,'/WebSite/Report/Resource/Image/yellow_richtext.png');");
-        this.ImageButton_RichText.Attributes.Add("onmouseout", "Javascript:ChangeImg(this,'/WebSite/Report/Resource/Image/blue_richtext.png');");
-        this.ImageButton_Admin.Attributes.Add("onmouseover", "Javascript:ChangeImg(this,'/WebSite/Report/Resource/Image/yellow_Admin.png');");
-        this.ImageButton_Admin.Attributes.Add("onmouseout", "Javascript:ChangeImg(this,'/WebSite/Report/Resource/Image/blue_Admin.png');");
-        this.ImageButton_StudentID.Attributes.Add("onmouseover", "Javascript:ChangeImg(this,'/WebSite/Report/Resource/Image/yellow_studentid.png');");
-        this.ImageButton_StudentID.Attributes.Add("onmouseout", "Javascript:ChangeImg(this,'/WebSite/Report/Resource/Image/blue_studentid.png');");
+        this.ImageButton_Text.Attributes.Add("onmouseover", "Javascript:ChangeImg(this,'/TjChemicalWeb/Report/Resource/Image/yellow_text.png');");
+        this.ImageButton_Text.Attributes.Add("onmouseout", "Javascript:ChangeImg(this,'/TjChemicalWeb/Report/Resource/Image/blue_text.png');");
+        this.ImageButton_Report.Attributes.Add("onmouseover", "Javascript:ChangeImg(this,'/TjChemicalWeb/Report/Resource/Image/yellow_report.png');");
+        this.ImageButton_Report.Attributes.Add("onmouseout", "Javascript:ChangeImg(this,'/TjChemicalWeb/Report/Resource/Image/blue_report.png');");
+        this.ImageButton_SingleSelect.Attributes.Add("onmouseover", "Javascript:ChangeImg(this,'/TjChemicalWeb/Report/Resource/Image/yellow_singleselect.png');");
+        this.ImageButton_SingleSelect.Attributes.Add("onmouseout", "Javascript:ChangeImg(this,'/TjChemicalWeb/Report/Resource/Image/blue_singleselect.png');");
+        this.ImageButton_RichText.Attributes.Add("onmouseover", "Javascript:ChangeImg(this,'/TjChemicalWeb/Report/Resource/Image/yellow_richtext.png');");
+        this.ImageButton_RichText.Attributes.Add("onmouseout", "Javascript:ChangeImg(this,'/TjChemicalWeb/Report/Resource/Image/blue_richtext.png');");
+        this.ImageButton_Admin.Attributes.Add("onmouseover", "Javascript:ChangeImg(this,'/TjChemicalWeb/Report/Resource/Image/yellow_Admin.png');");
+        this.ImageButton_Admin.Attributes.Add("onmouseout", "Javascript:ChangeImg(this,'/TjChemicalWeb/Report/Resource/Image/blue_Admin.png');");
+        this.ImageButton_StudentID.Attributes.Add("onmouseover", "Javascript:ChangeImg(this,'/TjChemicalWeb/Report/Resource/Image/yellow_studentid.png');");
+        this.ImageButton_StudentID.Attributes.Add("onmouseout", "Javascript:ChangeImg(this,'/TjChemicalWeb/Report/Resource/Image/blue_studentid.png');");
     }
 
     private void CreateControl()

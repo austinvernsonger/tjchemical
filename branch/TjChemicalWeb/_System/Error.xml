@@ -1,1 +1,3 @@
-<SunMkrErr />
+<SunMkrErr>
+  <SunMkrExp Time="2010-02-19 05:02:44" Message="文件不存在。" Target="System.Web.StaticFileHandler" StackTrace="   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)&#xD;&#xA;   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)&#xD;&#xA;   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)&#xD;&#xA;   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()&#xD;&#xA;   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean&amp; completedSynchronously)" />
+</SunMkrErr>
