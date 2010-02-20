@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{18237246-FA82-4C18-9A0E-0E7447C82BD4}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -69,6 +69,7 @@
     <Compile Include="LoginDes.cs" />
     <Compile Include="LoginInfo.cs" />
     <Compile Include="LoginMail.cs" />
+    <Compile Include="LoginRegister.cs" />
     <Compile Include="LoginState.cs" />
     <Compile Include="Ops\OpAdminQuery.cs" />
     <Compile Include="Ops\OpCheckInfo.cs" />
@@ -85,6 +86,12 @@
     <Compile Include="Sql\sqlLoginUpdate.cs" />
     <Compile Include="Sql\sqlMailCommit.cs" />
     <Compile Include="Sql\sqlSetMailAddress.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IDepartment\IDepartment.csproj">
+      <Project>{2290975C-C0A3-4F29-AB03-D24EA357562B}</Project>
+      <Name>IDepartment</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

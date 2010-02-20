@@ -11,7 +11,7 @@
             width: 100%;
         }
     </style>
-    <script language=javascript>
+    <script language="javascript" type="text/javascript">
     function CheckPassword(source, arguments)
     {
         var userName =document.getElementById("UserName");

@@ -32,12 +32,12 @@
     <!--Bottom Panel-->         
     <asp:Panel id="bottom_bar" runat="server" CssClass="bottom_bar">
 	    <table border="0" cellpadding="0" id="bottom_table">
-          <tr>
-            <td>上海市嘉定区曹安公路4800号</td>
-            <td style="text-align:right;">CopyRight 2009 SSE,TJU</td>
+           <tr>
+            <td>上海市四平路1239号</td>
+            <td style="text-align:right;">CopyRight 2009 TJU</td>
           </tr>
           <tr>
-            <td>电话：69579374 | 传真：69589374 | E-mail：<a href="mailto:sse@tongji.edu.cn">sse@tongji.edu.cn</a></td>
+            <td>电话：021-65981591 | 传真：021-65987071 | E-mail：<a href="mailto:medical@mail.tongji.edu.cn">medical@mail.tongji.edu.cn</a></td>
             <td style="text-align:right;">
                 <asp:HyperLink ID="lnk_dev" runat="server" NavigateUrl="#">Developer Team</asp:HyperLink>
             </td>

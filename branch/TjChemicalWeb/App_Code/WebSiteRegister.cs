@@ -28,9 +28,12 @@ public class WebSiteRegister
         //Department.Interface.DepartmentList.Register(Myname, myInterface);
        
       //  Department.Interface.DepartmentList.Register("院友会", new AlumusRecordsrc.EducationAuthRegister());
+        Department.Interface.DepartmentList.Register("个人账户管理", new SysCom.LoginRegister());
+        Department.Interface.DepartmentList.Register("通知", new News.NoticeRegister());
         Department.Interface.DepartmentList.Register("学生信息管理", new StundentInfoManagement.MngRegister());
         Department.Interface.DepartmentList.Register("学生档案", new StudentFile.StudentFileRegister());
-        Department.Interface.DepartmentList.Register("通知", new News.NoticeRegister());
+        
+        
         
 
         return true;
