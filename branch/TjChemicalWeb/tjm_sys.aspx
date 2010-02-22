@@ -10,7 +10,7 @@
             </asp:Panel>
         </div>
         <div id="Content">
-            <iframe name="ifrm_content" id="ifrm_content" scrolling="no" frameborder="0" width="738px"  height="100%"></iframe>
+            <iframe name="ifrm_content" id="ifrm_content" scrolling="no" frameborder="0" width="850px"  height="100%"></iframe>
             <script language="javascript" type="text/javascript">
                 function reInitial(){
                     var iframe = document.getElementById("ifrm_content");

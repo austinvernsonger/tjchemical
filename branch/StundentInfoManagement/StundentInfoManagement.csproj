@@ -105,17 +105,23 @@
     <Compile Include="Ops\OpStudentMngQuery.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sql\SqlAddDepartmentName.cs" />
+    <Compile Include="Sql\SqlAddStraitStudent.cs" />
     <Compile Include="Sql\SqlAddWorkUnitName.cs" />
     <Compile Include="Sql\SqlCheckAdmin.cs" />
     <Compile Include="Sql\SqlDeleteDepartmentName.cs" />
+    <Compile Include="Sql\SqlDeleteStraitStudent.cs" />
     <Compile Include="Sql\SqlDeleteStudentInfo.cs" />
     <Compile Include="Sql\SqlDeleteWorkUnitName.cs" />
     <Compile Include="Sql\SqlInsertVal.cs" />
     <Compile Include="Sql\SqlSelectAllDepartment.cs" />
+    <Compile Include="Sql\SqlSelectAllStraitStudent.cs" />
     <Compile Include="Sql\SqlSelectAllStudentBasicInfo.cs" />
     <Compile Include="Sql\SqlSelectAllWorkUnitName.cs" />
+    <Compile Include="Sql\SqlSelectStraitStudentBasicInfo.cs" />
+    <Compile Include="Sql\SqlSelectStraitStudentByQuery.cs" />
     <Compile Include="Sql\SqlSelectStudentAccount.cs" />
     <Compile Include="Sql\SqlStudentInfoQuery.cs" />
+    <Compile Include="StraitStudentInfoEx.cs" />
     <Compile Include="StudentBasicInfoEx.cs" />
     <Compile Include="WorkUnitInfoEx.cs" />
   </ItemGroup>

@@ -18,7 +18,7 @@ public partial class StudentInfo_admin_WorkingPlaceManage : System.Web.UI.Page
     {
         if (Session["IdentifyNumber"] == null)
             SysCom.Login.LoginRedirect(Request.Url.ToString());
-        if (Session["Authority"] != "Admin")
+        if (Session["Authority"].ToString() != "Admin")
         {
             SysCom.Login.LoginRedirect(Request.Url.ToString());
         }

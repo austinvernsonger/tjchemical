@@ -17,6 +17,7 @@ namespace StundentInfoManagement
              TeacherRoot.ChildNodes.Add(new TreeNode("系所管理", "系所管理", "", "~/StudentInfo/Admin/DepartmentManage.aspx", ""));
              TeacherRoot.ChildNodes.Add(new TreeNode("单位管理", "单位管理", "", "~/StudentInfo/Admin/WorkingPlaceManage.aspx", ""));
              TeacherRoot.ChildNodes.Add(new TreeNode("学生账号管理", "学生账号管理", "", "~/StudentInfo/Admin/AddStudent.aspx", ""));
+             TeacherRoot.ChildNodes.Add(new TreeNode("困难生管理", "困难生管理", "", "~/StraitStudentInfo/StraitStudentInfoManage.aspx", ""));
             return TeacherAuth;
         }
 

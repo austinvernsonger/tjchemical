@@ -23,5 +23,5 @@ color: Black;
 font-weight: bold;
 
 }
-#Navigation{float: left; width: 180px; font-size:13px; background-color:White; padding:10px; border-left:solid 1px silver}
+#Navigation{float: left; width: 180px; font-size:13px; background-color:#EDEDED; padding:10px; border-left:solid 1px silver}
 #Content{  float:left; width:748px; padding-left:10px; border-left:solid 1px silver; background-color:White}
