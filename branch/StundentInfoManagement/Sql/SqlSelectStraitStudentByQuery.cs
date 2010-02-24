@@ -8,11 +8,11 @@ namespace StundentInfoManagement.Sql
     class SqlSelectStraitStudentByQuery : OldtoNewSql
     {
         private string returnstring;
-        public void GetCondition(String ID,String strName,Int16 Degree)
+        public void GetCondition(String ID,String strName,Int16 iClass,Int16 Degree)
         {
-            this.key = new object[] { "@ID", "@Name", "@Degree" };
-            this.value = new object[] { "%" + ID.Trim() + "%", "%" + strName.Trim() + "%", Degree };
-            returnstring = "Select S.StudentID,S.Name,P.StraitDegree from [Student] as S,[StraitStudentInfo] as P where S.StudentID = P.StudentID";
+            this.key = new object[] { "@ID", "@Name", "@Class","@Degree" };
+            this.value = new object[] { "%" + ID.Trim() + "%", "%" + strName.Trim() + "%",iClass, Degree };
+            returnstring = "Select S.StudentID,S.Name,S.Class,P.StraitDegree from [Student] as S,[StraitStudentInfo] as P where S.StudentID = P.StudentID";
             if (ID != String.Empty)
             {
                 returnstring += " and P.StudentID like @ID";
@@ -20,6 +20,10 @@ namespace StundentInfoManagement.Sql
             if (strName != String.Empty)
             {
                 returnstring += " and S.Name like @Name";
+            }
+            if (iClass !=-1)
+            {
+                returnstring += " and S.Class = @Class";
             }
             if (Degree != -1)
             {

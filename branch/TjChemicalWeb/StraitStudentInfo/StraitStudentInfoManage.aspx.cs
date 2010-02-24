@@ -62,9 +62,17 @@ public partial class StraitStudentInfo_StraitStudentInfoManage : System.Web.UI.P
         }
         return Convert.ToInt16(a.SelectedValue);
     }
+    protected Int16 CheckContent(TextBox a)
+    {
+        if (a.Text.Trim()==String.Empty)
+        {
+            return -1;
+        }
+        return Convert.ToInt16(a.Text.Trim());
+    }
     protected void btQuery_Click(object sender, EventArgs e)
     {
-        DataSet Ds = StundentInfoManagement.StraitStudentInfoEx.StraitStudentQuery(txtStudentID.Text.Trim(), txtName.Text.Trim(), 
+        DataSet Ds = StundentInfoManagement.StraitStudentInfoEx.StraitStudentQuery(txtStudentID.Text.Trim(), txtName.Text.Trim(),CheckContent(txtClass) ,
             CheckDropDownListContent(DropDownListStraitDegree));
         this.GridviewStraitStudent.DataSource = Ds;
         this.GridviewStraitStudent.DataBind();

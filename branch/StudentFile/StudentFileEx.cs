@@ -24,10 +24,10 @@ namespace StudentFile
             Ops.OpStudentFileExec op = new StudentFile.Ops.OpStudentFileExec(qs);
             return op.Do();
         }
-        public static DataSet SelectStudentFileQuery(String ID,String strName)
+        public static DataSet SelectStudentFileQuery(String ID,String strName,Int16 iClass)
         {
             Sql.SqlSelectStudentFileQuery qs = new StudentFile.Sql.SqlSelectStudentFileQuery();
-            qs.GetConditon(ID, strName);
+            qs.GetConditon(ID, strName,iClass);
             Ops.OpStudentFileQuery op = new StudentFile.Ops.OpStudentFileQuery(qs);
             op.Do();
             return op.Ds;

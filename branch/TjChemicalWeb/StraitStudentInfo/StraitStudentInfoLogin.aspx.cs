@@ -77,6 +77,6 @@ public partial class StraitStudentInfo_StraitStudentInfoLogin : System.Web.UI.Pa
             Response.Write("<script>alert('保存成功！');</script>");
             GoBack();
         }
-        Response.Write("<script>alert('保持失败！');</script>");
+        Response.Write("<script>alert('保存失败！');</script>");
     }
 }

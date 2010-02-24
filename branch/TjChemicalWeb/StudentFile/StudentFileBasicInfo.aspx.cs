@@ -47,6 +47,22 @@ public partial class StudentFile_StudentFileBasicInfo : System.Web.UI.Page
                 GoBack();
             }
             InitializeControl();
+            if (txtFileCreateTime.Text.Trim() == String.Empty)
+            {
+                txtFileCreateTime.Text = DateTime.Today.ToString();
+            }
+            if (txtFileSendTime.Text.Trim() == String.Empty)
+            {
+                txtFileSendTime.Text = DateTime.Today.ToString();
+            }
+            if (txtGradutaionTime.Text.Trim() == String.Empty)
+            {
+                txtGradutaionTime.Text = DateTime.Today.ToString();
+            }
+            if (txtStoreFileStartTime.Text.Trim() == String.Empty)
+            {
+                txtStoreFileStartTime.Text = DateTime.Today.ToString();
+            }
             if (type == 1)
             {
                 Rebind();
@@ -87,7 +103,7 @@ public partial class StudentFile_StudentFileBasicInfo : System.Web.UI.Page
             String Result = year + "/" + month + "/" + date;
             return Result;
         }
-        return "";
+        return DateTime.Today.ToString();
     }
     protected String CheckDropDownListView(DropDownList Dp, Object a)
     {
@@ -169,19 +185,19 @@ public partial class StudentFile_StudentFileBasicInfo : System.Web.UI.Page
         strStudentID = lbStudentID.Text.Trim();
         if (txtFileCreateTime.Text.Trim()==String.Empty)
         {
-            txtFileCreateTime.Text = "1900/1/1";
+            txtFileCreateTime.Text = DateTime.Today.ToString();
         }
         if (txtFileSendTime.Text.Trim() == String.Empty)
         {
-            txtFileSendTime.Text = "1900/1/1";
+            txtFileSendTime.Text = DateTime.Today.ToString();
         }
         if (txtGradutaionTime.Text.Trim() == String.Empty)
         {
-            txtGradutaionTime.Text = "1900/1/1";
+            txtGradutaionTime.Text = DateTime.Today.ToString();
         }
         if (txtStoreFileStartTime.Text.Trim() == String.Empty)
         {
-            txtStoreFileStartTime.Text = "1900/1/1";
+            txtStoreFileStartTime.Text = DateTime.Today.ToString();
         }
         if (!StudentFileEx.UpdateStudentArchives(Convert.ToInt16(DropDownListMemberInfo.SelectedValue),Convert.ToInt16(DropDownListPartyMemberInfo.SelectedValue),
             txtFileCreateTime.Text.Trim(),txtFileSource.Text.Trim(),txtFileSourceType.Text.Trim(),txtGradutaionTime.Text.Trim(),txtFileSendTime.Text.Trim(),

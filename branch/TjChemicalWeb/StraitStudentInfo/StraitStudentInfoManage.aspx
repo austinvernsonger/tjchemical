@@ -25,6 +25,14 @@
     </tr>
     <tr>
         <td>
+            班级：
+        </td>
+        <td>
+            <asp:TextBox ID="txtClass" runat="server"></asp:TextBox>
+        </td>
+    </tr>
+    <tr>
+        <td>
             困难生情况：
         </td>
         <td>
@@ -59,6 +67,11 @@
             <asp:TemplateField HeaderText="姓名">
                 <ItemTemplate>
                     <asp:Label ID="lbName" runat="server" Text='<%# Eval("Name")%>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="班级">
+                <ItemTemplate>
+                    <asp:Label ID="lbClass" runat="server" Text='<%# Eval("Class")%>'></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="困难生情况">

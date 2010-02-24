@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Report", "Report\Report.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentifyLibrary", "IdentifyLibrary\IdentifyLibrary.csproj", "{F472F1F6-702D-4C89-A0E6-E90BE578EC6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{A98B9920-42F2-4192-A51D-BBD438BCA288}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|.NET = Debug|.NET
@@ -151,6 +153,16 @@ Global
 		{F472F1F6-702D-4C89-A0E6-E90BE578EC6D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F472F1F6-702D-4C89-A0E6-E90BE578EC6D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{F472F1F6-702D-4C89-A0E6-E90BE578EC6D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A98B9920-42F2-4192-A51D-BBD438BCA288}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{A98B9920-42F2-4192-A51D-BBD438BCA288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A98B9920-42F2-4192-A51D-BBD438BCA288}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A98B9920-42F2-4192-A51D-BBD438BCA288}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A98B9920-42F2-4192-A51D-BBD438BCA288}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A98B9920-42F2-4192-A51D-BBD438BCA288}.Release|.NET.ActiveCfg = Release|Any CPU
+		{A98B9920-42F2-4192-A51D-BBD438BCA288}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A98B9920-42F2-4192-A51D-BBD438BCA288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A98B9920-42F2-4192-A51D-BBD438BCA288}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A98B9920-42F2-4192-A51D-BBD438BCA288}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

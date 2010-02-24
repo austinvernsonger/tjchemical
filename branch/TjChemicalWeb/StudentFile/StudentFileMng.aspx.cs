@@ -33,9 +33,17 @@ public partial class StudentFile_StudentFileMng : System.Web.UI.Page
         this.GridviewFile.DataSource = Rs;
         GridviewFile.DataBind();
     }
-    public void Rebind(String ID,String strName)
+    protected Int16 CheckContent(TextBox a)
     {
-        DataSet Rs = StudentFileEx.SelectStudentFileQuery(ID,strName);
+        if (a.Text.Trim() == String.Empty)
+        {
+            return -1;
+        }
+        return Convert.ToInt16(a.Text.Trim());
+    }
+    public void Rebind(String ID,String strName,Int16 iClass)
+    {
+        DataSet Rs = StudentFileEx.SelectStudentFileQuery(ID,strName,iClass);
         this.GridviewFile.DataSource = Rs;
         GridviewFile.DataBind();
     }
@@ -62,7 +70,7 @@ public partial class StudentFile_StudentFileMng : System.Web.UI.Page
     }
     protected void btQuery_Click(object sender, EventArgs e)
     {
-        Rebind(txtStudentID.Text.Trim(),txtName.Text.Trim());
+        Rebind(txtStudentID.Text.Trim(),txtName.Text.Trim(),CheckContent(txtClass));
     }
     protected void btAdd_Click(object sender, EventArgs e)
     {

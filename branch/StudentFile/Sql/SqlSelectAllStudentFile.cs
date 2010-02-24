@@ -9,7 +9,7 @@ namespace StudentFile.Sql
     {
         public override string GetSql()
         {
-            return "select S.StudentID,S.Name from [Student] as S,[Archives] as T where S.StudentID = T.StudentID";
+            return "select S.StudentID,S.Name,S.Class from [Student] as S,[Archives] as T where S.StudentID = T.StudentID";
         }
     }
 }

@@ -25,10 +25,10 @@ namespace StundentInfoManagement
             Ops.OpStudentMngExec op = new OpStudentMngExec(qs);
             return op.Do();
         }
-        public static DataSet StraitStudentQuery(String ID,String strName,Int16 Degree)
+        public static DataSet StraitStudentQuery(String ID,String strName,Int16 iClass,Int16 Degree)
         {
             Sql.SqlSelectStraitStudentByQuery qs = new StundentInfoManagement.Sql.SqlSelectStraitStudentByQuery();
-            qs.GetCondition(ID, strName, Degree);
+            qs.GetCondition(ID, strName, iClass,Degree);
             Ops.OpStudentMngQuery op = new OpStudentMngQuery(qs);
             op.Do();
             return op.Ds;
@@ -36,7 +36,7 @@ namespace StundentInfoManagement
         public static bool HasStraitStudent(String ID)
         {
             Sql.SqlSelectStraitStudentByQuery qs = new StundentInfoManagement.Sql.SqlSelectStraitStudentByQuery();
-            qs.GetCondition(ID, "", -1);
+            qs.GetCondition(ID, "", -1,-1);
             Ops.OpStudentMngQuery op = new OpStudentMngQuery(qs);
             op.Do();
             if (op.Ds.Tables[0].Rows.Count == 0)
