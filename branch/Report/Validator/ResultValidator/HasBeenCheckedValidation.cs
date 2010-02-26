@@ -23,7 +23,7 @@ namespace Report.Validator.ResultValidator
             if (Desc.Type == Report.Descriptor.ItemType.ADMINCHECK &&
                 Desc.DisplayDescriptor.DisplayMode == Report.Descriptor.DisplayMode.DisplayFront)
             {
-                if (Desc.ControlAdapter.GetResult().Equals("已审核"))
+                if (Desc.ControlAdapter.GetResult().Equals("已通过"))
                 {
                     return false;
                 }
