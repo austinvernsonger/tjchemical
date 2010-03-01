@@ -12,6 +12,7 @@ namespace StudentFile
         {
             TreeView TeacherAuth = new TreeView();
             TreeNode TeacherRoot = new TreeNode("学生档案", "学生档案");
+            TeacherRoot.SelectAction = TreeNodeSelectAction.Expand;
             TeacherAuth.Nodes.Add(TeacherRoot);
             TeacherRoot.ChildNodes.Add(new TreeNode("学生档案管理", "学生档案管理", "", "~/StudentFile/StudentFileMng.aspx", ""));
             

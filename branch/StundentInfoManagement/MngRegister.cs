@@ -12,6 +12,7 @@ namespace StundentInfoManagement
         {
              TreeView TeacherAuth = new TreeView();
              TreeNode TeacherRoot = new TreeNode("学生信息", "学生信息");
+             TeacherRoot.SelectAction = TreeNodeSelectAction.Expand;
              TeacherAuth.Nodes.Add(TeacherRoot);
              TeacherRoot.ChildNodes.Add(new TreeNode("学生信息查询", "学生信息查询", "", "~/StudentInfo/Admin/StudentInfoQuery.aspx", ""));
              TeacherRoot.ChildNodes.Add(new TreeNode("系所管理", "系所管理", "", "~/StudentInfo/Admin/DepartmentManage.aspx", ""));
@@ -26,6 +27,7 @@ namespace StundentInfoManagement
         {
             TreeView StudentAuth = new TreeView();
             TreeNode StudentRoot = new TreeNode("学工办", "学工办");
+            StudentRoot.SelectAction = TreeNodeSelectAction.Expand;
              StudentAuth.Nodes.Add(StudentRoot);
              StudentRoot.ChildNodes.Add(new TreeNode("个人信息维护", "个人信息维护", "", "~/StudentInfo/Student/StudentBasicInfo.aspx", ""));
             // StudentRoot.ChildNodes.Add(new TreeNode("申请学习奖学金", "申请学习奖学金", "", "~/StudentManage/StudentApplyStudyAward.aspx", ""));

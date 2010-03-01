@@ -13,6 +13,7 @@ namespace SysCom
         {
             TreeView TeacherAuth = new TreeView();
             TreeNode TeacherRoot = new TreeNode("个人账户管理", "个人账户管理");
+            TeacherRoot.SelectAction = TreeNodeSelectAction.Expand;
             TeacherAuth.Nodes.Add(TeacherRoot);
             TeacherRoot.ChildNodes.Add(new TreeNode("修改密码", "修改密码", "", "~/Login/ChangePassword.aspx", ""));
 
@@ -23,6 +24,7 @@ namespace SysCom
         {
             TreeView StudentAuth = new TreeView();
             TreeNode StudentRoot = new TreeNode("个人账户管理", "个人账户管理");
+            StudentRoot.SelectAction = TreeNodeSelectAction.Expand;
             StudentAuth.Nodes.Add(StudentRoot);
             StudentRoot.ChildNodes.Add(new TreeNode("修改密码", "修改密码", "", "~/Login/ChangePassword.aspx", ""));
 
